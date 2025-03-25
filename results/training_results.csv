@@ -1,0 +1,13 @@
+model,feature_subset,hyperparameters,hyperparameter_search_type,cv_total_time,cv_iters,cv_time_per_iter,training_time,training_score
+linear_regression,manual,{'preprocessing__cat__oh__min_frequency': 0.01},grid,2.5169968605041504,7,0.3595709800720215,0.06199908256530762,85.5920240757758
+linear_regression,filter,{'preprocessing__cat__oh__min_frequency': 0.01},grid,2.8725011348724365,7,0.41035730498177664,0.08350062370300293,85.4569556654142
+linear_regression,wrapper,{'preprocessing__cat__oh__min_frequency': 0.01},grid,2.6130001544952393,7,0.3732857363564627,0.07299923896789551,85.35180995760444
+linear_regression,no_selection,{'preprocessing__cat__oh__min_frequency': 0.01},grid,19.22550320625305,7,2.74650045803615,0.8200016021728516,86.28996047065878
+ridge_l2,manual,"{'preprocessing__cat__oh__min_frequency': 0.01, 'regression__alpha': 10}",grid,34.17399835586548,91,0.3755384434710492,0.06999897956848145,85.58433580447385
+ridge_l2,filter,"{'preprocessing__cat__oh__min_frequency': 0.01, 'regression__alpha': 10}",grid,40.563997983932495,91,0.4457582196036538,0.08999991416931152,85.4491984761273
+ridge_l2,wrapper,"{'preprocessing__cat__oh__min_frequency': 0.01, 'regression__alpha': 1}",grid,35.048001766204834,91,0.3851428765517015,0.07900071144104004,85.35059976524977
+ridge_l2,no_selection,"{'preprocessing__cat__oh__min_frequency': 0.01, 'regression__alpha': 10}",grid,161.00300002098083,91,1.769263736494295,0.401003360748291,85.9586892172773
+decision_tree,manual,"{'preprocessing__cat__oh__min_frequency': 0.004859973536663009, 'regression__criterion': 'squared_error', 'regression__max_depth': 6, 'regression__min_samples_leaf': 48, 'regression__min_samples_split': 25}",randomized,122.64810109138489,50,2.4529620218276977,0.06450057029724121,85.22656694503523
+decision_tree,filter,"{'preprocessing__cat__oh__min_frequency': 0.004859973536663009, 'regression__criterion': 'squared_error', 'regression__max_depth': 6, 'regression__min_samples_leaf': 48, 'regression__min_samples_split': 25}",randomized,247.8714997768402,50,4.957429995536804,0.09399890899658203,85.42568030248417
+decision_tree,wrapper,"{'preprocessing__cat__oh__min_frequency': 0.004859973536663009, 'regression__criterion': 'squared_error', 'regression__max_depth': 6, 'regression__min_samples_leaf': 48, 'regression__min_samples_split': 25}",randomized,236.7465000152588,50,4.734930000305176,0.08649921417236328,85.8728151220721
+decision_tree,no_selection,"{'preprocessing__cat__oh__min_frequency': 0.004859973536663009, 'regression__criterion': 'squared_error', 'regression__max_depth': 6, 'regression__min_samples_leaf': 48, 'regression__min_samples_split': 25}",randomized,2747.0716636180878,50,54.941433272361756,0.6995024681091309,85.78761658149259
