@@ -1,0 +1,1 @@
+{"feature_subset": "wrapper", "hyperparameters": {"preprocessing__cat__oh__min_frequency": null, "regression__alpha": 1}, "training_time": 0.028603553771972656, "avg_training_score": 83.37960870257116}

@@ -1,0 +1,5 @@
+model,feature_subset,hyperparameters,hyperparameter_search_type,cv_total_time,cv_iters,cv_time_per_iter,training_time,avg_training_score
+linear_regression,manual,{'preprocessing__cat__oh__min_frequency': None},grid,1.6383299827575684,7,0.23404714039393834,0.023879528045654297,83.8568112648107
+linear_regression,filter,{'preprocessing__cat__oh__min_frequency': None},grid,0.3313274383544922,7,0.04733249119349888,0.04161810874938965,83.75820570897277
+linear_regression,wrapper,{'preprocessing__cat__oh__min_frequency': None},grid,0.32102227210998535,7,0.04586032458714077,0.030787944793701172,83.57752118121913
+linear_regression,no_selection,{'preprocessing__cat__oh__min_frequency': 0.05},grid,1.8199312686920166,7,0.25999018124171663,0.3231534957885742,93.32674499694888

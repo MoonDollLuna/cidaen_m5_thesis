@@ -1,0 +1,5 @@
+model,feature_subset,hyperparameters,hyperparameter_search_type,cv_total_time,cv_iters,cv_time_per_iter,training_time,avg_training_score
+adaboost,manual,"OrderedDict([('preprocessing__cat__oh__min_frequency', 0.0001), ('regression__learning_rate', 0.0001), ('regression__n_estimators', 50)])",bayes,25.390121698379517,50,0.5078024339675903,0.215623140335083,86.98043185143206
+adaboost,filter,"OrderedDict([('preprocessing__cat__oh__min_frequency', 0.0001), ('regression__learning_rate', 0.0001), ('regression__n_estimators', 200)])",bayes,37.909886598587036,50,0.7581977319717407,1.9048182964324951,87.0056344510263
+adaboost,wrapper,"OrderedDict([('preprocessing__cat__oh__min_frequency', 0.0001), ('regression__learning_rate', 0.0001), ('regression__n_estimators', 200)])",bayes,75.38741755485535,50,1.507748351097107,1.864696741104126,87.06043695047784
+adaboost,no_selection,"OrderedDict([('preprocessing__cat__oh__min_frequency', 0.005044812250139233), ('regression__learning_rate', 0.0001), ('regression__n_estimators', 200)])",bayes,688.5746812820435,50,13.771493625640868,17.499237537384033,87.03001535473632

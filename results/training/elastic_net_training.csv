@@ -1,0 +1,5 @@
+model,feature_subset,hyperparameters,hyperparameter_search_type,cv_total_time,cv_iters,cv_time_per_iter,training_time,avg_training_score
+elastic_net,manual,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.001, 'regression__l1_ratio': 0.5}",grid,11.721351385116577,273,0.04293535305903508,0.5812702178955078,83.51526405439998
+elastic_net,filter,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.001, 'regression__l1_ratio': 0.5}",grid,14.64482307434082,273,0.05364404056535099,0.6614060401916504,83.41333496392983
+elastic_net,wrapper,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.001, 'regression__l1_ratio': 0.5}",grid,12.514547348022461,273,0.04584083277663905,0.4930276870727539,83.31637514887375
+elastic_net,no_selection,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.01, 'regression__l1_ratio': 0.75}",grid,167.6494746208191,273,0.6141006396366999,2.934457540512085,83.83496942582158

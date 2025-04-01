@@ -1,0 +1,1 @@
+{"feature_subset": "wrapper", "hyperparameters": {"regression__colsample_bytree": 0.4645360146077211, "regression__gamma": 9132.97187266263, "regression__learning_rate": 0.02968498714490269, "regression__max_depth": 4, "regression__n_estimators": 153, "regression__subsample": 0.3}, "training_time": 0.0812370777130127, "avg_training_score": 86.51321162424438}

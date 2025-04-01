@@ -1,0 +1,1 @@
+{"feature_subset": "manual", "hyperparameters": {"preprocessing__cat__oh__min_frequency": 0.0018707496062876693, "regression__C": 32.75143592003466, "regression__degree": 4, "regression__epsilon": 0.030225289960459558, "regression__tol": 0.07982332010050937}, "training_time": 2.4611942768096924, "avg_training_score": 89.36720565282685}

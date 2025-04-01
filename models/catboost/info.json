@@ -1,0 +1,1 @@
+{"feature_subset": "filter", "hyperparameters": {"regression__iterations": 200, "regression__l2_leaf_reg": 5.637922884126309, "regression__learning_rate": 0.04893017698331533, "regression__max_depth": 8, "regression__random_strength": 2.0}, "training_time": 3.180443525314331, "avg_training_score": 82.17582430193673}

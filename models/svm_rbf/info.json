@@ -1,0 +1,1 @@
+{"feature_subset": "filter", "hyperparameters": {"preprocessing__cat__oh__min_frequency": 0.005067687245650943, "regression__C": 71.0411544538531, "regression__epsilon": 0.26633253593242695, "regression__tol": 0.041821644626507753}, "training_time": 3.0770490169525146, "avg_training_score": 88.40458104489666}

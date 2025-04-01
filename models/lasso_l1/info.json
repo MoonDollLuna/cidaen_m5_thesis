@@ -1,0 +1,1 @@
+{"feature_subset": "filter", "hyperparameters": {"preprocessing__cat__oh__min_frequency": null, "regression__alpha": 0.1}, "training_time": 0.021471500396728516, "avg_training_score": 83.30629026098315}

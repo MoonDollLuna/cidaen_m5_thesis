@@ -1,0 +1,1 @@
+{"feature_subset": "manual", "hyperparameters": {"preprocessing__cat__oh__min_frequency": 0.002965985859578346, "regression__criterion": "friedman_mse", "regression__max_depth": 9, "regression__min_samples_leaf": 40, "regression__min_samples_split": 33}, "training_time": 0.020879030227661133, "avg_training_score": 83.7780860558013}

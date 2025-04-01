@@ -1,0 +1,5 @@
+model,feature_subset,hyperparameters,hyperparameter_search_type,cv_total_time,cv_iters,cv_time_per_iter,training_time,avg_training_score
+lasso_l1,manual,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.1}",grid,3.9954326152801514,91,0.0439058529151665,0.01643848419189453,83.40286406661048
+lasso_l1,filter,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.1}",grid,4.819518566131592,91,0.05296174248496255,0.021471500396728516,83.30629026098315
+lasso_l1,wrapper,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.1}",grid,3.9306271076202393,91,0.04319370447934329,0.016907930374145508,83.31664928110077
+lasso_l1,no_selection,"{'preprocessing__cat__oh__min_frequency': None, 'regression__alpha': 0.1}",grid,53.92193555831909,91,0.5925487423991109,1.0820424556732178,83.54799847993567
