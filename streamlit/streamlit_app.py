@@ -17,6 +17,17 @@
 
 import streamlit as st
 
+
+# MODEL METHODS - TO AVOID DUE TO PICKLING ERRORS ######################################################################
+def to_categorical(dataframe):
+    """
+    Transforms all the elements in a DataFrame into Categorical dTypes.
+
+    Used instead of a lambda function for pickling purposes
+    """
+
+    return dataframe.astype("category")
+
 ########################################################################################################################
 # APP DEFINITION - MAIN PAGE ###########################################################################################
 

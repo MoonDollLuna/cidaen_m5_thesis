@@ -17,12 +17,13 @@
 
 # Python
 import pickle
-
-import numpy as np
-# 3rd Party
-import streamlit as st
-import pandas as pd
 from pathlib import Path
+
+# 3rd Party
+import numpy as np
+import pandas as pd
+from sklearn.pipeline import Pipeline
+import streamlit as st
 
 
 # MODEL AND DATA LOADING ###############################################################################################
@@ -40,7 +41,7 @@ def load_data():
         pd.read_csv("data.csv", index_col="patient_id", dtype={"patient_zip3": object})
         .fillna({
             "payer_type": "UNKNOWN",
-            "patient_race": "Unknown"
+            "patient_race": "UNKNOWN"
         })
     )
 
@@ -125,7 +126,7 @@ if uploaded_file is not None:
             pd.read_csv(uploaded_file, index_col="patient_id", dtype={"patient_zip3": object})
             .fillna({
                 "payer_type": "UNKNOWN",
-                "patient_race": "Unknown"
+                "patient_race": "UNKNOWN"
             })
         )
 
@@ -279,4 +280,24 @@ with st.form("single_form"):
 
 ########################################################################################################################
 # MODEL OUTPUT #########################################################################################################
+
+# Load the model from disk
+# NOTE - A function needs to be loaded in the Main part of the app due to pickle serialization problems
+model = load_model()
+
+# Transform the dictionary into a DataFrame to feed into the model
+df_input = pd.DataFrame.from_records(patient_submission, index=["patient"])
+
+# Obtain the prediction for the input
+prediction = model.predict(df_input)
+processed_prediction = int(round(prediction.item(), 0))
+
+st.subheader("Predicted metastatic diagnosis period:")
+st.metric("",
+          value=f"{processed_prediction} days",
+          label_visibility="collapsed")
+
+
+
+
 
