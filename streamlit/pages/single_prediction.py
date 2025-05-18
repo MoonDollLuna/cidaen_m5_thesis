@@ -18,9 +18,11 @@
 # Python
 import pickle
 
+import numpy as np
 # 3rd Party
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
 
 # MODEL AND DATA LOADING ###############################################################################################
@@ -34,84 +36,247 @@ def load_model():
 @st.cache_data
 def load_data():
     """Loads the full training dataset as a DataFrame"""
-    return pd.read_csv("data.csv", index_col="patient_id", dtype={"patient_zip3": object})
+    return (
+        pd.read_csv("data.csv", index_col="patient_id", dtype={"patient_zip3": object})
+        .fillna({
+            "payer_type": "UNKNOWN",
+            "patient_race": "Unknown"
+        })
+    )
+
+
+@st.cache_data
+def load_icd10_data():
+    """Loads the full ICD10 medical dataset from a json file"""
+    return pd.read_json("codes/icd10_codes.json").set_index("code")
+
+
+@st.cache_data
+def load_icd9_data():
+    """Loads the full ICD9 medical dataset from a CSV file"""
+    # Read the dataframe and remove the dots
+    df = pd.read_csv("codes/icd9_codes.csv")
+    df["icd9code"] = df["icd9code"].str.replace(".", "")
+
+    return df.set_index("icd9code")["long_description"]
+
+
+# CACHED HELPER METHODS ################################################################################################
+@st.cache_data
+def get_icd_description(icd_code):
+    """
+    Given an ICD code, return the appropriate description.
+
+    If the code is not directly contained in the dataset, find the closest code
+    """
+    return (f"{icd_code} - {load_icd10_data().filter(like=icd_code, axis=0).iloc[0]['desc']}" if icd_code[0] == "C"
+                     else f"{icd_code} - {load_icd9_data().filter(regex=f'^{icd_code}', axis=0).iloc[0]}")
+
+
+@st.cache_data
+def get_average_percentage_state(data, state, attribute):
+    """
+    Given an attribute, computes the average score for the specified state
+
+    Used to automatically fill in values when choosing a state
+    """
+
+    return (
+        data[data["patient_state"]==state][attribute].mean()
+    )
 
 
 ########################################################################################################################
-# APP DEFINITION - MAIN PAGE ###########################################################################################
+# APP DEFINITION - SINGLE PREDICTION PAGE ##############################################################################
 
-st.set_page_config(page_title="Single prediction")
+# TITLES ############################################
+# Titles
+st.set_page_config(page_title="Patient prediction")
+st.title("Metastatic Cancer Diagnosis - Delay in diagnosis prediction")
+st.markdown("""
+## Patient prediction
+#### Women in Data Science 2024 - Challenge 2
+""")
 
-# APP DEFINITION ######################################
+# FILE UPLOAD AND PRE-PROCESSING ####################
 
-# TITLES
-# st.set_page_config(page_title="EMBEDDED - Estimador de problemas cardiacos")
-# st.title("❤️ Estimador de problemas cardiacos 🏥")
-# st.markdown("### ¿Cuanto riesgo tienes de sufrir un problema cardiaco?")
-#
-# # INPUT WIDGETS
-# age = st.slider("Age", value=20, min_value=0, max_value=100)
-# gender = st.radio("Gender", options=[
-#     "Male",
-#     "Female"
-# ])
-# rbp = st.number_input("Resting blood pressure",
-#                       min_value=0)
-# cholesterol = st.number_input("Cholesterol",
-#                               min_value=0)
-# fbs = st.radio("Fasting blood sugar", options=[
-#                     "Yes",
-#                     "No"
-#                ],
-#                index=1)
-# mhr = st.number_input("Maximum heart rate",
-#                       min_value=0)
-#
-# st.markdown("---")
-#
-# chosen_model = st.selectbox("Model to use for predictions", [
-#     "Random Forest",
-#     "Neural Network"
-# ])
-#
-# # INPUT PROCESSING
-# # Conversion dictionaries
-# gender_dict = {"Male": 0, "Female": 1}
-# fbs_dict = {"Yes": 1, "No": 0}
-# outcome_dict = {
-#     0: "💚 Probablemente no tendrás problemas de corazón",
-#     1: "💔 Tienes riesgo de padecer problemas de corazón"
-# }
-#
-# # Transform the input into a DataFrame for the models
-# input = pd.DataFrame(
-#     data=[[
-#         age,
-#         gender_dict[gender],
-#         rbp,
-#         cholesterol,
-#         fbs_dict[fbs],
-#         mhr
-#     ]],
-#     columns=["Age", "Sex", "RestingBP", "Cholesterol", "FastingBS", "MaxHR"]
-# )
-#
-# # MODEL AND DISPLAY
-# # Pre-load both models
-# rf_model = load_random_forest_model()
-# nn_model = load_neural_network_model()
-#
-# # Depending on the chosen model, process the input
-# if chosen_model == "Random Forest":
-#     # RANDOM FOREST - Predict and extract the prediction
-#     prediction = rf_model.predict(input)[0]
-#
-# elif chosen_model == "Neural Network":
-#     # NEURAL NETWORK - Extract the prediction and transform it into an integer value
-#     prediction = round(nn_model.predict(input)[0][0])
-#
-# # Output the prediction
-# st.text("Pronóstico:")
-# st.text(outcome_dict[prediction])
+# Storage of the patient info
+patient_info = None
 
-###########################################################
+uploaded_file = st.file_uploader(
+    label="Quick upload",
+    type=["csv", "json"],
+    accept_multiple_files=False,
+    help="Information about the patient can be uploaded as either a CSV table or a JSON file"
+)
+
+# Check if a file has been loaded
+
+if uploaded_file is not None:
+
+    # Files will always be read as Pandas DataFrames
+    df = None
+    # Check the format of the file and load it accordingly
+    extension = Path(uploaded_file.name).suffix
+
+    # CSV files
+    if extension == ".csv":
+        df = (
+            pd.read_csv(uploaded_file, index_col="patient_id", dtype={"patient_zip3": object})
+            .fillna({
+                "payer_type": "UNKNOWN",
+                "patient_race": "Unknown"
+            })
+        )
+
+    # JSON files
+    elif extension == ".json":
+        df = pd.read_json(uploaded_file)
+
+    # Check if the CSV contains more than one instance - and extract the first one
+    if len(df) > 1:
+        st.warning("""
+            More than one patient contained within the CSV file - only the first one will be considered.
+            Did you mean to do a batch prediction?
+            """)
+
+    patient_info = df.iloc[0]
+
+    st.success("Patient info uploaded successfully")
+
+st.divider()
+
+# PATIENT INFORMATION ##################################################################################################
+# If a patient has been loaded, automatically load the information into the form
+
+# Pre-load the Dataframe for reuse
+df_data = load_data()
+
+# Store the patient form submission in a dictionary
+patient_submission = {}
+
+st.subheader("Patient information:")
+
+with st.form("single_form"):
+    # PART 1 - Medical data
+    # Age, race and payer type
+    age_col, race_col, payertype_col = st.columns(3)
+    with age_col:
+        patient_submission["patient_age"] = st.number_input(
+            label="Patient age",
+            min_value=0,
+            max_value=150,
+            value=patient_info["patient_age"] if patient_info is not None else 50
+        )
+
+    with race_col:
+        patient_submission["patient_race"] = st.selectbox(
+            label="Patient race",
+            options=df_data["patient_race"].unique(),
+            index=(
+                np.where(df_data["patient_race"].unique() == patient_info["patient_race"])[0].item()
+                if patient_info is not None else 0
+            )
+        )
+
+    with payertype_col:
+        patient_submission["payer_type"] = st.selectbox(
+            label="Patient healthcare type",
+            options=df_data["payer_type"].unique(),
+            index=(
+                np.where(df_data["payer_type"].unique() == patient_info["payer_type"])[0].item()
+                if patient_info is not None else 0
+            )
+        )
+
+    code_col1, code_col2 = st.columns(2)
+    with code_col1:
+        ordered_breast_cancer_codes = np.sort(df_data["breast_cancer_diagnosis_code"].unique())[::-1]
+        patient_submission["breast_cancer_diagnosis_code"] = st.selectbox(
+            label="Breast cancer diagnosis code",
+            options=ordered_breast_cancer_codes,
+            format_func=get_icd_description,
+            index=(
+                np.where(ordered_breast_cancer_codes == patient_info["breast_cancer_diagnosis_code"])[0].item()
+                if patient_info is not None else 0
+            )
+        )
+
+    with code_col2:
+        ordered_metastatic_cancer_codes = np.sort(df_data["metastatic_cancer_diagnosis_code"].unique())[::-1]
+        patient_submission["metastatic_cancer_diagnosis_code"] = st.selectbox(
+            label="Metastatic cancer diagnosis code",
+            options=ordered_metastatic_cancer_codes,
+            format_func=get_icd_description,
+            index=(
+                np.where(ordered_metastatic_cancer_codes == patient_info["metastatic_cancer_diagnosis_code"])[0].item()
+                if patient_info is not None else 0
+            )
+        )
+
+    st.divider()
+
+    # PART 2 - Socio-economic data
+    # State selection
+    patient_submission["patient_state"] = st.selectbox(
+        label="Patient state",
+        options=df_data["patient_state"].unique(),
+        index=(
+            np.where(df_data["patient_state"].unique() == patient_info["patient_state"])[0].item()
+            if patient_info is not None else 0
+        )
+    )
+
+    # Percentages
+    # If no data is loaded, the default value of a percentage is whatever the state is
+    st.text("Percentage of the population of the patient state that:")
+
+    percent_col1, percent_col2 = st.columns(2)
+    with percent_col1:
+        patient_submission["education_bachelors"] = st.number_input(
+            label="Has a bachelors degree",
+            min_value=0.0,
+            max_value=100.0,
+            value=(
+                patient_info["education_bachelors"] if patient_info is not None
+                else get_average_percentage_state(df_data, patient_submission["patient_state"], "education_bachelors")
+            )
+        )
+
+        patient_submission["labor_force_participation"] = st.number_input(
+            label="Is part of the labor force",
+            min_value=0.0,
+            max_value=100.0,
+            value=(
+                patient_info["labor_force_participation"] if patient_info is not None
+                else get_average_percentage_state(df_data, patient_submission["patient_state"], "labor_force_participation")
+            )
+        )
+
+    with percent_col2:
+        patient_submission["education_college_or_above"] = st.number_input(
+            label="Has studied in college",
+            min_value=0.0,
+            max_value=100.0,
+            value=(
+                patient_info["education_college_or_above"] if patient_info is not None
+                else get_average_percentage_state(df_data, patient_submission["patient_state"], "education_college_or_above")
+            )
+        )
+
+        patient_submission["family_dual_income"] = st.number_input(
+            label="Is part of a dual-income household",
+            min_value=0.0,
+            max_value=100.0,
+            value=(
+                patient_info["family_dual_income"] if patient_info is not None
+                else get_average_percentage_state(df_data, patient_submission["patient_state"], "family_dual_income")
+            )
+        )
+
+    # UPLOAD BUTTON
+    submitted = st.form_submit_button("Predict")
+
+########################################################################################################################
+# MODEL OUTPUT #########################################################################################################
+

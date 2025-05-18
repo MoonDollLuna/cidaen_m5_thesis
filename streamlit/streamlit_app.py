@@ -23,7 +23,7 @@ import streamlit as st
 # Create the navigation side-bar
 pages = {
     "Metastatic diagnosis prediction": [
-        st.Page("pages/single_prediction.py", title="Single prediction", default=True),
+        st.Page("pages/single_prediction.py", title="Patient prediction", default=True),
         st.Page("pages/batch_prediction.py", title="Batch prediction")
     ]
 }
