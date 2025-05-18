@@ -1,0 +1,12 @@
+{
+	"patient_age": 59,
+	"patient_race": null,
+	"payer_type": "COMMERCIAL",
+	"breast_cancer_diagnosis_code": 1749,
+	"metastatic_cancer_diagnosis_code": "C773",
+	"patient_state": "CA",
+	"education_bachelors": 13.92,
+	"education_college_or_above": 22.32,
+	"labor_force_participation": 59.47,
+	"family_dual_income": 52.89
+}

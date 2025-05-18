@@ -1,0 +1,12 @@
+{
+	"patient_age": 59,
+	"patient_race": "Hispanic",
+	"payer_type": "MEDICAID",
+	"breast_cancer_diagnosis_code": "C50911",
+	"metastatic_cancer_diagnosis_code": "C773",
+	"patient_state": "CA",
+	"education_bachelors": 23.89,
+	"education_college_or_above": 37.58,
+	"labor_force_participation": 64.39,
+	"family_dual_income": 55.53
+}

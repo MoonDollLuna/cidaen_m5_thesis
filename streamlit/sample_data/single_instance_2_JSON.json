@@ -1,0 +1,12 @@
+{
+	"patient_age": 55,
+	"patient_race": "White",
+	"payer_type": null,
+	"breast_cancer_diagnosis_code": "C50412",
+	"metastatic_cancer_diagnosis_code": "C773",
+	"patient_state": "IL",
+	"education_bachelors": 12.46,
+	"education_college_or_above": 18.49,
+	"labor_force_participation": 52.51,
+	"family_dual_income": 41.41
+}

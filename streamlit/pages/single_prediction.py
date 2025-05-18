@@ -92,12 +92,16 @@ def get_average_percentage_state(data, state, attribute):
 
 # TITLES ############################################
 # Titles
-st.set_page_config(page_title="Patient prediction")
+st.set_page_config(page_title="Patient prediction", layout="wide")
 st.title("Metastatic Cancer Diagnosis - Delay in diagnosis prediction")
 st.markdown("""
 ## Patient prediction
 #### Women in Data Science 2024 - Challenge 2
 """)
+
+# Prepare session state values
+if "reloaded" not in st.session_state:
+    st.session_state.reloaded = False
 
 # FILE UPLOAD AND PRE-PROCESSING ####################
 
@@ -123,7 +127,11 @@ if uploaded_file is not None:
     # CSV files
     if extension == ".csv":
         df = (
-            pd.read_csv(uploaded_file, index_col="patient_id", dtype={"patient_zip3": object})
+            pd.read_csv(uploaded_file, index_col="patient_id", dtype={
+                "patient_zip3": object,
+                "breast_cancer_diagnosis_code": str,
+                "metastatic_cancer_diagnosis_code": str
+            })
             .fillna({
                 "payer_type": "UNKNOWN",
                 "patient_race": "UNKNOWN"
@@ -132,18 +140,30 @@ if uploaded_file is not None:
 
     # JSON files
     elif extension == ".json":
-        df = pd.read_json(uploaded_file)
+        df = (
+            pd.read_json(uploaded_file, typ="series", dtype={
+                "patient_zip3": object,
+                "breast_cancer_diagnosis_code": str,
+                "metastatic_cancer_diagnosis_code": str
+            })
+            .to_frame().transpose()
+            .fillna({
+                "payer_type": "UNKNOWN",
+                "patient_race": "UNKNOWN"
+            })
+        )
 
     # Check if the CSV contains more than one instance - and extract the first one
     if len(df) > 1:
         st.warning("""
-            More than one patient contained within the CSV file - only the first one will be considered.
+            More than one patient contained within the file - only the first one will be considered.
             Did you mean to do a batch prediction?
             """)
 
     patient_info = df.iloc[0]
-
-    st.success("Patient info uploaded successfully")
+    # Sanity check - ensure that the diagnosis codes are ALWAYS treated as strings
+    patient_info["breast_cancer_diagnosis_code"] = str(patient_info["breast_cancer_diagnosis_code"])
+    patient_info["metastatic_cancer_diagnosis_code"] = str(patient_info["metastatic_cancer_diagnosis_code"])
 
 st.divider()
 
@@ -230,7 +250,13 @@ with st.form("single_form"):
 
     # Percentages
     # If no data is loaded, the default value of a percentage is whatever the state is
-    st.text("Percentage of the population of the patient state that:")
+    reload_percentages = st.form_submit_button("Compute percentages for chosen state")
+    st.markdown("#### Percentage of the population of the patient state that:")
+
+
+    # If the state has been reloaded, display a message and reset the state
+    if st.session_state.reloaded:
+        st.success("Percentages automatically computed for the current state")
 
     percent_col1, percent_col2 = st.columns(2)
     with percent_col1:
@@ -239,8 +265,13 @@ with st.form("single_form"):
             min_value=0.0,
             max_value=100.0,
             value=(
-                patient_info["education_bachelors"] if patient_info is not None
-                else get_average_percentage_state(df_data, patient_submission["patient_state"], "education_bachelors")
+                get_average_percentage_state(
+                    df_data,
+                    patient_submission["patient_state"],
+                    "education_bachelors"
+                ) if st.session_state.reloaded
+                else patient_info["education_bachelors"] if patient_info is not None
+                else 50.0
             )
         )
 
@@ -249,8 +280,13 @@ with st.form("single_form"):
             min_value=0.0,
             max_value=100.0,
             value=(
-                patient_info["labor_force_participation"] if patient_info is not None
-                else get_average_percentage_state(df_data, patient_submission["patient_state"], "labor_force_participation")
+                get_average_percentage_state(
+                    df_data,
+                    patient_submission["patient_state"],
+                    "labor_force_participation"
+                ) if st.session_state.reloaded
+                else patient_info["labor_force_participation"] if patient_info is not None
+                else 50.0
             )
         )
 
@@ -260,8 +296,13 @@ with st.form("single_form"):
             min_value=0.0,
             max_value=100.0,
             value=(
-                patient_info["education_college_or_above"] if patient_info is not None
-                else get_average_percentage_state(df_data, patient_submission["patient_state"], "education_college_or_above")
+                get_average_percentage_state(
+                    df_data,
+                    patient_submission["patient_state"],
+                    "education_college_or_above"
+                ) if st.session_state.reloaded
+                else patient_info["education_college_or_above"] if patient_info is not None
+                else 50.0
             )
         )
 
@@ -270,13 +311,22 @@ with st.form("single_form"):
             min_value=0.0,
             max_value=100.0,
             value=(
-                patient_info["family_dual_income"] if patient_info is not None
-                else get_average_percentage_state(df_data, patient_submission["patient_state"], "family_dual_income")
+                get_average_percentage_state(
+                    df_data,
+                    patient_submission["patient_state"],
+                    "family_dual_income"
+                ) if st.session_state.reloaded
+                else patient_info["family_dual_income"] if patient_info is not None
+                else 50.0
             )
         )
 
     # UPLOAD BUTTON
     submitted = st.form_submit_button("Predict")
+
+    if reload_percentages:
+        st.session_state.reloaded = True
+        st.rerun()
 
 ########################################################################################################################
 # MODEL OUTPUT #########################################################################################################

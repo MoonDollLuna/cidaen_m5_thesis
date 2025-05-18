@@ -1,0 +1,12 @@
+{
+	"patient_age": 39,
+	"patient_race": null,
+	"payer_type": "COMMERCIAL",
+	"breast_cancer_diagnosis_code": "C50912",
+	"metastatic_cancer_diagnosis_code": "C773",
+	"patient_state": "AR",
+	"education_bachelors": 9.21,
+	"education_college_or_above": 13.32,
+	"labor_force_participation": 53.60,
+	"family_dual_income": 43.99
+}
