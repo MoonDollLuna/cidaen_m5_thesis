@@ -20,10 +20,12 @@ import pickle
 from pathlib import Path
 
 # 3rd Party
+import scipy as sp
 import numpy as np
 import pandas as pd
-from sklearn.pipeline import Pipeline
 import streamlit as st
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 # MODEL AND DATA LOADING ###############################################################################################
@@ -339,12 +341,43 @@ df_input = pd.DataFrame.from_records(patient_submission, index=["patient"])
 prediction = model.predict(df_input)
 processed_prediction = int(round(prediction.item(), 0))
 
-st.subheader("Predicted metastatic diagnosis period:")
-st.metric(label="Predicted metastatic diagnosis period",
-          value=f"{processed_prediction} days",
-          label_visibility="collapsed")
+# Compute the percentile for the prediction
+percentile = int(round(sp.stats.percentileofscore(df_data["metastatic_diagnosis_period"], processed_prediction), 0))
+metric_col1, metric_col2 = st.columns(2)
 
+with metric_col1:
+    st.subheader("Predicted metastatic diagnosis period:")
+    st.metric(label="Predicted metastatic diagnosis period",
+              value=f"{processed_prediction} days",
+              label_visibility="collapsed")
 
+with metric_col2:
+    st.subheader("Percentile:")
+    st.metric(label="Percentile",
+              value=f"{percentile}%",
+              label_visibility="collapsed")
+
+# FIGURE ###############################################################################################################
+# Display the distribution of known prediction times
+fig = plt.figure(figsize=(15, 4))
+ax = sns.histplot(
+    data=df_data,
+    x="metastatic_diagnosis_period",
+    binwidth=10
+)
+plt.xlabel("Metastatic diagnosis period")
+plt.ylabel("Frequency")
+plt.tight_layout()
+
+# Color in red the bar belonging to the current patient
+for id, bar in enumerate(ax.patches):
+    if (id * 10) < processed_prediction < (id+1) * 10:
+        bar.set_facecolor("#FF474C")
+    else:
+        bar.set_facecolor("#a3d3e3")
+
+# Display the figure
+st.pyplot(fig)
 
 
 
