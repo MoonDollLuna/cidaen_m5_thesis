@@ -2,7 +2,7 @@
 # Streamlit Application
 #
 # Luna Jimenez Fernandez
-import json
+
 # The goal of this file is to develop a MVP of an application used to deploy the
 # trained model obtained through the full Data Science process.
 #
@@ -10,14 +10,14 @@ import json
 # For real production and more complex models, a server - client model should be used,
 # allowing access to the model via API
 #
-# This file serves as the main app entrypoint.
-# The logic for both single prediction and batch prediction are contained in their separate files
+# This file serves as the main logic for single-instance detailed prediction.
 
 # IMPORTS ##############################################################################################################
 
 # Python
 import pickle
 from pathlib import Path
+import json
 
 # 3rd Party
 import scipy as sp
@@ -58,10 +58,10 @@ def load_icd10_data():
 def load_icd9_data():
     """Loads the full ICD9 medical dataset from a CSV file"""
     # Read the dataframe and remove the dots
-    df = pd.read_csv("codes/icd9_codes.csv")
-    df["icd9code"] = df["icd9code"].str.replace(".", "")
+    icd9_df = pd.read_csv("codes/icd9_codes.csv")
+    icd9_df["icd9code"] = icd9_df["icd9code"].str.replace(".", "")
 
-    return df.set_index("icd9code")["long_description"]
+    return icd9_df.set_index("icd9code")["long_description"]
 
 
 # CACHED HELPER METHODS ################################################################################################
@@ -73,7 +73,7 @@ def get_icd_description(icd_code):
     If the code is not directly contained in the dataset, find the closest code
     """
     return (f"{icd_code} - {load_icd10_data().filter(like=icd_code, axis=0).iloc[0]['desc']}" if icd_code[0] == "C"
-                     else f"{icd_code} - {load_icd9_data().filter(regex=f'^{icd_code}', axis=0).iloc[0]}")
+            else f"{icd_code} - {load_icd9_data().filter(regex=f'^{icd_code}', axis=0).iloc[0]}")
 
 
 @st.cache_data
@@ -85,7 +85,7 @@ def get_average_percentage_state(data, state, attribute):
     """
 
     return (
-        data[data["patient_state"]==state][attribute].mean()
+        data[data["patient_state"] == state][attribute].mean()
     )
 
 
@@ -158,7 +158,7 @@ if uploaded_file is not None:
     if len(df) > 1:
         st.warning("""
             More than one patient contained within the file - only the first one will be considered.
-            Did you mean to do a batch prediction?
+            Perhaps you meant to use a batch prediction?
             """)
 
     patient_info = df.iloc[0]
@@ -168,7 +168,7 @@ st.divider()
 # PATIENT INFORMATION ##################################################################################################
 # If a patient has been loaded, automatically load the information into the form
 
-# Pre-load the Dataframe for reuse
+# Preload the Dataframe for reuse
 df_data = load_data()
 
 # Store the patient form submission in a dictionary
@@ -250,7 +250,6 @@ with st.form("single_form"):
     # If no data is loaded, the default value of a percentage is whatever the state is
     reload_percentages = st.form_submit_button("Compute percentages for chosen state")
     st.markdown("#### Percentage of the population of the patient state that:")
-
 
     # If the state has been reloaded, display a message and reset the state
     if st.session_state.reloaded:
@@ -370,14 +369,11 @@ plt.ylabel("Frequency")
 plt.tight_layout()
 
 # Color in red the bar belonging to the current patient
-for id, bar in enumerate(ax.patches):
-    if (id * 10) < processed_prediction < (id+1) * 10:
+for bar_id, bar in enumerate(ax.patches):
+    if (bar_id * 10) < processed_prediction < (bar_id+1) * 10:
         bar.set_facecolor("#FF474C")
     else:
         bar.set_facecolor("#a3d3e3")
 
 # Display the figure
 st.pyplot(fig)
-
-
-
