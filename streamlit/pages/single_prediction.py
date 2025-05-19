@@ -2,7 +2,7 @@
 # Streamlit Application
 #
 # Luna Jimenez Fernandez
-
+import json
 # The goal of this file is to develop a MVP of an application used to deploy the
 # trained model obtained through the full Data Science process.
 #
@@ -116,7 +116,6 @@ uploaded_file = st.file_uploader(
 )
 
 # Check if a file has been loaded
-
 if uploaded_file is not None:
 
     # Files will always be read as Pandas DataFrames
@@ -140,13 +139,13 @@ if uploaded_file is not None:
 
     # JSON files
     elif extension == ".json":
+        # Read the json using normalization, and then convert dtypes to their expected values
         df = (
-            pd.read_json(uploaded_file, typ="series", dtype={
-                "patient_zip3": object,
+            pd.json_normalize(json.load(uploaded_file))
+            .astype({
                 "breast_cancer_diagnosis_code": str,
                 "metastatic_cancer_diagnosis_code": str
             })
-            .to_frame().transpose()
             .fillna({
                 "payer_type": "UNKNOWN",
                 "patient_race": "UNKNOWN"
@@ -161,9 +160,6 @@ if uploaded_file is not None:
             """)
 
     patient_info = df.iloc[0]
-    # Sanity check - ensure that the diagnosis codes are ALWAYS treated as strings
-    patient_info["breast_cancer_diagnosis_code"] = str(patient_info["breast_cancer_diagnosis_code"])
-    patient_info["metastatic_cancer_diagnosis_code"] = str(patient_info["metastatic_cancer_diagnosis_code"])
 
 st.divider()
 
@@ -257,6 +253,7 @@ with st.form("single_form"):
     # If the state has been reloaded, display a message and reset the state
     if st.session_state.reloaded:
         st.success("Percentages automatically computed for the current state")
+        st.session_state.reloaded = False
 
     percent_col1, percent_col2 = st.columns(2)
     with percent_col1:
@@ -343,7 +340,7 @@ prediction = model.predict(df_input)
 processed_prediction = int(round(prediction.item(), 0))
 
 st.subheader("Predicted metastatic diagnosis period:")
-st.metric("",
+st.metric(label="Predicted metastatic diagnosis period",
           value=f"{processed_prediction} days",
           label_visibility="collapsed")
 
