@@ -51,8 +51,9 @@ def convert_for_download(df):
 st.set_page_config(page_title="Batch prediction", layout="wide")
 st.title("Metastatic Cancer Diagnosis - Delay in diagnosis prediction")
 st.markdown("""
+#### Women in Data Science Datathon 2024  - Challenge 2
 ## Batch prediction
-#### Women in Data Science 2024 - Challenge 2
+
 """)
 
 

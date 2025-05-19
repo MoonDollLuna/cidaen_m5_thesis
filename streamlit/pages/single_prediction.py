@@ -97,8 +97,10 @@ def get_average_percentage_state(data, state, attribute):
 st.set_page_config(page_title="Patient prediction", layout="wide")
 st.title("Metastatic Cancer Diagnosis - Delay in diagnosis prediction")
 st.markdown("""
+#### Women in Data Science Datathon 2024  - Challenge 2
 ## Patient prediction
-#### Women in Data Science 2024 - Challenge 2
+
+
 """)
 
 # Prepare session state values

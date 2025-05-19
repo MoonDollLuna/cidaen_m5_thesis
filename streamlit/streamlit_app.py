@@ -28,6 +28,7 @@ def to_categorical(dataframe):
 
     return dataframe.astype("category")
 
+
 ########################################################################################################################
 # APP DEFINITION - MAIN PAGE ###########################################################################################
 
@@ -39,7 +40,7 @@ pages = {
     ]
 }
 
-# Load the pages and run the script
+# Load the pages and run the information
 pg = st.navigation(pages)
 pg.run()
 
