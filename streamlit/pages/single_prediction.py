@@ -29,7 +29,7 @@ import seaborn as sns
 
 
 # MODEL AND DATA LOADING ###############################################################################################
-@st.cache_data
+@st.cache_resource
 def load_model():
     """Loads the trained model from disk and un-pickles it"""
     with open("model.pkl", "rb") as model_file:
@@ -108,7 +108,7 @@ if "reloaded" not in st.session_state:
 # Add a warning for first time loading
 if "loaded" not in st.session_state:
     st.session_state.loaded = True
-    st.warning("NOTE - Due to how Pickle and loading works, the model may give an error on first launch. Reloading"
+    st.warning("NOTE - Due to how Pickle and loading works, the model may give an error on first launch. Reloading "
                "the page should fix the problem.")
 
 # FILE UPLOAD AND PRE-PROCESSING ####################
