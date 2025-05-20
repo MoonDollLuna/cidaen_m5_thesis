@@ -111,6 +111,16 @@ if "loaded" not in st.session_state:
     st.warning("NOTE - Due to how Pickle and loading works, the model may give an error on first launch. Reloading "
                "the page should fix the problem.")
 
+# First-load values for numeric variables
+if "bachelors_degree" not in st.session_state:
+    st.session_state.bachelors_degree = 50.0
+if "college_degree" not in st.session_state:
+    st.session_state.college_degree = 50.0
+if "labor_force" not in st.session_state:
+    st.session_state.labor_force = 50.0
+if "dual_income" not in st.session_state:
+    st.session_state.dual_income = 50.0
+
 # FILE UPLOAD AND PRE-PROCESSING ####################
 
 # Storage of the patient info
@@ -260,7 +270,6 @@ with st.form("single_form"):
     # If the state has been reloaded, display a message and reset the state
     if st.session_state.reloaded:
         st.success("Percentages automatically computed for the current state")
-        st.session_state.reloaded = False
 
     percent_col1, percent_col2 = st.columns(2)
     with percent_col1:
@@ -275,7 +284,7 @@ with st.form("single_form"):
                     "education_bachelors"
                 ) if st.session_state.reloaded
                 else patient_info["education_bachelors"] if patient_info is not None
-                else 50.0
+                else st.session_state.bachelors_degree
             )
         )
 
@@ -290,7 +299,7 @@ with st.form("single_form"):
                     "labor_force_participation"
                 ) if st.session_state.reloaded
                 else patient_info["labor_force_participation"] if patient_info is not None
-                else 50.0
+                else st.session_state.labor_force
             )
         )
 
@@ -306,7 +315,7 @@ with st.form("single_form"):
                     "education_college_or_above"
                 ) if st.session_state.reloaded
                 else patient_info["education_college_or_above"] if patient_info is not None
-                else 50.0
+                else st.session_state.college_degree
             )
         )
 
@@ -321,16 +330,23 @@ with st.form("single_form"):
                     "family_dual_income"
                 ) if st.session_state.reloaded
                 else patient_info["family_dual_income"] if patient_info is not None
-                else 50.0
+                else st.session_state.dual_income
             )
         )
 
     # UPLOAD BUTTON
     submitted = st.form_submit_button("Predict")
+    st.session_state.reloaded = False
 
     if reload_percentages:
         st.session_state.reloaded = True
         st.rerun()
+
+# Store the current values of the variables in memory
+st.session_state.bachelors_degree = patient_submission["education_bachelors"]
+st.session_state.college_degree = patient_submission["education_college_or_above"]
+st.session_state.labor_force = patient_submission["labor_force_participation"]
+st.session_state.dual_income = patient_submission["family_dual_income"]
 
 ########################################################################################################################
 # MODEL OUTPUT #########################################################################################################

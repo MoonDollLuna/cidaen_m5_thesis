@@ -2,7 +2,7 @@
 # Streamlit Application
 #
 # Luna Jimenez Fernandez
-
+import pandas as pd
 # The goal of this file is to develop a MVP of an application used to deploy the
 # trained model obtained through the full Data Science process.
 #
