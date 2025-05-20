@@ -56,6 +56,11 @@ st.markdown("""
 
 """)
 
+# Add a warning for first time loading
+if "loaded" not in st.session_state:
+    st.session_state.loaded = True
+    st.warning("NOTE - Due to how Pickle and loading works, the model may give an error on first launch. Reloading"
+               "the page should fix the problem.")
 
 # FILE UPLOAD ##########################################################################################################
 uploaded_file = st.file_uploader(

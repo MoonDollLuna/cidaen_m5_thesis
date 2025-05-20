@@ -99,13 +99,17 @@ st.title("Metastatic Cancer Diagnosis - Delay in diagnosis prediction")
 st.markdown("""
 #### Women in Data Science Datathon 2024  - Challenge 2 / Developed by Luna Jimenez Fernandez
 ## Patient prediction
-
-
 """)
 
 # Prepare session state values
 if "reloaded" not in st.session_state:
     st.session_state.reloaded = False
+
+# Add a warning for first time loading
+if "loaded" not in st.session_state:
+    st.session_state.loaded = True
+    st.warning("NOTE - Due to how Pickle and loading works, the model may give an error on first launch. Reloading"
+               "the page should fix the problem.")
 
 # FILE UPLOAD AND PRE-PROCESSING ####################
 
