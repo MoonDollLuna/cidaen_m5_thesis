@@ -1,0 +1,12 @@
+\xpg@aux {}{spanish}
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Revisión de técnicas}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Análisis exploratorio de datos}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Preprocesamiento del conjunto de datos}{7}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Modelado}{9}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Aplicación web}{11}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Resultados}{13}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{15}{chapter.8}%
+\contentsline {chapter}{Referencia bibliográfica}{17}{chapter*.6}%
+\contentsline {chapter}{\numberline {A}Anexo 1}{19}{appendix.A}%
+\contentsfinish 
