@@ -1,12 +1,40 @@
 \xpg@aux {}{spanish}
-\contentsline {chapter}{\numberline {1}Introducción al problema}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Objetivos}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Estructura de la memoria}{1}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Revisión de técnicas}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Análisis exploratorio de datos}{5}{chapter.3}%
+\contentsline {section}{\numberline {2.1}Ciencia de datos}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Búsqueda de hiperparámetros y validación cruzada}{3}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Modelos propuestos}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Modelos lineales}{3}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Máquinas de vectores de soporte}{3}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Árboles de decisión y \textit {ensembles}}{3}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Estudio del problema}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definición del problema}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Atributos del problema}{5}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Análisis exploratorio de datos}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Variable objetivo - distribución y comportamiento}{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Valores perdidos}{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Atributos categóricos}{5}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Atributos numéricos}{5}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Variables geográficas, sociales y económicas}{5}{subsection.3.2.5}%
 \contentsline {chapter}{\numberline {4}Preprocesamiento del conjunto de datos}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Modelado}{9}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Selección de atributos}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Procesamiento de los datos}{7}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Modelado y experimentación}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Selección de modelos}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Experimentación}{9}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Ajuste de hiperparámetros y selección de subconjuntos de atributos}{9}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Validación y selección de modelo final}{9}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Análisis de resultados}{9}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Rendimiento de los subconjuntos de hiperparámetros}{9}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Rendimiento de los modelos entrenados}{9}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Rendimiento del modelo final}{9}{subsection.5.3.3}%
 \contentsline {chapter}{\numberline {6}Aplicación web}{11}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Resultados}{13}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{15}{chapter.8}%
-\contentsline {chapter}{Referencia bibliográfica}{17}{chapter*.6}%
-\contentsline {chapter}{\numberline {A}Anexo 1}{19}{appendix.A}%
+\contentsline {section}{\numberline {6.1}Aplicación para usuario - predicción individual}{11}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en grupo}{11}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Trabajo futuro}{13}{section.7.1}%
+\contentsline {chapter}{Referencia bibliográfica}{15}{chapter*.6}%
+\contentsline {chapter}{\numberline {A}Anexo 1}{17}{appendix.A}%
 \contentsfinish 
