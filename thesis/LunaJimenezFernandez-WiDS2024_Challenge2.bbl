@@ -1,3 +1,53 @@
-\begin{thebibliography}{}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\end{thebibliography}
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{widsdatathon2024-challenge2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=292cbbca60ff4b8b0fee6cde89b78f45}{%
+           family={{Women in Data Science}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{fullhash}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{fullhashraw}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{bibnamehash}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{authorbibnamehash}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{authornamehash}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{authorfullhash}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \strng{authorfullhashraw}{292cbbca60ff4b8b0fee6cde89b78f45}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Kaggle}
+      \field{title}{{WiDS Datathon 2024 Challenge #2}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://kaggle.com/competitions/widsdatathon2024-challenge2
+      \endverb
+      \verb{url}
+      \verb https://kaggle.com/competitions/widsdatathon2024-challenge2
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

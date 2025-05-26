@@ -1,5 +1,36 @@
 \chapter{Introducción}
 
+El acceso equitativo a una \textbf{atención sanitaria de calidad} es un problema de gran interés a nivel global, existiendo desigualdades sustanciales en la \textbf{calidad y acceso} a dicho servicio entre distintas poblaciones. Estos problemas, además, se pueden llegar a exacerbar por distintos factores: geográficos, socioeconómicos y climáticos.
+
+Con el fin de estudiar la influencia de dichos factores en la atención sanitaria, la iniciativa \textit{Women in Data Science} propuso en el año 2024 una \textbf{competición} \cite{widsdatathon2024-challenge2} con el objetivo de \textbf{estimar el tiempo necesario para realizar un diagnóstico de metástasis para cáncer de mama} a partir de un conjunto de datos médico ampliado con información geográfica, socioeconómica y climática - y, a su vez, estudiar como dichos factores pueden influir al tiempo necesario para realizar un diagnóstico.
+
+Por tanto, la meta de este trabajo es la creación de \textbf{modelos de regresión} capaces de estimar dicho tiempo de diagnóstico con el menor error posible - utilizando, para ello, el proceso completo de \textbf{ciencia de datos}.
+
 \section{Objetivos}
 
+El principal objetivo de este trabajo es el \textbf{desarrollo de un modelo de regresión} capaz de resolver el problema propuesto por la competición: la predicción del tiempo necesario para realizar un diagnóstico de metástasis de cáncer de mama, evaluando su rendimiento y dejando disponible el modelo para ser accesible por los hipotéticos usuarios finales.
+
+Para alcanzar dicho objetivo, es necesario llevar a cabo los siguientes pasos, siguiendo el \textbf{ciclo de vida de la ciencia de datos}:
+\begin{enumerate}
+	\item Análisis exploratorio de los datos disponibles en la competición, para comprender su comportamiento y características.
+	\item Pre-procesamiento de los datos para la propuesta de subconjuntos de atributos reducidos y preparación posterior para el uso con modelos.
+	\item Estudio, selección y caracterización de los modelos y sus hiperparámetros a estudiar durante el proceso.
+	\item Experimentación y estudio de los resultados para seleccionar un modelo definitivo a ser utilizado.
+	\item Creación de una aplicación web para desplegar el modelo final entrenado, con el fin de ser utilizado por expertos en el campo de la medicina sin experiencia previa en ciencia de datos.
+\end{enumerate}
+
+A su vez, este trabajo aborda el segundo objetivo planteado por la propia competición: el \textbf{estudio de la influencia de los factores geográficos, socioeconómicos y climáticos} en la calidad de la atención sanitaria.
+
 \section{Estructura de la memoria}
+
+La memoria está dividida en un total de \textbf{7} capítulos, como se describen a continuación:
+
+\begin{itemize}
+	\item \textbf{Capítulo 1:} En este capítulo se introduce el problema a resolver, los objetivos que se busca cumplir con el trabajo y la estructura general de la memoria.
+	\item \textbf{Capítulo 2:} En este capítulo se realiza una breve revisión de las principales técnicas a utilizar durante la memoria: tanto el proceso de ciencia de datos y sus etapas como los modelos a utilizar durante la experimentación - desde los modelos simples como las regresiones lineales y los árboles de decisiones hasta los \textit{ensembles} de modelos simples.
+	\item \textbf{Capítulo 3:} En este capítulo se realiza un estudio más exhaustivo del problema: tanto su definición como un análisis exploratorio de los datos disponibles, estudiando el comportamiento de la variable objetivo y la relevancia y correlación de los atributos respecto al tiempo de diagnóstico.
+	\item \textbf{Capítulo 4:} En este capítulo se introduce el pre-procesamiento a realizar sobre el conjunto de datos, obteniendo varios subconjuntos de atributos reducidos a ser estudiado posteriormente y preparando \textit{pipelines} automáticos para realizar todas las transformaciones necesarias para el uso de los datos por parte de los modelos.
+	\item \textbf{Capítulo 5:} En este capítulo se detalla la experimentación a realizar. Se proponen varios modelos sobre los que se realizará un proceso de ajuste de hiperparámetros y selección de modelos, con el fin de obtener un modelo definitivo a ser utilizado para resolver el problema. Además, se presentan y estudian los resultados de dicha experimentación.
+	\item \textbf{Capítulo 6:} En este capítulo se presenta una aplicación web a través de la cual se hace disponible a los usuarios expertos el modelo obtenido en el capítulo anterior - detallando la interfaz gráfica y las distintas funcionalidades ofrecidas.
+	\item \textbf{Capítulo 7:} Finalmente, en este capítulo se muestran las conclusiones alcanzadas tras el desarrollo del trabajo, proponiendo posibles lineas de trabajo futuro para ampliarlo.
+\end{itemize}

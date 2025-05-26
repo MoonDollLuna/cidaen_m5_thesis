@@ -1,7 +1,7 @@
 \xpg@aux {}{spanish}
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Objetivos}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Estructura de la memoria}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Estructura de la memoria}{2}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Revisión de técnicas}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Ciencia de datos}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Búsqueda de hiperparámetros y validación cruzada}{3}{subsection.2.1.1}%

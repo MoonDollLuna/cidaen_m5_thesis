@@ -1,50 +1,14 @@
-This is BibTeX, Version 0.99d
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: LunaJimenezFernandez-WiDS2024_Challenge2.aux
-Reallocating 'name_of_file' (item size: 1) to 8 items.
-The style file: apalike.bst
-Reallocating 'name_of_file' (item size: 1) to 8 items.
-I found no \citation commands---while reading file LunaJimenezFernandez-WiDS2024_Challenge2.aux
-Database file #1: bib/ref.bib
-You've used 0 entries,
-            1935 wiz_defined-function locations,
-            471 strings with 3739 characters,
-and the built_in function-call counts, 17 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 1
-stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'LunaJimenezFernandez-WiDS2024_Challenge2.blg'
+[119] biber-MSWIN64:340> INFO - === 
+[166] Biber.pm:420> INFO - Reading 'LunaJimenezFernandez-WiDS2024_Challenge2.bcf'
+[302] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
+[320] Biber.pm:4463> INFO - Processing section 0
+[331] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[409] bibtex.pm:1713> INFO - LaTeX decoding ...
+[424] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[470] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[470] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[470] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[475] bbl.pm:676> INFO - Writing 'LunaJimenezFernandez-WiDS2024_Challenge2.bbl' with encoding 'UTF-8'
+[476] bbl.pm:779> INFO - Output to LunaJimenezFernandez-WiDS2024_Challenge2.bbl

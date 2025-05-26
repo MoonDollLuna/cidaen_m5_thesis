@@ -17,6 +17,17 @@
 % -------------------------------
 \input{include/configuracion}
 
+%---------------------------------
+% Bibliografia
+%----------------------------------
+\usepackage[style=ieee]{biblatex}
+\addbibresource{bibliography.bib}
+
+%------------------------------
+% Espacio entre parrafos
+%------------------------------
+% \usepackage{parskip}
+
 % Documento
 \begin{document}
 
@@ -42,7 +53,7 @@
 % Índices y tablas
 % -------------------------------
 % EXTEND THE TOC TO SHOW SECTIONS
-\setcounter{docdepth}{1}
+% \setcounter{docdepth}{1}
 
 \tableofcontents	% Índice
 \listoffigures		% Índice de figuras
@@ -88,8 +99,7 @@
 % -------------------------------
 % Bibliografía
 % -------------------------------
-\bibliographystyle{apalike}
-\bibliography{bib/ref} 
+\printbibliography
 \addcontentsline{toc}{chapter}{Referencia bibliográfica} % Añade a la tabla de contenidos
 
 % -------------------------------
@@ -101,7 +111,6 @@
 
 \appendix
 \chapter{Anexo 1}
-\lipsum[1-2]
 
 
 \end{document}
