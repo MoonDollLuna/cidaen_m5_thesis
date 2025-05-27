@@ -33,8 +33,8 @@
       \strng{authornamehash}{292cbbca60ff4b8b0fee6cde89b78f45}
       \strng{authorfullhash}{292cbbca60ff4b8b0fee6cde89b78f45}
       \strng{authorfullhashraw}{292cbbca60ff4b8b0fee6cde89b78f45}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Kaggle}
@@ -46,6 +46,346 @@
       \verb{url}
       \verb https://kaggle.com/competitions/widsdatathon2024-challenge2
       \endverb
+    \endentry
+    \entry{Donoho02102017}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=23af46b5a4dbca86d29088deef59d608}{%
+           family={and},
+           familyi={a\bibinitperiod},
+           given={David\bibnamedelima Donoho},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ASA Website}%
+      }
+      \strng{namehash}{23af46b5a4dbca86d29088deef59d608}
+      \strng{fullhash}{23af46b5a4dbca86d29088deef59d608}
+      \strng{fullhashraw}{23af46b5a4dbca86d29088deef59d608}
+      \strng{bibnamehash}{23af46b5a4dbca86d29088deef59d608}
+      \strng{authorbibnamehash}{23af46b5a4dbca86d29088deef59d608}
+      \strng{authornamehash}{23af46b5a4dbca86d29088deef59d608}
+      \strng{authorfullhash}{23af46b5a4dbca86d29088deef59d608}
+      \strng{authorfullhashraw}{23af46b5a4dbca86d29088deef59d608}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational and Graphical Statistics}
+      \field{number}{4}
+      \field{title}{50 Years of Data Science}
+      \field{volume}{26}
+      \field{year}{2017}
+      \field{pages}{745\bibrangedash 766}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1080/10618600.2017.1384734
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/10618600.2017.1384734
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/10618600.2017.1384734
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/10618600.2017.1384734
+      \endverb
+    \endentry
+    \entry{10.1145/2500499}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=72e7dd6096ad871a58725f4261fc9706}{%
+           family={Dhar},
+           familyi={D\bibinitperiod},
+           given={Vasant},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{fullhash}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{fullhashraw}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{bibnamehash}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{authorbibnamehash}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{authornamehash}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{authorfullhash}{72e7dd6096ad871a58725f4261fc9706}
+      \strng{authorfullhashraw}{72e7dd6096ad871a58725f4261fc9706}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Big data promises automated actionable knowledge creation and predictive models for use by both humans and computers.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Data science and prediction}
+      \field{volume}{56}
+      \field{year}{2013}
+      \field{pages}{64\bibrangedash 73}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/2500499
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2500499
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2500499
+      \endverb
+    \endentry
+    \entry{potential}{article}{}{}
+      \name{author}{11}{}{%
+        {{hash=d040532f89b44b40a73ff195443aef95}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Francine},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0cc2353f20988c52be331f0bfc97cf44}{%
+           family={Rutenbar},
+           familyi={R\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1b1512a7e4b58e35027b2858d102ea5d}{%
+           family={Hailpern},
+           familyi={H\bibinitperiod},
+           given={Brent},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3ee980e820e01b403005f312d8f06737}{%
+           family={Christensen},
+           familyi={C\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2e8b3098624fa0217809d4ed9e007b55}{%
+           family={Davidson},
+           familyi={D\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=222e100454bced2fd8e9e786fce92f41}{%
+           family={Estrin},
+           familyi={E\bibinitperiod},
+           given={Deborah},
+           giveni={D\bibinitperiod}}}%
+        {{hash=37be38e43f957d78e9807b819eb7a72b}{%
+           family={Franklin},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=51a2ecd59392c7fa73fa8648cea933be}{%
+           family={Martonosi},
+           familyi={M\bibinitperiod},
+           given={Margaret},
+           giveni={M\bibinitperiod}}}%
+        {{hash=66b413d251583fb223d8eb099c122d46}{%
+           family={Raghavan},
+           familyi={R\bibinitperiod},
+           given={Padma},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2f18fc23a917fe1f0c74958b593f4e71}{%
+           family={Stodden},
+           familyi={S\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
+        {{hash=51ccd89934c8aeb714a816f2b047905e}{%
+           family={Szalay},
+           familyi={S\bibinitperiod},
+           given={Alexander\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c5679f828e64e9ff84d223e08b6f5943}
+      \strng{fullhash}{ff2a542eee0073a26ac1478f5beccacf}
+      \strng{fullhashraw}{ff2a542eee0073a26ac1478f5beccacf}
+      \strng{bibnamehash}{c5679f828e64e9ff84d223e08b6f5943}
+      \strng{authorbibnamehash}{c5679f828e64e9ff84d223e08b6f5943}
+      \strng{authornamehash}{c5679f828e64e9ff84d223e08b6f5943}
+      \strng{authorfullhash}{ff2a542eee0073a26ac1478f5beccacf}
+      \strng{authorfullhashraw}{ff2a542eee0073a26ac1478f5beccacf}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Data science promises new insights, helping transform information into knowledge that can drive science and industry.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{3}
+      \field{number}{4}
+      \field{title}{Realizing the potential of data science}
+      \field{volume}{61}
+      \field{year}{2018}
+      \field{pages}{67\bibrangedash 72}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/3188721
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3188721
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3188721
+      \endverb
+    \endentry
+    \entry{datasciencelifecycle}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2f18fc23a917fe1f0c74958b593f4e71}{%
+           family={Stodden},
+           familyi={S\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{fullhash}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{fullhashraw}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{bibnamehash}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{authorbibnamehash}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{authornamehash}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{authorfullhash}{2f18fc23a917fe1f0c74958b593f4e71}
+      \strng{authorfullhashraw}{2f18fc23a917fe1f0c74958b593f4e71}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A cycle that traces ways to define the landscape of data science.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{6}
+      \field{number}{7}
+      \field{title}{The data science life cycle: a disciplined approach to advancing data science as a science}
+      \field{volume}{63}
+      \field{year}{2020}
+      \field{pages}{58\bibrangedash 66}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3360646
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3360646
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3360646
+      \endverb
+    \endentry
+    \entry{Wing2019Data}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc244460284339da385f5113c9207b79}{%
+           family={Wing},
+           familyi={W\bibinitperiod},
+           given={Jeannette\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{fc244460284339da385f5113c9207b79}
+      \strng{fullhash}{fc244460284339da385f5113c9207b79}
+      \strng{fullhashraw}{fc244460284339da385f5113c9207b79}
+      \strng{bibnamehash}{fc244460284339da385f5113c9207b79}
+      \strng{authorbibnamehash}{fc244460284339da385f5113c9207b79}
+      \strng{authornamehash}{fc244460284339da385f5113c9207b79}
+      \strng{authorfullhash}{fc244460284339da385f5113c9207b79}
+      \strng{authorfullhashraw}{fc244460284339da385f5113c9207b79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Harvard Data Science Review}
+      \field{month}{7}
+      \field{note}{https://hdsr.mitpress.mit.edu/pub/577rq08d}
+      \field{number}{1}
+      \field{title}{The {Data} {Life} {Cycle}}
+      \field{volume}{1}
+      \field{year}{2019}
+    \endentry
+    \entry{eda}{inbook}{}{}
+      \name{author}{4}{}{%
+        {{hash=cef5f97856a02a62b952884f01f514d7}{%
+           family={Komorowski},
+           familyi={K\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ea839438eb4bda8a230841d85c9b4356}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e3d73ce1594839b0e65e94ca919078ca}{%
+           family={Salciccioli},
+           familyi={S\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a582d8b71c5e4fdc296d1b9d4f427dc1}{%
+           family={Crutain},
+           familyi={C\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{92a587fb1edb468f2003f0f74c5b8f9e}
+      \strng{fullhash}{79ab314cc6b8bf34aa20d58529a23281}
+      \strng{fullhashraw}{79ab314cc6b8bf34aa20d58529a23281}
+      \strng{bibnamehash}{79ab314cc6b8bf34aa20d58529a23281}
+      \strng{authorbibnamehash}{79ab314cc6b8bf34aa20d58529a23281}
+      \strng{authornamehash}{92a587fb1edb468f2003f0f74c5b8f9e}
+      \strng{authorfullhash}{79ab314cc6b8bf34aa20d58529a23281}
+      \strng{authorfullhashraw}{79ab314cc6b8bf34aa20d58529a23281}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-43740-8}
+      \field{journaltitle}{Secondary Analysis of Electronic Health Records}
+      \field{month}{09}
+      \field{title}{Exploratory Data Analysis}
+      \field{year}{2016}
+      \field{pages}{185\bibrangedash 203}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-3-319-43742-2_15
+      \endverb
+    \endentry
+    \entry{shearer2000crisp}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3a4e3f5f408e7cfa7e86f42b4a99fe8b}{%
+           family={Shearer},
+           familyi={S\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {THE DATA WAREHOUSE INSTITUTE}%
+      }
+      \strng{namehash}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{fullhash}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{fullhashraw}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{bibnamehash}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{authorbibnamehash}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{authornamehash}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{authorfullhash}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \strng{authorfullhashraw}{3a4e3f5f408e7cfa7e86f42b4a99fe8b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of data warehousing}
+      \field{number}{4}
+      \field{title}{The CRISP-DM model: the new blueprint for data mining}
+      \field{volume}{5}
+      \field{year}{2000}
+      \field{pages}{13\bibrangedash 22}
+      \range{pages}{10}
+      \keyw{crisp data deepscan dm mining}
     \endentry
   \enddatalist
 \endrefsection
