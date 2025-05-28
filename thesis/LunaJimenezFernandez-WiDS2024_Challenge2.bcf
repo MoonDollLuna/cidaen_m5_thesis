@@ -2386,8 +2386,14 @@
     <bcf:citekey order="13" intorder="1">Wing2019Data</bcf:citekey>
     <bcf:citekey order="14" intorder="1">Wing2019Data</bcf:citekey>
     <bcf:citekey order="15" intorder="1">eda</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">shearer2000crisp</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">datasciencelifecycle</bcf:citekey>
     <bcf:citekey order="17" intorder="1">shearer2000crisp</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">shearer2000crisp</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Mariscal_Marbán_Fernández_2010</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">datasciencepmCRISPDMStill</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">shearer2000crisp</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">shearer2000crisp</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">shearer2000crisp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

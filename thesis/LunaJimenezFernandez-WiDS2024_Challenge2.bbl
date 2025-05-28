@@ -254,8 +254,8 @@
       \strng{authornamehash}{2f18fc23a917fe1f0c74958b593f4e71}
       \strng{authorfullhash}{2f18fc23a917fe1f0c74958b593f4e71}
       \strng{authorfullhashraw}{2f18fc23a917fe1f0c74958b593f4e71}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A cycle that traces ways to define the landscape of data science.}
@@ -386,6 +386,72 @@
       \field{pages}{13\bibrangedash 22}
       \range{pages}{10}
       \keyw{crisp data deepscan dm mining}
+    \endentry
+    \entry{Mariscal_Marbán_Fernández_2010}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=91bcf0ea2676a22759662afa148d72b3}{%
+           family={Mariscal},
+           familyi={M\bibinitperiod},
+           given={Gonzalo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ece4d6674fc2e763afc41249e0b4b60d}{%
+           family={Marbán},
+           familyi={M\bibinitperiod},
+           given={Óscar},
+           giveni={Ó\bibinitperiod}}}%
+        {{hash=bbad2fb0d63efdcca1d78a1431c0ce8e}{%
+           family={Fernández},
+           familyi={F\bibinitperiod},
+           given={Covadonga},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c545158fcf56fc036638ad92c4896881}
+      \strng{fullhash}{7785888eb6e95448d9dbb7479502296b}
+      \strng{fullhashraw}{7785888eb6e95448d9dbb7479502296b}
+      \strng{bibnamehash}{7785888eb6e95448d9dbb7479502296b}
+      \strng{authorbibnamehash}{7785888eb6e95448d9dbb7479502296b}
+      \strng{authornamehash}{c545158fcf56fc036638ad92c4896881}
+      \strng{authorfullhash}{7785888eb6e95448d9dbb7479502296b}
+      \strng{authorfullhashraw}{7785888eb6e95448d9dbb7479502296b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Knowledge Engineering Review}
+      \field{number}{2}
+      \field{title}{A survey of data mining and knowledge discovery process models and methodologies}
+      \field{volume}{25}
+      \field{year}{2010}
+      \field{pages}{137\bibrangedash 166}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1017/S0269888910000032
+      \endverb
+    \endentry
+    \entry{datasciencepmCRISPDMStill}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f70416afe1ca400f31d9bbacbd9b44e}{%
+           family={Saltz},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{fullhash}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{fullhashraw}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{bibnamehash}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{authorbibnamehash}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{authornamehash}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{authorfullhash}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \strng{authorfullhashraw}{4f70416afe1ca400f31d9bbacbd9b44e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.datascience-pm.com/crisp-dm-still-most-popular/}}
+      \field{note}{[Accessed 28-05-2025]}
+      \field{title}{{C}{R}{I}{S}{P}-{D}{M} is {S}till the {M}ost {P}opular {F}ramework for {E}xecuting {D}ata {S}cience {P}rojects - {D}ata {S}cience {P}{M} --- datascience-pm.com}
+      \field{year}{2024}
     \endentry
   \enddatalist
 \endrefsection

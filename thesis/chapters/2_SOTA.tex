@@ -1,6 +1,7 @@
 \chapter{Revisión de técnicas}
 
-En este capítulo se describen los procesos y algoritmos utilizados a lo largo del trabajo descrito en esta memoria. Concretamente, se explica el concepto de la \textbf{ciencia de datos} y su ciclo de vida, detallando los conceptos principales en cada una de las etapas del proceso. Tras esto, se estudian los modelos de regresión utilizados durante el trabajo - con especial énfasis en los modelos de \textit{ensembles} basados en técnicas de \textit{\textbf{Gradient Boosting}}.
+En este capítulo se describen los procesos y algoritmos utilizados a lo largo del trabajo descrito en esta memoria. Concretamente, se comienza explicando el concepto de la \textbf{ciencia de datos} y su ciclo de vida, haciendo énfasis en \textbf{CRISP-DM} como metodología utilizada a lo largo del proyecto para resolver el problema propuesto. Tras esto, se estudian conceptos de aprendizaje automático como los \textbf{modelos de regresión} - haciendo especial énfasis en los modelos de \textit{ensemble} basados en técnicas de \textbf{\textit{Gradient Boosting}} - o la búsqueda de hiperparámetros.
+
 
 \section{Ciencia de datos y el ciclo de vida de los datos}
 
@@ -15,7 +16,9 @@ Desde su origen, la ciencia de datos ha evolucionado como un campo interdiscipli
 	\label{fig:datalifecycle}
 \end{figure}
 
-Por definición, la ciencia de datos depende completamente de los datos sobre los que se trabajan. Por esto, los ciclos de vida de la ciencia de datos dependen generalmente del \textbf{ciclo de vida de los datos}: las distintas etapas por las que pasa un conjunto de datos desde su recolección e investigación hasta su uso final \cite{datasciencelifecycle}. Como se observa en la \textbf{Figura \ref{fig:datalifecycle}}, este ciclo está tradicionalmente dividido en \textbf{cinco} apartados \cite{potential}:
+Por definición, la ciencia de datos depende de los datos sobre los que se está trabajando. Por esto, el proceso de trabajo de la ciencia de datos depende generalmente del \textbf{ciclo de vida de los datos}: las distintas etapas por las que pasa un conjunto de datos desde su recolección e investigación hasta su uso final \cite{datasciencelifecycle}. Como se observa en la \textbf{Figura \ref{fig:datalifecycle}}, este ciclo está tradicionalmente dividido en \textbf{cinco} apartados \cite{potential}:
+
+
 
 \begin{enumerate}
 	\item \textbf{Adquisición:} En la actualidad, los datos se generan en cantidades masivas - del orden de \textbf{exabytes por hora} \cite{Wing2019Data}. Por tanto, el primer paso del ciclo consiste en la adquisición y almacenamiento eficiente de los datos necesarios para el proceso.
@@ -30,16 +33,38 @@ Por definición, la ciencia de datos depende completamente de los datos sobre lo
 	\item \textbf{Preservación o destrucción:} El quinto y último paso del ciclo consiste en la preservación o destrucción de los datos utilizados - cumpliendo con otros factores como pueden ser las consideraciones éticas o regulatorias.
 \end{enumerate}
 
+Con el fin de regularizar, estandarizar y hacer reproducible el proceso completo de la ciencia de datos - desde la adquisición de los conjuntos de datos hasta la distribución de los resultados -, se han propuesto varias ampliaciones y adaptaciones del ciclo de datos estudiado, conocidas como \textbf{ciclos de vida de la ciencia de datos} \cite{datasciencelifecycle}. 
 
+Aunque actualmente no existe un ciclo estandarizado, uno de los procesos más utilizados para ciencia de datos es el \textbf{Cross-Industry Standard Process for Data Mining (\textit{CRISP-DM})}, propuesto originalmente para el campo de la minería de datos pero adaptado a las necesidades de la ciencia de datos \cite{shearer2000crisp}.
 
-\subsection{CRISP-DM: Cross-Industry Standard Process for Data Mining}
+\subsection{Cross-Industry Standard Process for Data Mining - CRISP-DM}
+
+\textbf{Cross-Industry Standard Process for Data Mining} (abreviado como \textit{CRISP-DM}) es una metodología desarrollada con el fin de ofrecer un proceso de trabajo completo de principio a fin para la minería de datos; independientemente del campo, las herramientas o la aplicación final de los datos \cite{shearer2000crisp}. Si bien fue propuesto originalmente en el año 2000, en la actualidad sigue siendo uno de los procesos más utilizados tanto en minería de datos como en ciencia de datos \cite{Mariscal_Marbán_Fernández_2010} \cite{datasciencepmCRISPDMStill}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.6\linewidth]{figs/chapter2/crispdm}
-	\caption{Ciclo de vida de la ciencia de datos según CRISP-DM \cite{shearer2000crisp}}
+	\caption{Ciclo de vida de CRISP-DM \cite{shearer2000crisp}}
 	\label{fig:crispdm}
 \end{figure}
+
+Como se observa en la \textbf{Figura \ref{fig:crispdm}}, el ciclo de CRISP-DM está dividido en \textbf{seis fases} \cite{shearer2000crisp}, similares al ciclo de datos estudiado:
+
+\begin{enumerate}
+	\item \textbf{Conocimiento del campo (\textit{Business Understanding}):} El primer paso del ciclo consiste en entender el problema y los objetivos a resolver - estudiando la situación actual y estableciendo los pasos para alcanzar las metas propuestas.
+	\item \textbf{Conocimiento de los datos (\textit{Data Understanding}):} El segundo paso del ciclo consiste en adquirir y estudiar los datos - tanto de forma superficial como en un análisis exploratorio más profundo -, además de verificar que los datos disponibles son útiles para los objetivos propuestos.
+	\item \textbf{Preparación de los datos (\textit{Data Preparation}):} Tras la adquisición de conocimiento, el tercer paso consiste en preparar los datos obtenidos para su uso posterior - seleccionando las instancias relevantes, limpiando los datos para eliminar valores perdidos, enriqueciendo los datos con información externa...
+	\item \textbf{Modelado (\textit{Modeling}):} Con los datos preparados, la cuarta fase del ciclo consiste en el uso y calibración de modelos de aprendizaje automático - definiendo los estudios y experimentos a realizar sobre los modelos, y evaluando el rendimiento final de éstos.
+	\item \textbf{Evaluación (\textit{Evaluation}):} Antes de desplegar el modelo final, la quinta fase del ciclo consiste en evaluar si los resultados obtenidos satisfacen los objetivos propuestos y si el proceso de ciencia de datos se ha aplicado de forma adecuada.
+	\item \textbf{Despliegue (\textit{Deployment}):} La última fase del ciclo es el despliegue y diseminación de los resultados obtenidos - haciendo disponible el modelo y los resultados a los usuarios finales.
+	
+\end{enumerate}
+
+Es importante destacar que, como indican las flechas de la \textbf{Figura \ref{fig:crispdm}}, la metodología propuesta no es linear, sino que el flujo entre los distintos pasos se puede ver alterado:
+\begin{itemize}
+	\item Las fases tienen dependencias entre sí - los descubrimientos en algunas fases pueden producir que sea necesario volver a fases anteriores para perfeccionar el proceso.
+	\item El proceso es \textbf{cíclico} - los conocimientos adquiridos durante las distintas fases se aplican para refinar futuros procesos, ya sean sobre el mismo conjunto de datos o datos nuevos.
+\end{itemize}
 
 
 \section{Aprendizaje supervisado y modelos de regresión}
@@ -59,3 +84,5 @@ Por definición, la ciencia de datos depende completamente de los datos sobre lo
 \subsubsection{Boosting}
 
 \subsubsection{Gradient Boosting}
+
+\subsection{Ajuste de hiperparámetros y validación cruzada}

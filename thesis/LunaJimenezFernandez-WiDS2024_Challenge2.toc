@@ -4,16 +4,17 @@
 \contentsline {section}{\numberline {1.2}Estructura de la memoria}{2}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Revisión de técnicas}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Ciencia de datos y el ciclo de vida de los datos}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}CRISP-DM: Cross-Industry Standard Process for Data Mining}{4}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Aprendizaje supervisado y modelos de regresión}{4}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Modelos simples}{4}{subsection.2.2.1}%
-\contentsline {subsubsection}{Modelos de regresión lineal}{5}{subsection.2.2.1}%
-\contentsline {subsubsection}{Árboles de decisión}{5}{subsection.2.2.1}%
-\contentsline {subsubsection}{Máquinas de vectores de soporte}{5}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Modelos grupales - Ensembles}{5}{subsection.2.2.2}%
-\contentsline {subsubsection}{Bagging}{5}{subsection.2.2.2}%
-\contentsline {subsubsection}{Boosting}{5}{subsection.2.2.2}%
-\contentsline {subsubsection}{Gradient Boosting}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.1.1}Cross-Industry Standard Process for Data Mining - CRISP-DM}{5}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Aprendizaje supervisado y modelos de regresión}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Modelos simples}{6}{subsection.2.2.1}%
+\contentsline {subsubsection}{Modelos de regresión lineal}{6}{subsection.2.2.1}%
+\contentsline {subsubsection}{Árboles de decisión}{6}{subsection.2.2.1}%
+\contentsline {subsubsection}{Máquinas de vectores de soporte}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Modelos grupales - Ensembles}{6}{subsection.2.2.2}%
+\contentsline {subsubsection}{Bagging}{6}{subsection.2.2.2}%
+\contentsline {subsubsection}{Boosting}{6}{subsection.2.2.2}%
+\contentsline {subsubsection}{Gradient Boosting}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Ajuste de hiperparámetros y validación cruzada}{6}{subsection.2.2.3}%
 \contentsline {chapter}{\numberline {3}Estudio del problema}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definición del problema}{7}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Atributos del problema}{7}{subsection.3.1.1}%
@@ -40,6 +41,6 @@
 \contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en grupo}{13}{section.6.2}%
 \contentsline {chapter}{\numberline {7}Conclusiones}{15}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Trabajo futuro}{15}{section.7.1}%
-\contentsline {chapter}{Referencia bibliográfica}{17}{chapter*.8}%
+\contentsline {chapter}{Referencia bibliográfica}{18}{chapter*.8}%
 \contentsline {chapter}{\numberline {A}Anexo 1}{19}{appendix.A}%
 \contentsfinish 
