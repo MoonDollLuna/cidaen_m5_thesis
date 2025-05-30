@@ -387,47 +387,6 @@
       \range{pages}{10}
       \keyw{crisp data deepscan dm mining}
     \endentry
-    \entry{Mariscal_Marbán_Fernández_2010}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=91bcf0ea2676a22759662afa148d72b3}{%
-           family={Mariscal},
-           familyi={M\bibinitperiod},
-           given={Gonzalo},
-           giveni={G\bibinitperiod}}}%
-        {{hash=ece4d6674fc2e763afc41249e0b4b60d}{%
-           family={Marbán},
-           familyi={M\bibinitperiod},
-           given={Óscar},
-           giveni={Ó\bibinitperiod}}}%
-        {{hash=bbad2fb0d63efdcca1d78a1431c0ce8e}{%
-           family={Fernández},
-           familyi={F\bibinitperiod},
-           given={Covadonga},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{c545158fcf56fc036638ad92c4896881}
-      \strng{fullhash}{7785888eb6e95448d9dbb7479502296b}
-      \strng{fullhashraw}{7785888eb6e95448d9dbb7479502296b}
-      \strng{bibnamehash}{7785888eb6e95448d9dbb7479502296b}
-      \strng{authorbibnamehash}{7785888eb6e95448d9dbb7479502296b}
-      \strng{authornamehash}{c545158fcf56fc036638ad92c4896881}
-      \strng{authorfullhash}{7785888eb6e95448d9dbb7479502296b}
-      \strng{authorfullhashraw}{7785888eb6e95448d9dbb7479502296b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The Knowledge Engineering Review}
-      \field{number}{2}
-      \field{title}{A survey of data mining and knowledge discovery process models and methodologies}
-      \field{volume}{25}
-      \field{year}{2010}
-      \field{pages}{137\bibrangedash 166}
-      \range{pages}{30}
-      \verb{doi}
-      \verb 10.1017/S0269888910000032
-      \endverb
-    \endentry
     \entry{datasciencepmCRISPDMStill}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=4f70416afe1ca400f31d9bbacbd9b44e}{%
@@ -452,6 +411,426 @@
       \field{note}{[Accessed 28-05-2025]}
       \field{title}{{C}{R}{I}{S}{P}-{D}{M} is {S}till the {M}ost {P}opular {F}ramework for {E}xecuting {D}ata {S}cience {P}rojects - {D}ata {S}cience {P}{M} --- datascience-pm.com}
       \field{year}{2024}
+    \endentry
+    \entry{mitchell1997machine}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d331eeb7f00e650950ccadcb9c47efec}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Tom\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-hill New York}%
+      }
+      \strng{namehash}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{fullhash}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{fullhashraw}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{bibnamehash}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{authorbibnamehash}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{authornamehash}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{authorfullhash}{d331eeb7f00e650950ccadcb9c47efec}
+      \strng{authorfullhashraw}{d331eeb7f00e650950ccadcb9c47efec}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{9}
+      \field{title}{Machine learning}
+      \field{volume}{1}
+      \field{year}{1997}
+      \keyw{book ml}
+    \endentry
+    \entry{mlprobabilistic}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=99413be56c82adf72b6474dcdf8d3023}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Kevin\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{fullhash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{fullhashraw}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{bibnamehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authorbibnamehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authornamehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authorfullhash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authorfullhashraw}{99413be56c82adf72b6474dcdf8d3023}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Today's Web-enabled deluge of electronic data calls for automated methods of data analysis. Machine learning provides these, developing methods that can automatically detect patterns in data and then use the uncovered patterns to predict future data. This textbook offers a comprehensive and self-contained introduction to the field of machine learning, based on a unified, probabilistic approach. The coverage combines breadth and depth, offering necessary background material on such topics as probability, optimization, and linear algebra as well as discussion of recent developments in the field, including conditional random fields, L1 regularization, and deep learning. The book is written in an informal, accessible style, complete with pseudo-code for the most important algorithms. All topics are copiously illustrated with color images and worked examples drawn from such application domains as biology, text processing, computer vision, and robotics. Rather than providing a cookbook of different heuristic methods, the book stresses a principled model-based approach, often using the language of graphical models to specify models in a concise and intuitive way. Almost all the models described have been implemented in a MATLAB software package--PMTK (probabilistic modeling toolkit)--that is freely available online. The book is suitable for upper-level undergraduates with an introductory-level college math background and beginning graduate students.}
+      \field{isbn}{0262018020}
+      \field{title}{Machine Learning: A Probabilistic Perspective}
+      \field{year}{2012}
+    \endentry
+    \entry{aima}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=143fa183327d9fcd9de18eec99d6ca97}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall Press}%
+      }
+      \strng{namehash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhashraw}{b280605b721b4ebcba5395298499f924}
+      \strng{bibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorbibnamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authornamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhashraw}{b280605b721b4ebcba5395298499f924}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The long-anticipated revision of this #1 selling book offers the most comprehensive, state of the art introduction to the theory and practice of artificial intelligence for modern applications. Intelligent Agents. Solving Problems by Searching. Informed Search Methods. Game Playing. Agents that Reason Logically. First-order Logic. Building a Knowledge Base. Inference in First-Order Logic. Logical Reasoning Systems. Practical Planning. Planning and Acting. Uncertainty. Probabilistic Reasoning Systems. Making Simple Decisions. Making Complex Decisions. Learning from Observations. Learning with Neural Networks. Reinforcement Learning. Knowledge in Learning. Agents that Communicate. Practical Communication in English. Perception. Robotics. For computer professionals, linguists, and cognitive scientists interested in artificial intelligence.}
+      \field{edition}{3rd}
+      \field{isbn}{0136042597}
+      \field{title}{Artificial Intelligence: A Modern Approach}
+      \field{year}{2009}
+    \endentry
+    \entry{Burkov2019TheHM}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=e7bec4aeb6cbfe8741541f4a2ab78c26}{%
+           family={Burkov},
+           familyi={B\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{fullhash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{fullhashraw}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{bibnamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authorbibnamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authornamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authorfullhash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \strng{authorfullhashraw}{e7bec4aeb6cbfe8741541f4a2ab78c26}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Hundred-Page Machine Learning Book}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:202780305
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:202780305
+      \endverb
+    \endentry
+    \entry{tai2021surveyregressionalgorithmsconnections}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=64637d8fed58bdd2e68c465ea39d2f7d}{%
+           family={Tai},
+           familyi={T\bibinitperiod},
+           given={Yunpeng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{fullhash}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{fullhashraw}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{bibnamehash}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{authorbibnamehash}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{authornamehash}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{authorfullhash}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \strng{authorfullhashraw}{64637d8fed58bdd2e68c465ea39d2f7d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{A Survey Of Regression Algorithms And Connections With Deep Learning}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2104.12647
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2104.12647
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2104.12647
+      \endverb
+    \endentry
+    \entry{l1l2}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=49e889356ff39df159461bc2895c7e16}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelima Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Banff, Alberta, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{49e889356ff39df159461bc2895c7e16}
+      \strng{fullhash}{49e889356ff39df159461bc2895c7e16}
+      \strng{fullhashraw}{49e889356ff39df159461bc2895c7e16}
+      \strng{bibnamehash}{49e889356ff39df159461bc2895c7e16}
+      \strng{authorbibnamehash}{49e889356ff39df159461bc2895c7e16}
+      \strng{authornamehash}{49e889356ff39df159461bc2895c7e16}
+      \strng{authorfullhash}{49e889356ff39df159461bc2895c7e16}
+      \strng{authorfullhashraw}{49e889356ff39df159461bc2895c7e16}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider supervised learning in the presence of very many irrelevant features, and study two different regularization methods for preventing overfitting. Focusing on logistic regression, we show that using L1 regularization of the parameters, the sample complexity (i.e., the number of training examples required to learn "well,") grows only logarithmically in the number of irrelevant features. This logarithmic rate matches the best known bounds for feature selection, and indicates that L1 regularized logistic regression can be effective even if there are exponentially many irrelevant features as there are training examples. We also give a lower-bound showing that any rotationally invariant algorithm---including logistic regression with L2 regularization, SVMs, and neural networks trained by backpropagation---has a worst case sample complexity that grows at least linearly in the number of irrelevant features.}
+      \field{booktitle}{Proceedings of the Twenty-First International Conference on Machine Learning}
+      \field{isbn}{1581138385}
+      \field{series}{ICML '04}
+      \field{title}{Feature selection, L1 vs. L2 regularization, and rotational invariance}
+      \field{year}{2004}
+      \field{pages}{78}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/1015330.1015435
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1015330.1015435
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1015330.1015435
+      \endverb
+    \endentry
+    \entry{elasticnet}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f15b129e88b4820c7ed982265e79986b}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c346171da05683239c65d0053413406e}
+      \strng{fullhash}{c346171da05683239c65d0053413406e}
+      \strng{fullhashraw}{c346171da05683239c65d0053413406e}
+      \strng{bibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorbibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authornamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorfullhash}{c346171da05683239c65d0053413406e}
+      \strng{authorfullhashraw}{c346171da05683239c65d0053413406e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose the elastic net, a new regularization and variable selection method. Real world data and a simulation study show that the elastic net often outperforms the lasso, while enjoying a similar sparsity of representation. In addition, the elastic net encourages a grouping effect, where strongly correlated predictors tend to be in or out of the model together. The elastic net is particularly useful when the number of predictors (p) is much bigger than the number of observations (n). By contrast, the lasso is not a very satisfactory variable selection method in the p≫n case. An algorithm called LARS-EN is proposed for computing elastic net regularization paths efficiently, much like algorithm LARS does for the lasso.}
+      \field{issn}{1369-7412}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{month}{03}
+      \field{number}{2}
+      \field{title}{Regularization and Variable Selection Via the Elastic Net}
+      \field{volume}{67}
+      \field{year}{2005}
+      \field{pages}{301\bibrangedash 320}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1111/j.1467-9868.2005.00503.x
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/jrsssb/article-pdf/67/2/301/49795094/jrsssb\_67\_2\_301.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/j.1467-9868.2005.00503.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/j.1467-9868.2005.00503.x
+      \endverb
+    \endentry
+    \entry{ridge}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=073bf156684ab93b481fb9a5dd6a82c7}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Arthur\bibnamedelima E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=39f4e06a9e51f345e243e2b24175e7e4}{%
+           family={Kennard},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[Taylor & Francis, Ltd., American Statistical Association, American Society for Quality]}%
+      }
+      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhashraw}{5ca383125b65b015cb46067f1150f462}
+      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhashraw}{5ca383125b65b015cb46067f1150f462}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In multiple regression it is shown that parameter estimates based on minimum residual sum of squares have a high probability of being unsatisfactory, if not incorrect, if the prediction vectors are not orthogonal. Proposed is an estimation procedure based on adding small positive quantities to the diagonal of X′X. Introduced is the ridge trace, a method for showing in two dimensions the effects of nonorthogonality. It is then shown how to augment X′X to obtain biased estimates with smaller mean square error.}
+      \field{issn}{00401706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{Ridge Regression: Biased Estimation for Nonorthogonal Problems}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{42}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{80\bibrangedash 86}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/1271436
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/1271436
+      \endverb
+    \endentry
+    \entry{lasso}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[Royal Statistical Society, Oxford University Press]}%
+      }
+      \strng{namehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{fullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{fullhashraw}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{bibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorbibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authornamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorfullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorfullhashraw}{88eea600247d798f8b2ce0b2dc614492}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new method for estimation in linear models. The `lasso' minimizes the residual sum of squares subject to the sum of the absolute value of the coefficients being less than a constant. Because of the nature of this constraint it tends to produce some coefficients that are exactly 0 and hence gives interpretable models. Our simulation studies suggest that the lasso enjoys some of the favourable properties of both subset selection and ridge regression. It produces interpretable models like subset selection and exhibits the stability of ridge regression. There is also an interesting relationship with recent work in adaptive function estimation by Donoho and Johnstone. The lasso idea is quite general and can be applied in a variety of statistical models: extensions to generalized regression models and tree-based models are briefly described.}
+      \field{issn}{00359246}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series B (Methodological)}
+      \field{number}{1}
+      \field{title}{Regression Shrinkage and Selection via the Lasso}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{58}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{267\bibrangedash 288}
+      \range{pages}{22}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2346178
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2346178
+      \endverb
+    \endentry
+    \entry{svr}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a4d2eb3aadfce48c1b00303f0988e905}{%
+           family={Smola},
+           familyi={S\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ca31cc11ec9370460148c3a9c48fce45}{%
+           family={Schölkopf},
+           familyi={S\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{fullhash}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{fullhashraw}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{bibnamehash}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{authorbibnamehash}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{authornamehash}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{authorfullhash}{b17a929aea6866e3532cdba6e1ed8257}
+      \strng{authorfullhashraw}{b17a929aea6866e3532cdba6e1ed8257}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics and Computing}
+      \field{month}{08}
+      \field{title}{A tutorial on support vector regression}
+      \field{volume}{14}
+      \field{year}{2004}
+      \field{pages}{199\bibrangedash 222}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1023/B%3ASTCO.0000035301.49549.88
+      \endverb
+    \endentry
+    \entry{Goodfellow-et-al-2016}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Book in preparation for MIT Press}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb http://www.deeplearningbook.org
+      \endverb
+      \verb{url}
+      \verb http://www.deeplearningbook.org
+      \endverb
+      \keyw{book deep learning toread}
     \endentry
   \enddatalist
 \endrefsection

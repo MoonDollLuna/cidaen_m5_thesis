@@ -2389,11 +2389,38 @@
     <bcf:citekey order="16" intorder="1">datasciencelifecycle</bcf:citekey>
     <bcf:citekey order="17" intorder="1">shearer2000crisp</bcf:citekey>
     <bcf:citekey order="18" intorder="1">shearer2000crisp</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Mariscal_Marbán_Fernández_2010</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">datasciencepmCRISPDMStill</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">datasciencepmCRISPDMStill</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">shearer2000crisp</bcf:citekey>
     <bcf:citekey order="21" intorder="1">shearer2000crisp</bcf:citekey>
     <bcf:citekey order="22" intorder="1">shearer2000crisp</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">shearer2000crisp</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">mitchell1997machine</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">mlprobabilistic</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">mlprobabilistic</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Burkov2019TheHM</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">mlprobabilistic</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Burkov2019TheHM</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">tai2021surveyregressionalgorithmsconnections</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">Burkov2019TheHM</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">mlprobabilistic</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">l1l2</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">elasticnet</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">ridge</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">lasso</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">elasticnet</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">svr</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Burkov2019TheHM</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">aima</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">mlprobabilistic</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Goodfellow-et-al-2016</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

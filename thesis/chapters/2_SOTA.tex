@@ -5,6 +5,8 @@ En este capítulo se describen los procesos y algoritmos utilizados a lo largo d
 
 \section{Ciencia de datos y el ciclo de vida de los datos}
 
+\subsection{Ciencia de datos}
+
 La \textbf{ciencia de datos} es el estudio de la extracción de conocimiento útil a partir de datos, y de la generalización de dicho proceso a cualquier problema \cite{Donoho02102017}. Dicho proceso incluye la recolección y almacenamiento, mantenimiento, procesamiento, análisis y visualización de enormes cantidades de datos heterogéneos - asociados a un gran abanico de aplicaciones y dominios en muchas ocasiones multidisciplinarios \cite{10.1145/2500499}.
 
 Desde su origen, la ciencia de datos ha evolucionado como un campo interdisciplinar que integra conocimientos y técnicas de otras disciplinas afines como el análisis de datos, la estadística o la minería de datos \cite{potential}. Ahora bien, la principal diferencia con estos campos se encuentra en el fin: el aprendizaje a partir de los datos \cite{Donoho02102017} y la capacidad de adquirir nuevo conocimiento capaz de ser utilizado para la toma de decisiones y la predicción \cite{10.1145/2500499}.
@@ -35,11 +37,11 @@ Por definición, la ciencia de datos depende de los datos sobre los que se está
 
 Con el fin de regularizar, estandarizar y hacer reproducible el proceso completo de la ciencia de datos - desde la adquisición de los conjuntos de datos hasta la distribución de los resultados -, se han propuesto varias ampliaciones y adaptaciones del ciclo de datos estudiado, conocidas como \textbf{ciclos de vida de la ciencia de datos} \cite{datasciencelifecycle}. 
 
-Aunque actualmente no existe un ciclo estandarizado, uno de los procesos más utilizados para ciencia de datos es el \textbf{Cross-Industry Standard Process for Data Mining (\textit{CRISP-DM})}, propuesto originalmente para el campo de la minería de datos pero adaptado a las necesidades de la ciencia de datos \cite{shearer2000crisp}.
+Aunque actualmente no existe un ciclo estandarizado, uno de los procesos más utilizados para ciencia de datos es el \textbf{Cross-Industry Standard Process for Data Mining (\textit{CRISP-DM})}, propuesto originalmente para el campo de la minería de datos pero adaptado a las necesidades de la ciencia de datos \cite{shearer2000crisp} - siendo el proceso utilizado a lo largo del trabajo descrito en esta memoria.
 
 \subsection{Cross-Industry Standard Process for Data Mining - CRISP-DM}
 
-\textbf{Cross-Industry Standard Process for Data Mining} (abreviado como \textit{CRISP-DM}) es una metodología desarrollada con el fin de ofrecer un proceso de trabajo completo de principio a fin para la minería de datos; independientemente del campo, las herramientas o la aplicación final de los datos \cite{shearer2000crisp}. Si bien fue propuesto originalmente en el año 2000, en la actualidad sigue siendo uno de los procesos más utilizados tanto en minería de datos como en ciencia de datos \cite{Mariscal_Marbán_Fernández_2010} \cite{datasciencepmCRISPDMStill}.
+\textbf{Cross-Industry Standard Process for Data Mining} (abreviado como \textit{CRISP-DM}) es una metodología desarrollada con el fin de ofrecer un proceso de trabajo completo de principio a fin para la minería de datos; independientemente del campo, las herramientas o la aplicación final de los datos \cite{shearer2000crisp}. Si bien fue propuesto originalmente en el año 2000, en la actualidad sigue siendo uno de los procesos más utilizados tanto en minería de datos como en ciencia de datos \cite{datasciencepmCRISPDMStill}.
 
 \begin{figure}[h]
 	\centering
@@ -54,7 +56,7 @@ Como se observa en la \textbf{Figura \ref{fig:crispdm}}, el ciclo de CRISP-DM es
 	\item \textbf{Conocimiento del campo (\textit{Business Understanding}):} El primer paso del ciclo consiste en entender el problema y los objetivos a resolver - estudiando la situación actual y estableciendo los pasos para alcanzar las metas propuestas.
 	\item \textbf{Conocimiento de los datos (\textit{Data Understanding}):} El segundo paso del ciclo consiste en adquirir y estudiar los datos - tanto de forma superficial como en un análisis exploratorio más profundo -, además de verificar que los datos disponibles son útiles para los objetivos propuestos.
 	\item \textbf{Preparación de los datos (\textit{Data Preparation}):} Tras la adquisición de conocimiento, el tercer paso consiste en preparar los datos obtenidos para su uso posterior - seleccionando las instancias relevantes, limpiando los datos para eliminar valores perdidos, enriqueciendo los datos con información externa...
-	\item \textbf{Modelado (\textit{Modeling}):} Con los datos preparados, la cuarta fase del ciclo consiste en el uso y calibración de modelos de aprendizaje automático - definiendo los estudios y experimentos a realizar sobre los modelos, y evaluando el rendimiento final de éstos.
+	\item \textbf{Modelado (\textit{Modeling}):} Con los datos preparados, la cuarta fase del ciclo consiste en el uso y calibración de modelos de aprendizaje automático a aplicar sobre los datos - definiendo los estudios y experimentos a realizar sobre los modelos, y evaluando el rendimiento final de éstos.
 	\item \textbf{Evaluación (\textit{Evaluation}):} Antes de desplegar el modelo final, la quinta fase del ciclo consiste en evaluar si los resultados obtenidos satisfacen los objetivos propuestos y si el proceso de ciencia de datos se ha aplicado de forma adecuada.
 	\item \textbf{Despliegue (\textit{Deployment}):} La última fase del ciclo es el despliegue y diseminación de los resultados obtenidos - haciendo disponible el modelo y los resultados a los usuarios finales.
 	
@@ -66,23 +68,108 @@ Es importante destacar que, como indican las flechas de la \textbf{Figura \ref{f
 	\item El proceso es \textbf{cíclico} - los conocimientos adquiridos durante las distintas fases se aplican para refinar futuros procesos, ya sean sobre el mismo conjunto de datos o datos nuevos.
 \end{itemize}
 
+\section{Aprendizaje automático y ajuste de modelos}
 
-\section{Aprendizaje supervisado y modelos de regresión}
+\subsection{Aprendizaje automático}
 
-\subsection{Modelos simples}
+El \textbf{aprendizaje automático} (también conocido en inglés como \textit{Machine Learning}) es una rama de la inteligencia artificial que consiste en la creación de programas capaces de \textbf{aprender} - es decir, de mejorar su rendimiento en una tarea - a través de la experiencia y de la información que se les aporta \cite{mitchell1997machine}. 
 
-\subsubsection{Modelos de regresión lineal}
+También se puede definir el término como el conjunto de métodos capaces de detectar patrones en los datos de forma autónoma, y de utilizar dichos patrones para predecir datos futuros \cite{mlprobabilistic} - siendo este último de mayor interés a los principios de la ciencia de datos.
 
-\subsubsection{Árboles de decisión}
+Generalmente, los algoritmos de aprendizaje automático se dividen en dos grandes familias, en función del tipo de datos e información que se aporta a los algoritmos \cite{aima} \cite{mlprobabilistic}:
 
-\subsubsection{Máquinas de vectores de soporte}
+\begin{itemize}
+	\item \textbf{Aprendizaje supervisado:} El objetivo del algoritmo es aprender una función capaz de, dados unos datos de entrada $X$, predecir una salida $Y$. Esta función se aprende a partir de un conjunto de datos $D={(x_i, y_i)}^{N}_{i=1}$ donde a cada instancia $x_i$ del conjunto de datos $D$ se le asocia un valor esperado $y_i$.
+	
+	Este tipo de aprendizaje se puede dividir a su vez en dos categorías dependiendo del tipo de salida $Y$ que se espera \cite{aima}:
+	\begin{itemize}
+		\item \textbf{Clasificación}: El algoritmo busca obtener para cada entrada $x_i$ un valor concreto \textbf{dentro de un conjunto finito de posibles valores}.
+		\item \textbf{Regresión}: El algoritmo busca obtener, para cada entrada $x_i$, un \textbf{valor numérico continuo}.
+	\end{itemize}
+	\item \textbf{Aprendizaje no supervisado:} El objetivo del algoritmo es aprender patrones subyacentes de los datos de entrada $X$ ofrecidos, sin buscar predecir una salida. Esta función se aprende a partir de un conjunto de datos $D={x_i}^{N}_{i=1}$ donde no se ofrece ningún tipo de etiqueta a cada instancia $x_i$.
+\end{itemize}
 
-\subsection{Modelos grupales - Ensembles}
+De cara a cumplir el objetivo propuesto por el trabajo descrito en esta memoria - la creación de un modelo capaz de \textbf{predecir el tiempo de diagnóstico} -, se van a trabajar con modelos supervisados de \textbf{regresión}. Por esto, resulta de interés describir los principales modelos a utilizar y el ajuste que se va a realizar sobre ellos.
 
-\subsubsection{Bagging}
+\subsection{Modelos de regresión}
 
-\subsubsection{Boosting}
+Un \textbf{modelo} es el resultado del proceso de aprendizaje automático: una función capaz de predecir una salida para una entrada dada, y cuyos parámetros han sido ajustados a través de un entrenamiento sobre un conjunto de datos para \textbf{minimizar un error} \cite{Burkov2019TheHM}. 
 
-\subsubsection{Gradient Boosting}
+En el caso de la \textbf{regresión}, el objetivo del modelo es aprender una función capaz de predecir un valor numérico continuo para cada instancia de datos de entrada \cite{mlprobabilistic}. Dicha función se ajusta buscando encontrar el conjunto de parámetros que \textbf{minimiza} la diferencia entre los valores predichos por la función y los valores reales asociados a los datos de entrada \cite{Burkov2019TheHM}.
 
-\subsection{Ajuste de hiperparámetros y validación cruzada}
+En el caso de los modelos de regresión, el objetivo por tanto es encontrar los parámetros que \textbf{reducen al mínimo la diferencia} entre los valores predichos por la función y los valores reales esperados.
+
+Se han propuesto y estudiado un gran número de modelos de regresión, con parametrizaciones y funcionamientos diversos, en la bibliografía \cite{tai2021surveyregressionalgorithmsconnections}. Pese a esta variedad, es posible dividir todas estas familias de modelos en dos grandes grupos: modelos \textbf{tradicionales} y modelos de \textbf{conjuntos o \textit{ensembles}} \cite{aima}
+
+\subsubsection{Modelos tradicionales - regresión lineal, árboles de decisiones y máquinas de vectores de soporte}
+
+Si bien no hay una definición consensuada sobre su definición, se puede entender como \textbf{modelo tradicional} a un modelo que entrena una única función con el fin de realizar predicciones sobre la salida esperada para cada entrada de datos \cite{aima}.
+
+Existe una gran cantidad de familias de modelos con una larga trayectoria en la bibliografía existente \cite{Burkov2019TheHM}. Ahora bien, el estudio realizado en la memoria se centra en las siguientes tres familias de modelos utilizadas en el trabajo:
+
+\paragraph{Regresión lineal:}
+
+Los modelos más simples, trabajando con la suposición de que \textbf{existe una correlación lineal} entre los atributos de entrada y la salida del modelo \cite{mlprobabilistic}. Por lo general, la salida $y$ para una entrada $x$ se predice utilizando la siguiente fórmula: 
+
+$$y(x) = \sum_{j=1}^{D}w_j x_j$$
+
+Donde $x_j$ representa cada atributo de la entrada y $w_j$ el peso asignado a cada atributo, siendo el objetivo de estos modelos ajustar los pesos asignados a cada atributo para minimizar el error cuadrado \cite{aima}. Ahora bien, cuando se trabaja con conjuntos de datos de gran dimensionalidad, el gran número de atributos puede afectar de forma negativa al rendimiento del modelo, causando un sobreajuste al conjunto de entrenamiento \cite{l1l2}.
+
+Para evitar este problema, se proponen técnicas de \textbf{regularización} - penalizaciones aplicadas a la fórmula del error con el objetivo de conseguir modelos menos complejos y más generalizables \cite{elasticnet}. Los tres modelos de regularización más utilizados son los siguientes:
+
+\begin{itemize}
+	\item \textbf{Ridge (L2) \cite{ridge}:} Como factor de penalización, se utiliza $\sum_{j=1}^D(w_j)^2$ - la suma de los pesos cuadrados del modelo, buscando reducir de forma generalizada la influencia de los atributos para evitar sobreajustes y correlaciones.
+	\item \textbf{Lasso (L1) \cite{lasso}:} Como factor de penalización, se utiliza $\sum_{j=1}^D|w_j|$ - la suma del valor absoluto de los pesos del modelo, buscando eliminar los atributos irrelevantes reduciendo su peso a $0$.
+	\item \textbf{Elastic-Net \cite{elasticnet}:} Como factor de penalización, se utiliza $\lambda\left(\sum_{j=1}^D(w_j)^2\right) + (1-\lambda)\left(\sum_{j=1}^D|w_j|\right)$ - utilizando a la vez las regularizaciones L1 y L2 de forma ponderada, buscando aunar los beneficios de ambas aproximaciones.
+\end{itemize}
+
+\paragraph{Máquinas de vectores de soporte (SVM):} Las máquinas de vectores de soporte se pueden entender como una evolución de los modelos de regresión lineal donde, en vez de buscar la linea que mejor se ajusta al conjunto de datos, se busca el \textbf{hiperplano} capaz de ajustarse al conjunto de datos con el \textbf{mayor margen} \cite{aima}. 
+
+En regresión, esto se traduce en la búsqueda de la función representando al mejor hiperplano capaz de ajustarse a todas las instancias del conjunto de datos a la vez que es capaz de mantener una distancia inferior a un margen $\epsilon$ con todos los puntos \cite{svr}.
+
+La principal utilidad de estos modelos radica en las dos siguientes características \cite{aima}:
+\begin{itemize}
+	\item \textbf{Funciones kernel:} Un problema de los modelos lineales es que los conjuntos de datos no siempre son linealmente separables. Para solventar este problema, las máquinas de vectores de soporte son capaces de utilizar \textbf{funciones \textit{kernel}} para transformar los datos a una mayor dimensionalidad - donde si es posible ajustar un hiperplano con mayor margen.
+	\item \textbf{Vectores de soporte:} Para definir el modelo no es necesario almacenar información sobre el conjunto de datos completo, sino que es suficiente con almacenar información sobre los \textbf{puntos que definen la frontera entre el hiperplano y el margen} - conocidos como los vectores de soporte.
+\end{itemize}
+
+\paragraph{Árboles de decisión:} Los árboles de decisión son modelos de reglas representando su función a través de grafos dirigidos \cite{Burkov2019TheHM} donde la predicción se obtiene realizando una serie de comprobaciones secuenciales empezando desde la raíz, ramificando hasta llegar a una hoja final \cite{aima}. Estos árboles se dividen en los siguientes componentes:
+
+\begin{itemize}
+	\item \textbf{Nodos:} Nodos internos del árbol donde se realiza una comprobación sobre el valor de un atributo. Dependiendo del resultado de la comprobación, el nodo se \textbf{ramifica} a otros nodos u hojas.
+	\item \textbf{Hojas:} El valor final predicho para una entrada, alcanzado tras una serie de comprobaciones en nodos.
+\end{itemize}
+
+El objetivo del modelo es, por tanto, aprender el conjunto de reglas que minimiza el error del modelo para el conjunto de datos dado. Ahora bien, estos modelos tienden a \textbf{sobreajustar} - intentando representar patrones presentes en el conjunto de datos no representativos de la distribución real - creando árboles de gran profundidad \cite{aima}.
+
+
+\subsubsection{Modelos de ensemble - bagging y boosting}
+
+Como contraste a los modelos tradicionales, un \textbf{modelo de conjunto o \textit{ensembles}} es un modelo que, durante su entrenamiento, aprende un \textbf{conjunto de funciones o modelos} - por lo general, una agrupación de modelos tradicionales -, agrupando las predicciones de todos éstos para obtener una predicción general de la salida esperada para cada entrada de datos \cite{aima}.
+
+\paragraph{Bagging}
+
+\begin{itemize}
+	\item \textbf{\textit{Random Forest}:}
+	\item \textbf{\textit{Extremely Random Trees:}}
+\end{itemize}
+
+\paragraph{Boosting}
+
+\begin{itemize}
+	\item \textbf{\textit{Adaptive Boosting:}}
+\end{itemize}
+
+\begin{itemize}
+	\item \textbf{\textit{Extreme Gradient Boosting:}}
+	\item \textbf{\textit{Categorical Boosting:}}
+	\item \textbf{\textit{Light Gradient-Boosting Model:}}
+	\item \textbf{\textit{Histogram-based Gradient Boosting:}}
+\end{itemize}
+
+
+\subsection{Selección de modelos: ajuste de hiperparámetros y validación cruzada}
+
+\cite{mlprobabilistic} PARA DEFINICION DE SELECCION
+
+\cite{Goodfellow-et-al-2016} PARA AJUSTE DE HIPERPARAMETROS
