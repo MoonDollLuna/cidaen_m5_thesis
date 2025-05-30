@@ -91,13 +91,19 @@ Generalmente, los algoritmos de aprendizaje automático se dividen en dos grande
 
 De cara a cumplir el objetivo propuesto por el trabajo descrito en esta memoria - la creación de un modelo capaz de \textbf{predecir el tiempo de diagnóstico} -, se van a trabajar con modelos supervisados de \textbf{regresión}. Por esto, resulta de interés describir los principales modelos a utilizar y el ajuste que se va a realizar sobre ellos.
 
+\subsection{Selección de modelos}
+
+AÑADIR SOBREAJUSTE? \cite{aima}
+
+\cite{mlprobabilistic} PARA DEFINICION DE SELECCION
+
+\cite{Goodfellow-et-al-2016} PARA AJUSTE DE HIPERPARAMETROS
+
 \subsection{Modelos de regresión}
 
 Un \textbf{modelo} es el resultado del proceso de aprendizaje automático: una función capaz de predecir una salida para una entrada dada, y cuyos parámetros han sido ajustados a través de un entrenamiento sobre un conjunto de datos para \textbf{minimizar un error} \cite{Burkov2019TheHM}. 
 
 En el caso de la \textbf{regresión}, el objetivo del modelo es aprender una función capaz de predecir un valor numérico continuo para cada instancia de datos de entrada \cite{mlprobabilistic}. Dicha función se ajusta buscando encontrar el conjunto de parámetros que \textbf{minimiza} la diferencia entre los valores predichos por la función y los valores reales asociados a los datos de entrada \cite{Burkov2019TheHM}.
-
-En el caso de los modelos de regresión, el objetivo por tanto es encontrar los parámetros que \textbf{reducen al mínimo la diferencia} entre los valores predichos por la función y los valores reales esperados.
 
 Se han propuesto y estudiado un gran número de modelos de regresión, con parametrizaciones y funcionamientos diversos, en la bibliografía \cite{tai2021surveyregressionalgorithmsconnections}. Pese a esta variedad, es posible dividir todas estas familias de modelos en dos grandes grupos: modelos \textbf{tradicionales} y modelos de \textbf{conjuntos o \textit{ensembles}} \cite{aima}
 
@@ -107,69 +113,121 @@ Si bien no hay una definición consensuada sobre su definición, se puede entend
 
 Existe una gran cantidad de familias de modelos con una larga trayectoria en la bibliografía existente \cite{Burkov2019TheHM}. Ahora bien, el estudio realizado en la memoria se centra en las siguientes tres familias de modelos utilizadas en el trabajo:
 
-\paragraph{Regresión lineal:}
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Regresión lineal:} 
+	
+	Los modelos más simples, trabajando con la suposición de que \textbf{existe una correlación lineal} entre los atributos de entrada y la salida del modelo \cite{mlprobabilistic}. Por lo general, la salida $y$ para una entrada $x$ se predice utilizando la siguiente fórmula: 
 
-Los modelos más simples, trabajando con la suposición de que \textbf{existe una correlación lineal} entre los atributos de entrada y la salida del modelo \cite{mlprobabilistic}. Por lo general, la salida $y$ para una entrada $x$ se predice utilizando la siguiente fórmula: 
+	$$y(x) = \sum_{j=1}^{D}w_j x_j$$
+	
+	Donde $x_j$ representa cada atributo de la entrada y $w_j$ el peso asignado a cada atributo, siendo el objetivo de estos modelos ajustar los pesos asignados a cada atributo para minimizar el error cuadrado \cite{aima}. Ahora bien, cuando se trabaja con conjuntos de datos de gran dimensionalidad, el gran número de atributos puede afectar de forma negativa al rendimiento del modelo, causando un sobreajuste al conjunto de entrenamiento \cite{l1l2}.
+	
+	Para evitar este problema, se proponen técnicas de \textbf{regularización} - penalizaciones aplicadas a la fórmula del error con el objetivo de conseguir modelos menos complejos y más generalizables \cite{elasticnet}. Los tres modelos de regularización más utilizados son los siguientes:
+	
+	\begin{itemize}
+		\item \textbf{Ridge (L2) \cite{ridge}:} Como factor de penalización, se utiliza $\sum_{j=1}^D(w_j)^2$ - la suma de los pesos cuadrados del modelo, buscando reducir de forma generalizada la influencia de los atributos para evitar sobreajustes y correlaciones.
+		\item \textbf{Lasso (L1) \cite{lasso}:} Como factor de penalización, se utiliza $\sum_{j=1}^D|w_j|$ - la suma del valor absoluto de los pesos del modelo, buscando eliminar los atributos irrelevantes reduciendo su peso a $0$.
+		\item \textbf{Elastic-Net \cite{elasticnet}:} Como factor de penalización, se utiliza $\lambda\left(\sum_{j=1}^D(w_j)^2\right) + (1-\lambda)\left(\sum_{j=1}^D|w_j|\right)$ - utilizando a la vez las regularizaciones L1 y L2 de forma ponderada, buscando aunar los beneficios de ambas aproximaciones.
+	\end{itemize}
 
-$$y(x) = \sum_{j=1}^{D}w_j x_j$$
+	\item \textbf{Máquinas de vectores de soporte (SVM):} 
+	
+	Las máquinas de vectores de soporte se pueden entender como una evolución de los modelos de regresión lineal donde, en vez de buscar la linea que mejor se ajusta al conjunto de datos, se busca el \textbf{hiperplano} capaz de ajustarse al conjunto de datos con el \textbf{mayor margen} \cite{aima}. 
+	
+	En regresión, esto se traduce en la búsqueda de la función representando al mejor hiperplano capaz de ajustarse a todas las instancias del conjunto de datos a la vez que es capaz de mantener una distancia inferior a un margen $\epsilon$ con todos los puntos \cite{svr}.
+	
+	La principal utilidad de estos modelos radica en las dos siguientes características \cite{aima}:
+	\begin{itemize}
+		\item \textbf{Funciones kernel:} Un problema de los modelos lineales es que los conjuntos de datos no siempre son linealmente separables. Para solventar este problema, las máquinas de vectores de soporte son capaces de utilizar \textbf{funciones \textit{kernel}} para transformar los datos a una mayor dimensionalidad - donde si es posible ajustar un hiperplano con mayor margen.
+		\item \textbf{Vectores de soporte:} Para definir el modelo no es necesario almacenar información sobre el conjunto de datos completo, sino que es suficiente con almacenar información sobre los \textbf{puntos que definen la frontera entre el hiperplano y el margen} - conocidos como los vectores de soporte.
+	\end{itemize}
+	
+	\item \textbf{Árboles de decisión:} 
+	
+	Los árboles de decisión son modelos de reglas representando su función a través de grafos dirigidos \cite{Burkov2019TheHM} donde la predicción se obtiene realizando una serie de comprobaciones secuenciales empezando desde la raíz, ramificando hasta llegar a una hoja final \cite{aima}. Estos árboles se dividen en los siguientes componentes:
+	
+	\begin{itemize}
+		\item \textbf{Nodos:} Nodos internos del árbol donde se realiza una comprobación sobre el valor de un atributo. Dependiendo del resultado de la comprobación, el nodo se \textbf{ramifica} a otros nodos u hojas.
+		\item \textbf{Hojas:} El valor final predicho para una entrada, alcanzado tras una serie de comprobaciones en nodos.
+	\end{itemize}
+	
+	El objetivo del modelo es, por tanto, aprender el conjunto de reglas que minimiza el error del modelo para el conjunto de datos dado. Ahora bien, estos modelos tienden a \textbf{sobreajustar} creando árboles de gran profundidad \cite{aima}.
 
-Donde $x_j$ representa cada atributo de la entrada y $w_j$ el peso asignado a cada atributo, siendo el objetivo de estos modelos ajustar los pesos asignados a cada atributo para minimizar el error cuadrado \cite{aima}. Ahora bien, cuando se trabaja con conjuntos de datos de gran dimensionalidad, el gran número de atributos puede afectar de forma negativa al rendimiento del modelo, causando un sobreajuste al conjunto de entrenamiento \cite{l1l2}.
-
-Para evitar este problema, se proponen técnicas de \textbf{regularización} - penalizaciones aplicadas a la fórmula del error con el objetivo de conseguir modelos menos complejos y más generalizables \cite{elasticnet}. Los tres modelos de regularización más utilizados son los siguientes:
-
-\begin{itemize}
-	\item \textbf{Ridge (L2) \cite{ridge}:} Como factor de penalización, se utiliza $\sum_{j=1}^D(w_j)^2$ - la suma de los pesos cuadrados del modelo, buscando reducir de forma generalizada la influencia de los atributos para evitar sobreajustes y correlaciones.
-	\item \textbf{Lasso (L1) \cite{lasso}:} Como factor de penalización, se utiliza $\sum_{j=1}^D|w_j|$ - la suma del valor absoluto de los pesos del modelo, buscando eliminar los atributos irrelevantes reduciendo su peso a $0$.
-	\item \textbf{Elastic-Net \cite{elasticnet}:} Como factor de penalización, se utiliza $\lambda\left(\sum_{j=1}^D(w_j)^2\right) + (1-\lambda)\left(\sum_{j=1}^D|w_j|\right)$ - utilizando a la vez las regularizaciones L1 y L2 de forma ponderada, buscando aunar los beneficios de ambas aproximaciones.
 \end{itemize}
-
-\paragraph{Máquinas de vectores de soporte (SVM):} Las máquinas de vectores de soporte se pueden entender como una evolución de los modelos de regresión lineal donde, en vez de buscar la linea que mejor se ajusta al conjunto de datos, se busca el \textbf{hiperplano} capaz de ajustarse al conjunto de datos con el \textbf{mayor margen} \cite{aima}. 
-
-En regresión, esto se traduce en la búsqueda de la función representando al mejor hiperplano capaz de ajustarse a todas las instancias del conjunto de datos a la vez que es capaz de mantener una distancia inferior a un margen $\epsilon$ con todos los puntos \cite{svr}.
-
-La principal utilidad de estos modelos radica en las dos siguientes características \cite{aima}:
-\begin{itemize}
-	\item \textbf{Funciones kernel:} Un problema de los modelos lineales es que los conjuntos de datos no siempre son linealmente separables. Para solventar este problema, las máquinas de vectores de soporte son capaces de utilizar \textbf{funciones \textit{kernel}} para transformar los datos a una mayor dimensionalidad - donde si es posible ajustar un hiperplano con mayor margen.
-	\item \textbf{Vectores de soporte:} Para definir el modelo no es necesario almacenar información sobre el conjunto de datos completo, sino que es suficiente con almacenar información sobre los \textbf{puntos que definen la frontera entre el hiperplano y el margen} - conocidos como los vectores de soporte.
-\end{itemize}
-
-\paragraph{Árboles de decisión:} Los árboles de decisión son modelos de reglas representando su función a través de grafos dirigidos \cite{Burkov2019TheHM} donde la predicción se obtiene realizando una serie de comprobaciones secuenciales empezando desde la raíz, ramificando hasta llegar a una hoja final \cite{aima}. Estos árboles se dividen en los siguientes componentes:
-
-\begin{itemize}
-	\item \textbf{Nodos:} Nodos internos del árbol donde se realiza una comprobación sobre el valor de un atributo. Dependiendo del resultado de la comprobación, el nodo se \textbf{ramifica} a otros nodos u hojas.
-	\item \textbf{Hojas:} El valor final predicho para una entrada, alcanzado tras una serie de comprobaciones en nodos.
-\end{itemize}
-
-El objetivo del modelo es, por tanto, aprender el conjunto de reglas que minimiza el error del modelo para el conjunto de datos dado. Ahora bien, estos modelos tienden a \textbf{sobreajustar} - intentando representar patrones presentes en el conjunto de datos no representativos de la distribución real - creando árboles de gran profundidad \cite{aima}.
-
 
 \subsubsection{Modelos de ensemble - bagging y boosting}
 
-Como contraste a los modelos tradicionales, un \textbf{modelo de conjunto o \textit{ensembles}} es un modelo que, durante su entrenamiento, aprende un \textbf{conjunto de funciones o modelos} - por lo general, una agrupación de modelos tradicionales -, agrupando las predicciones de todos éstos para obtener una predicción general de la salida esperada para cada entrada de datos \cite{aima}.
+Como contraste a los modelos tradicionales, un \textbf{modelo de conjunto, meta-modelo o \textit{ensemble}} es un modelo que, durante su entrenamiento, ha aprendido un \textbf{conjunto de funciones o modelos sencillos} - por lo general, una agrupación de modelos tradicionales -, agrupando las predicciones de todos éstos para obtener una predicción general de la salida esperada para cada entrada de datos \cite{aima}.
 
-\paragraph{Bagging}
+Los algoritmos de \textit{ensemble} buscan aprender un gran número de modelos simples con rendimiento ligeramente mejor que un modelo aleatorio - conocidos como \textbf{modelos de aprendizaje débil}, generalmente \textbf{árboles de decisión} \cite{Burkov2019TheHM}. Suponiendo que cada uno de estos modelos es completamente independiente al resto, la unión de sus resultados lleva a una predicción final \textbf{más precisa y generalizable} que un único modelo entrenado \cite{Burkov2019TheHM}.
+
+Dependiendo de la metodología utilizada para entrenar los modelos simples - ya sea de forma secuencial o paralela -, se pueden dividir los algoritmos en dos familias \cite{aima}:
+
 
 \begin{itemize}
-	\item \textbf{\textit{Random Forest}:}
-	\item \textbf{\textit{Extremely Random Trees:}}
+
+	\item \textbf{Bootstrap Aggregating (Bagging):} 
+	
+	Los modelos de \textit{ensemble} trabajan con la suposición de que cada uno de los modelos individuales que lo componen es totalmente independiente al resto de modelos. Ahora bien, en la práctica no suele ser factible entrenar a cada modelo individual sobre un conjunto de datos independiente \cite{baggingart}. 
+	
+	Para solventar este problema, los modelos de \textbf{\textit{bagging}} entrenan cada modelo sobre una \textbf{muestra uniformemente aleatoria con reemplazo} (\textit{bootstrap} en inglés) del conjunto de datos original \cite{baggingart} - obteniendo como resultados modelos sencillos e independientes, y siendo la predicción final el \textbf{promedio} de las predicciones de cada modelo.
+
+	Algunos de los modelos de \textit{bagging} más importantes son los siguientes:
+	
+	\begin{itemize}
+		\item \textbf{\textit{Random Forest} \cite{randomforests}:} Un modelo de \textit{ensemble bagging} de \textbf{árboles de decisión profundos} en el que se añade un segundo proceso de muestreo aleatorio para aumentar la independencia entre los predictores simples entrenados:
+		\begin{itemize}
+			\item \textbf{Muestreo de instancias:} Cada árbol se entrena con un subconjunto aleatorio de instancias del conjunto de datos.
+			\item \textbf{Muestreo de atributos:} Cada árbol se entrena con un subconjunto aleatorio de atributos del conjunto de datos.
+		\end{itemize}
+		\item \textbf{\textit{Extremely Randomized Trees \cite{Geurts2006}:}} Una evolución del modelo de \textit{Random Forest} en el que se añade un proceso de muestreo adicional, con los siguientes cambios:
+		\begin{itemize}
+			\item Cada árbol pasa a entrenarse sobre el \textbf{conjunto de datos completo}, sin muestreo - aunque se sigue realizando un muestreo de los atributos a considerar por cada árbol.
+			\item Durante la construcción del árbol, se generan de forma aleatoria varias \textbf{particiones del conjunto de datos} para cada atributo - en vez de calcular la partición óptima. A la hora de construir cada nodo, se elige la partición que mejor puntuación obtiene de todas las generadas.
+		\end{itemize}
+	\end{itemize}
+	
+	\item \textbf{Boosting:}
+	
+	Para garantizar la independencia entre los modelos entrenados, los modelos de \textit{ensemble} de tipo \textbf{boosting} optan por entrenar sus modelos de forma \textbf{secuencial} sobre un \textbf{conjunto de datos con pesos} - donde, para cada modelo, se da más peso a las instancias del conjunto de datos que se han predicho erróneamente en los modelos anteriores \cite{aima}.
+	
+	Durante el trabajo, se ha considerado el siguiente modelo de \textit{boosting}:
+	
+	\begin{itemize}
+		\item \textbf{\textit{Adaptive Boosting \cite{adaboost}:}} Un modelo básico de \textit{boosting} que sigue estrictamente el proceso descrito. Concretamente, se comienza con un conjunto de datos de pesos uniformes sobre el que se entrena el primer modelo, ajustando los pesos de las instancias - aumentando el peso de las instancias con mayor error, y reduciendo el peso de las instancias con menor error. Tras esto, se repite el proceso de entrenamiento de modelos y ajuste de pesos hasta entrenar todos los predictores \cite{aima}.
+		
+		La predicción final es una \textbf{media ponderada por el error} de la predicción de todos los modelos - donde los modelos con menor error tienen un mayor peso en la ponderación.
+	\end{itemize}
+	
+	Una subfamilia dentro de estos algoritmos son los modelos de \textbf{Gradient Boosting}. Estos modelos también utilizan la metodología de \textit{boosting} - entrenar modelos secuencialmente ajustándose a los errores del modelo anterior -, con la diferencia de que el entrenamiento no se hace sobre el conjunto de datos directamente, sino sobre los \textbf{errores residuales} (la diferencia entre la predicción y el valor real) de cada instancia \cite{gradientboosting}. 
+	
+	Este comportamiento es similar al \textbf{gradiente descendiente} utilizado para entrenar otros modelos como la regresión lineal o las redes neuronales \cite{Burkov2019TheHM}. En concreto, se llevan a cabo los siguientes pasos:
+	\begin{enumerate}
+		\item Se comienza realizando una predicción inicial, generalmente el valor promedio de todas las instancias.
+		\item Utilizando el valor estimado, se calculan los \textbf{errores pseudo-residuales} de cada instancia - el \textbf{error} entre la predicción y el valor real. Estas pseudo-residuales dependen de la función de error que se elija.
+		\item Repitiéndose para cada modelo que se tiene que entrenar:
+		\begin{enumerate}
+			\item A partir de los valores pseudo-residuales, se entrena un modelo simple que \textbf{predice el valor residual de cada instancia}.
+			\item Utilizando los nuevos residuales estimados, se recalculan los valores pseudo-residuales para que el siguiente modelo ajuste mejor a las instancias clasificadas erroneamente.
+		\end{enumerate}
+	\end{enumerate}
+	
+	Para obtener una predicción final, se suma al valor promedio inicial los residuales calculados por cada uno de los modelos - ponderados por un \textbf{factor de aprendizaje} para evitar el sobreajuste \cite{gradientboosting}.
+	
+	Actualmente, los modelos de \textit{Gradient Boosting} son considerados el estado del arte para la mayoría de problemas de predicción estructurada \cite{Burkov2019TheHM}, siendo algunos de los modelos más populares los siguientes:
+	
+	\begin{itemize}
+		\item \textbf{\textit{Extreme Gradient Boosting \cite{Chen_2016}:}} Un algoritmo de \textit{Gradient Boosting} utilizando el método de Newton-Raphson - en vez de calcular los errores pseudo-residuales, se calcula una función de la segunda y la primera derivada de la función de error. Además, el modelo está diseñado para permitir el entrenamiento en paralelo de los árboles.
+		\item \textbf{\textit{Categorical Boosting \cite{dorogush2018catboostgradientboostingcategorical}:}} Un algoritmo de \textit{Gradient Boosting} diseñado para trabajar de forma nativa con atributos categóricos sin necesidad de convertirlos previamente a valores numéricos. 
+		
+		El modelo se entrena utilizando \textbf{\textit{Ordered Boosting}} - utilizando una permutación aleatoria del conjunto de entrenamiento para cada modelo, donde para calcular las pseudo-residuales de cada instancia se consideran solo las instancias anteriores en la permutación \cite{catboost2} - para evitar introducir sesgos.
+		\item \textbf{\textit{Light Gradient-Boosting Model \cite{NIPS2017_6449f44a}:}} Un algoritmo de \textit{Gradient Boosting} con las siguientes características:
+		\begin{itemize}
+			\item \textbf{Histogramas:} Para optimizar el rendimiento, los valores de los atributos continuos se agrupan en histogramas.
+			\item \textbf{Crecimiento del arbol por hojas:} Frente a otros algoritmos que entrenan los árboles nivel a nivel, el modelo ramifica siempre por la hoja que minimizaría el error - llevando a árboles más ajustados.
+		\end{itemize}
+		
+		Existe otra implementación de este algoritmo, conocida como \textbf{Histogram-Based Gradient Boosting}, ofrecida por la librería de ciencia de datos \textit{Scikit-Learn} \cite{scikit-learn} - aunque ambas se basan en el mismo modelo y no presentan diferencias significativas.
+	\end{itemize}
 \end{itemize}
 
-\paragraph{Boosting}
-
-\begin{itemize}
-	\item \textbf{\textit{Adaptive Boosting:}}
-\end{itemize}
-
-\begin{itemize}
-	\item \textbf{\textit{Extreme Gradient Boosting:}}
-	\item \textbf{\textit{Categorical Boosting:}}
-	\item \textbf{\textit{Light Gradient-Boosting Model:}}
-	\item \textbf{\textit{Histogram-based Gradient Boosting:}}
-\end{itemize}
-
-
-\subsection{Selección de modelos: ajuste de hiperparámetros y validación cruzada}
-
-\cite{mlprobabilistic} PARA DEFINICION DE SELECCION
-
-\cite{Goodfellow-et-al-2016} PARA AJUSTE DE HIPERPARAMETROS

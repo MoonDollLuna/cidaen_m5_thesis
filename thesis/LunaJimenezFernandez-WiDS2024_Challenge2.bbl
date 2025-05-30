@@ -506,6 +506,50 @@
       \field{title}{Artificial Intelligence: A Modern Approach}
       \field{year}{2009}
     \endentry
+    \entry{Goodfellow-et-al-2016}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Book in preparation for MIT Press}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb http://www.deeplearningbook.org
+      \endverb
+      \verb{url}
+      \verb http://www.deeplearningbook.org
+      \endverb
+      \keyw{book deep learning toread}
+    \endentry
     \entry{Burkov2019TheHM}{book}{}{}
       \name{author}{1}{}{%
         {{hash=e7bec4aeb6cbfe8741541f4a2ab78c26}{%
@@ -522,8 +566,8 @@
       \strng{authornamehash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
       \strng{authorfullhash}{e7bec4aeb6cbfe8741541f4a2ab78c26}
       \strng{authorfullhashraw}{e7bec4aeb6cbfe8741541f4a2ab78c26}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The Hundred-Page Machine Learning Book}
@@ -591,8 +635,8 @@
       \strng{authornamehash}{49e889356ff39df159461bc2895c7e16}
       \strng{authorfullhash}{49e889356ff39df159461bc2895c7e16}
       \strng{authorfullhashraw}{49e889356ff39df159461bc2895c7e16}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We consider supervised learning in the presence of very many irrelevant features, and study two different regularization methods for preventing overfitting. Focusing on logistic regression, we show that using L1 regularization of the parameters, the sample complexity (i.e., the number of training examples required to learn "well,") grows only logarithmically in the number of irrelevant features. This logarithmic rate matches the best known bounds for feature selection, and indicates that L1 regularized logistic regression can be effective even if there are exponentially many irrelevant features as there are training examples. We also give a lower-bound showing that any rotationally invariant algorithm---including logistic regression with L2 regularization, SVMs, and neural networks trained by backpropagation---has a worst case sample complexity that grows at least linearly in the number of irrelevant features.}
@@ -634,8 +678,8 @@
       \strng{authornamehash}{c346171da05683239c65d0053413406e}
       \strng{authorfullhash}{c346171da05683239c65d0053413406e}
       \strng{authorfullhashraw}{c346171da05683239c65d0053413406e}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We propose the elastic net, a new regularization and variable selection method. Real world data and a simulation study show that the elastic net often outperforms the lasso, while enjoying a similar sparsity of representation. In addition, the elastic net encourages a grouping effect, where strongly correlated predictors tend to be in or out of the model together. The elastic net is particularly useful when the number of predictors (p) is much bigger than the number of observations (n). By contrast, the lasso is not a very satisfactory variable selection method in the p≫n case. An algorithm called LARS-EN is proposed for computing elastic net regularization paths efficiently, much like algorithm LARS does for the lasso.}
@@ -650,9 +694,6 @@
       \range{pages}{20}
       \verb{doi}
       \verb 10.1111/j.1467-9868.2005.00503.x
-      \endverb
-      \verb{eprint}
-      \verb https://academic.oup.com/jrsssb/article-pdf/67/2/301/49795094/jrsssb\_67\_2\_301.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1111/j.1467-9868.2005.00503.x
@@ -685,8 +726,8 @@
       \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
       \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
       \strng{authorfullhashraw}{5ca383125b65b015cb46067f1150f462}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In multiple regression it is shown that parameter estimates based on minimum residual sum of squares have a high probability of being unsatisfactory, if not incorrect, if the prediction vectors are not orthogonal. Proposed is an estimation procedure based on adding small positive quantities to the diagonal of X′X. Introduced is the ridge trace, a method for showing in two dimensions the effects of nonorthogonality. It is then shown how to augment X′X to obtain biased estimates with smaller mean square error.}
@@ -788,49 +829,513 @@
       \verb 10.1023/B%3ASTCO.0000035301.49549.88
       \endverb
     \endentry
-    \entry{Goodfellow-et-al-2016}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
-           family={Goodfellow},
-           familyi={G\bibinitperiod},
-           given={Ian},
-           giveni={I\bibinitperiod}}}%
-        {{hash=40a8e4774982146adc2688546f54efb2}{%
-           family={Bengio},
+    \entry{baggingart}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=132b7100417675d55d5d4d8b244f7a34}{%
+           family={Breiman},
            familyi={B\bibinitperiod},
-           given={Yoshua},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
-           family={Courville},
-           familyi={C\bibinitperiod},
-           given={Aaron},
-           giveni={A\bibinitperiod}}}%
+           given={Leo},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
       }
       \list{publisher}{1}{%
-        {MIT Press}%
+        {Kluwer Academic Publishers}%
       }
-      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
-      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
-      \strng{fullhashraw}{3ae53fe582e8a815b118d26947eaa326}
-      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
-      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
-      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
-      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
-      \strng{authorfullhashraw}{3ae53fe582e8a815b118d26947eaa326}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \strng{namehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhashraw}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{bibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorbibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authornamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhashraw}{132b7100417675d55d5d4d8b244f7a34}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Book in preparation for MIT Press}
-      \field{title}{Deep Learning}
-      \field{year}{2016}
+      \field{issn}{0885-6125}
+      \field{journaltitle}{Mach. Learn.}
+      \field{month}{8}
+      \field{number}{2}
+      \field{title}{Bagging predictors}
+      \field{volume}{24}
+      \field{year}{1996}
+      \field{pages}{123\bibrangedash 140}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1023/A:1018054314350
+      \endverb
       \verb{urlraw}
-      \verb http://www.deeplearningbook.org
+      \verb https://doi.org/10.1023/A:1018054314350
       \endverb
       \verb{url}
-      \verb http://www.deeplearningbook.org
+      \verb https://doi.org/10.1023/A:1018054314350
       \endverb
-      \keyw{book deep learning toread}
+      \keyw{aggregation,averaging,bootstrap,combining}
+    \endentry
+    \entry{randomforests}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=132b7100417675d55d5d4d8b244f7a34}{%
+           family={Breiman},
+           familyi={B\bibinitperiod},
+           given={Leo},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Kluwer Academic Publishers}%
+      }
+      \strng{namehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhashraw}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{bibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorbibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authornamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhashraw}{132b7100417675d55d5d4d8b244f7a34}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Random forests are a combination of tree predictors such that each tree depends on the values of a random vector sampled independently and with the same distribution for all trees in the forest. The generalization error for forests converges a.s. to a limit as the number of trees in the forest becomes large. The generalization error of a forest of tree classifiers depends on the strength of the individual trees in the forest and the correlation between them. Using a random selection of features to split each node yields error rates that compare favorably to Adaboost (Y. Freund \& R. Schapire, Machine Learning: Proceedings of the Thirteenth International conference, ***, 148–156), but are more robust with respect to noise. Internal estimates monitor error, strength, and correlation and these are used to show the response to increasing the number of features used in the splitting. Internal estimates are also used to measure variable importance. These ideas are also applicable to regression.}
+      \field{issn}{0885-6125}
+      \field{journaltitle}{Mach. Learn.}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{Random Forests}
+      \field{volume}{45}
+      \field{year}{2001}
+      \field{pages}{5\bibrangedash 32}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1023/A:1010933404324
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1010933404324
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1010933404324
+      \endverb
+      \keyw{regression,ensemble,classification}
+    \endentry
+    \entry{Geurts2006}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=04d0aa9fc26c1881b5d9f8abbcf7df51}{%
+           family={Geurts},
+           familyi={G\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6fbe33fd3b6a25f54629f311cb113551}{%
+           family={Ernst},
+           familyi={E\bibinitperiod},
+           given={Damien},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a66465f00752277e96b03f8046d66d7b}{%
+           family={Wehenkel},
+           familyi={W\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{d85a8f7a352f561c06a1121c06d31694}
+      \strng{fullhash}{d0f7a6e18b557632261c444879fced3d}
+      \strng{fullhashraw}{d0f7a6e18b557632261c444879fced3d}
+      \strng{bibnamehash}{d0f7a6e18b557632261c444879fced3d}
+      \strng{authorbibnamehash}{d0f7a6e18b557632261c444879fced3d}
+      \strng{authornamehash}{d85a8f7a352f561c06a1121c06d31694}
+      \strng{authorfullhash}{d0f7a6e18b557632261c444879fced3d}
+      \strng{authorfullhashraw}{d0f7a6e18b557632261c444879fced3d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a new tree-based ensemble method for supervised classification and regression problems. It essentially consists of randomizing strongly both attribute and cut-point choice while splitting a tree node. In the extreme case, it builds totally randomized trees whose structures are independent of the output values of the learning sample. The strength of the randomization can be tuned to problem specifics by the appropriate choice of a parameter. We evaluate the robustness of the default choice of this parameter, and we also provide insight on how to adjust it in particular situations. Besides accuracy, the main strength of the resulting algorithm is computational efficiency. A bias/variance analysis of the Extra-Trees algorithm is also provided as well as a geometrical and a kernel characterization of the models induced.}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{Extremely randomized trees}
+      \field{volume}{63}
+      \field{year}{2006}
+      \field{pages}{3\bibrangedash 42}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1007/s10994-006-6226-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10994-006-6226-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10994-006-6226-1
+      \endverb
+    \endentry
+    \entry{adaboost}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=9dae54fc70ef3090ef42046937183be2}{%
+           family={Freund},
+           familyi={F\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=08900c47ecc2f4dbcb934ad47bb6db9b}{%
+           family={Schapire},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{fullhash}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{fullhashraw}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{bibnamehash}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{authorbibnamehash}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{authornamehash}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{authorfullhash}{44393f04b9db3d51c4c344eacdc81606}
+      \strng{authorfullhashraw}{44393f04b9db3d51c4c344eacdc81606}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Second European Conference on Computational Learning Theory}
+      \field{isbn}{3540591192}
+      \field{series}{EuroCOLT '95}
+      \field{title}{A decision-theoretic generalization of on-line learning and an application to boosting}
+      \field{year}{1995}
+      \field{pages}{23\bibrangedash 37}
+      \range{pages}{15}
+    \endentry
+    \entry{gradientboosting}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{fullhash}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{fullhashraw}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{bibnamehash}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{authorbibnamehash}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{authornamehash}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{authorfullhash}{ce884cc144616c39e723a8fe2eb3c879}
+      \strng{authorfullhashraw}{ce884cc144616c39e723a8fe2eb3c879}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Statistics}
+      \field{number}{5}
+      \field{title}{{Greedy function approximation: A gradient boosting machine.}}
+      \field{volume}{29}
+      \field{year}{2001}
+      \field{pages}{1189\bibrangedash 1232}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1214/aos/1013203451
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/aos/1013203451
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/aos/1013203451
+      \endverb
+      \keyw{boosting,decision trees,Function estimation,robust nonparametric regression}
+    \endentry
+    \entry{Chen_2016}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=48461ccdf50ba5a54e29a354aa734c0b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tianqi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c9ab8ac486d7f85ac914b1a8e51e512b}{%
+           family={Guestrin},
+           familyi={G\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{fullhash}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{fullhashraw}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{bibnamehash}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{authorbibnamehash}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{authornamehash}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{authorfullhash}{f79ceb030bcf791e5521f87ac6ada03b}
+      \strng{authorfullhashraw}{f79ceb030bcf791e5521f87ac6ada03b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}
+      \field{month}{8}
+      \field{series}{KDD ’16}
+      \field{title}{XGBoost: A Scalable Tree Boosting System}
+      \field{year}{2016}
+      \field{pages}{785\bibrangedash 794}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/2939672.2939785
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1145/2939672.2939785
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1145/2939672.2939785
+      \endverb
+    \endentry
+    \entry{dorogush2018catboostgradientboostingcategorical}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=a2bbc57c5fa93135342ee3c846b63db3}{%
+           family={Dorogush},
+           familyi={D\bibinitperiod},
+           given={Anna\bibnamedelima Veronika},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=d50d7325255d65c95c743b05f848d0e8}{%
+           family={Ershov},
+           familyi={E\bibinitperiod},
+           given={Vasily},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b0bbfa15913cf76eff37e68538d3927e}{%
+           family={Gulin},
+           familyi={G\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{870b6a3ec956468a6099c01f8cdefa69}
+      \strng{fullhash}{fcfc466ab29cc40aee35f1cdfe74eabe}
+      \strng{fullhashraw}{fcfc466ab29cc40aee35f1cdfe74eabe}
+      \strng{bibnamehash}{fcfc466ab29cc40aee35f1cdfe74eabe}
+      \strng{authorbibnamehash}{fcfc466ab29cc40aee35f1cdfe74eabe}
+      \strng{authornamehash}{870b6a3ec956468a6099c01f8cdefa69}
+      \strng{authorfullhash}{fcfc466ab29cc40aee35f1cdfe74eabe}
+      \strng{authorfullhashraw}{fcfc466ab29cc40aee35f1cdfe74eabe}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{CatBoost: gradient boosting with categorical features support}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1810.11363
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1810.11363
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1810.11363
+      \endverb
+    \endentry
+    \entry{catboost2}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=75d85fbaf5e44febf90b390cb205c49e}{%
+           family={Prokhorenkova},
+           familyi={P\bibinitperiod},
+           given={Liudmila},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d99ea4ed468e2d3f8bc4082b7d308161}{%
+           family={Gusev},
+           familyi={G\bibinitperiod},
+           given={Gleb},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4eea157d768ad9f7d675c1cb1624b822}{%
+           family={Vorobev},
+           familyi={V\bibinitperiod},
+           given={Aleksandr},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a2bbc57c5fa93135342ee3c846b63db3}{%
+           family={Dorogush},
+           familyi={D\bibinitperiod},
+           given={Anna\bibnamedelima Veronika},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=b0bbfa15913cf76eff37e68538d3927e}{%
+           family={Gulin},
+           familyi={G\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf2200e049515471bef98bbe4ddd078a}
+      \strng{fullhash}{be3384044cde3b920a17c00545fb90a0}
+      \strng{fullhashraw}{be3384044cde3b920a17c00545fb90a0}
+      \strng{bibnamehash}{be3384044cde3b920a17c00545fb90a0}
+      \strng{authorbibnamehash}{be3384044cde3b920a17c00545fb90a0}
+      \strng{authornamehash}{bf2200e049515471bef98bbe4ddd078a}
+      \strng{authorfullhash}{be3384044cde3b920a17c00545fb90a0}
+      \strng{authorfullhashraw}{be3384044cde3b920a17c00545fb90a0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{CatBoost: unbiased boosting with categorical features}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1706.09516
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.09516
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.09516
+      \endverb
+    \endentry
+    \entry{NIPS2017_6449f44a}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=dadd87e1dad07728ce408894042b277e}{%
+           family={Ke},
+           familyi={K\bibinitperiod},
+           given={Guolin},
+           giveni={G\bibinitperiod}}}%
+        {{hash=359e0be87f96079a68d0ebf5355da232}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=d1cb1c25fa372c0b0885de8a27dc0222}{%
+           family={Finley},
+           familyi={F\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b5857cb363d37a3b1ff2c28da6586fc9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Taifeng},
+           giveni={T\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a70fde7196864f8be0248eba2f7f29c8}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Weidong},
+           giveni={W\bibinitperiod}}}%
+        {{hash=162ccfc475d9d2bc1177357e4913f290}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Qiwei},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=716b89cbb7332599ebb33cc58a52f648}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Tie-Yan},
+           giveni={T\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \name{editor}{7}{}{%
+        {{hash=e7e74de725116358b68a6e890c026145}{%
+           family={Guyon},
+           familyi={G\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3b118a9660c18913c6d05d3bcfae41a3}{%
+           family={Luxburg},
+           familyi={L\bibinitperiod},
+           given={U.\bibnamedelimi Von},
+           giveni={U\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=9b411b6c9cefdde16ffea77ecf612142}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1444141e07dd9549dbb4b8530fe4ec15}{%
+           family={Wallach},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f3857e15544199442f3d4fb2cf6645b4}{%
+           family={Fergus},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c73f06e2fc98c9b0bf52eb5fdce61943}{%
+           family={Vishwanathan},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=36b98b7ab533936cf1b5716148de704f}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{cec83448a93ad6a5cdc6f494a8f2dbcb}
+      \strng{fullhash}{138b620984178bfaf960c59da39eb14f}
+      \strng{fullhashraw}{138b620984178bfaf960c59da39eb14f}
+      \strng{bibnamehash}{cec83448a93ad6a5cdc6f494a8f2dbcb}
+      \strng{authorbibnamehash}{cec83448a93ad6a5cdc6f494a8f2dbcb}
+      \strng{authornamehash}{cec83448a93ad6a5cdc6f494a8f2dbcb}
+      \strng{authorfullhash}{138b620984178bfaf960c59da39eb14f}
+      \strng{authorfullhashraw}{138b620984178bfaf960c59da39eb14f}
+      \strng{editorbibnamehash}{7cffda9a379be8eb9063eee4eb0f58b3}
+      \strng{editornamehash}{7cffda9a379be8eb9063eee4eb0f58b3}
+      \strng{editorfullhash}{1564f811a39f09a7400a11284c987926}
+      \strng{editorfullhashraw}{1564f811a39f09a7400a11284c987926}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{LightGBM: A Highly Efficient Gradient Boosting Decision Tree}
+      \field{volume}{30}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf
+      \endverb
+    \endentry
+    \entry{histboost}{inbook}{}{}
+      \name{author}{1}{}{%
+        {{hash=406cdb1dde60c7dfc095b364e1e11485}{%
+           family={Guryanov},
+           familyi={G\bibinitperiod},
+           given={Aleksei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{fullhash}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{fullhashraw}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{bibnamehash}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{authorbibnamehash}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{authornamehash}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{authorfullhash}{406cdb1dde60c7dfc095b364e1e11485}
+      \strng{authorfullhashraw}{406cdb1dde60c7dfc095b364e1e11485}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783030373337}
+      \field{month}{12}
+      \field{title}{Histogram-Based Algorithm for Building Gradient Boosting Ensembles of Piecewise Linear Decision Trees}
+      \field{year}{2019}
+      \field{pages}{39\bibrangedash 50}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/978-3-030-37334-4_4
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
