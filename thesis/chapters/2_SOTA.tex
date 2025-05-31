@@ -89,19 +89,31 @@ Generalmente, los algoritmos de aprendizaje automático se dividen en dos grande
 	\item \textbf{Aprendizaje no supervisado:} El objetivo del algoritmo es aprender patrones subyacentes de los datos de entrada $X$ ofrecidos, sin buscar predecir una salida. Esta función se aprende a partir de un conjunto de datos $D={x_i}^{N}_{i=1}$ donde no se ofrece ningún tipo de etiqueta a cada instancia $x_i$.
 \end{itemize}
 
+Un \textbf{modelo} es el resultado del proceso de aprendizaje automático: una función capaz de predecir una salida para una entrada dada, y cuyos parámetros e hiperparámetros han sido ajustados a través de un entrenamiento sobre un conjunto de datos para \textbf{minimizar un error} \cite{Burkov2019TheHM}. 
+
 De cara a cumplir el objetivo propuesto por el trabajo descrito en esta memoria - la creación de un modelo capaz de \textbf{predecir el tiempo de diagnóstico} -, se van a trabajar con modelos supervisados de \textbf{regresión}. Por esto, resulta de interés describir los principales modelos a utilizar y el ajuste que se va a realizar sobre ellos.
 
 \subsection{Selección de modelos}
 
-AÑADIR SOBREAJUSTE? \cite{aima}
+Durante el entrenamiento de los modelos, se pueden encontrar algunos problemas:
+\begin{itemize}
+	\item Se han entrenado varios modelos, y es necesario elegir de forma objetiva uno de ellos en base a su rendimiento.
+	\item Se necesitan elegir los hiperparámetros de un modelo que mejor rendimiento ofrecen sobre el conjunto de datos, de forma objetiva.
+	\item Los modelos entrenados han aprendido variaciones insignificantes y patrones falsos - ruido interpretado como información real - a partir de los datos de entrada, llevando a un problema de \textbf{sobreajuste} \cite{mlprobabilistic} que puede afectar de forma negativa al rendimiento del modelo.
+\end{itemize}
 
-\cite{mlprobabilistic} PARA DEFINICION DE SELECCION
+En estos casos, nos interesa seleccionar de entre todos los modelos a evaluar el modelo más \textbf{generalizable} - es decir, el modelo que tendría el \textbf{menor error esperado} si se evaluase con un conjunto de datos distinto al utilizado durante el entrenamiento \cite{mlprobabilistic}. 
 
-\cite{Goodfellow-et-al-2016} PARA AJUSTE DE HIPERPARAMETROS
+Ahora bien, a la hora de la verdad no es común tener acceso a dicho hipotético conjunto de test - o si se tiene, solo debería ser utilizado para evaluar el rendimiento del modelo seleccionado finalmente para evitar que se sesgue la selección de modelos \cite{aima}. 
+
+Para solucionar este problema y realizar una selección de modelos \textbf{honesta}, se pueden utilizar las siguientes opciones \cite{mlprobabilistic}:
+
+\begin{itemize}
+	\item \textbf{Conjunto de validación:} Se particiona el conjunto de datos inicial en entrenamiento y validación - utilizando el primero para entrenar los modelos, y el segundo para evaluar su rendimiento honesto y seleccionar el modelo.
+	\item \textbf{K-Validación cruzada:} En caso de que el conjunto de datos no sea suficientemente grande para particionarse, se puede optar por particionar el conjunto de datos en \textbf{K trozos} de igual tamaño. Para cada uno de estas particiones, se entrenan los modelos con el resto de particiones y se evalúan los rendimientos sobre la partición seleccionada. Tras realizar este proceso $K$ veces, se puede utilizar el error promedio de los $K$ entrenamientos como una aproximación al rendimiento honesto del modelo para realizar la selección.
+\end{itemize}
 
 \subsection{Modelos de regresión}
-
-Un \textbf{modelo} es el resultado del proceso de aprendizaje automático: una función capaz de predecir una salida para una entrada dada, y cuyos parámetros han sido ajustados a través de un entrenamiento sobre un conjunto de datos para \textbf{minimizar un error} \cite{Burkov2019TheHM}. 
 
 En el caso de la \textbf{regresión}, el objetivo del modelo es aprender una función capaz de predecir un valor numérico continuo para cada instancia de datos de entrada \cite{mlprobabilistic}. Dicha función se ajusta buscando encontrar el conjunto de parámetros que \textbf{minimiza} la diferencia entre los valores predichos por la función y los valores reales asociados a los datos de entrada \cite{Burkov2019TheHM}.
 

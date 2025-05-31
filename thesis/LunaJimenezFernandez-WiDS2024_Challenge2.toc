@@ -9,9 +9,9 @@
 \contentsline {section}{\numberline {2.2}Aprendizaje automático y ajuste de modelos}{6}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Aprendizaje automático}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Selección de modelos}{7}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Modelos de regresión}{7}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Modelos de regresión}{8}{subsection.2.2.3}%
 \contentsline {subsubsection}{Modelos tradicionales - regresión lineal, árboles de decisiones y máquinas de vectores de soporte}{8}{subsection.2.2.3}%
-\contentsline {subsubsection}{Modelos de ensemble - bagging y boosting}{9}{subsection.2.2.3}%
+\contentsline {subsubsection}{Modelos de ensemble - bagging y boosting}{10}{subsection.2.2.3}%
 \contentsline {chapter}{\numberline {3}Estudio del problema}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definición del problema}{13}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Atributos del problema}{13}{subsection.3.1.1}%
