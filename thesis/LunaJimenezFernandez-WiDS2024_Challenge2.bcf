@@ -2442,6 +2442,8 @@
     <bcf:citekey order="69" intorder="1">catboost2</bcf:citekey>
     <bcf:citekey order="70" intorder="1">NIPS2017_6449f44a</bcf:citekey>
     <bcf:citekey order="71" intorder="1">scikit-learn</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">widsdatathon2024-challenge2</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">widsdatathon2024-challenge2</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
