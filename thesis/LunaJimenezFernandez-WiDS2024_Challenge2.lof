@@ -3,8 +3,13 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces \xpg@aux {}{spanish}Ciclo de vida de los datos \blx@tocontentsinit {0}\cite {potential}}}{4}{figure.caption.4}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces \xpg@aux {}{spanish}Ciclo de vida de CRISP-DM \blx@tocontentsinit {0}\cite {shearer2000crisp}}}{5}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{spanish}Ejemplo de subfiguras}}{14}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{spanish}Atributos con mayor número de valores perdidos}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{spanish}Distribución del tiempo de diagnóstico}}{14}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{spanish}Distribución de valores perdidos en el conjunto de datos}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \xpg@aux {}{spanish}Distribución de la raza del paciente}}{16}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \xpg@aux {}{spanish}Distribución del tipo de seguro médico del paciente}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \xpg@aux {}{spanish}Distribución de los 15 valores más frecuentes del código de diagnóstico de cáncer de mama}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \xpg@aux {}{spanish}Distribución de los 15 valores más frecuentes del código de diagnóstico de cáncer de mama}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \xpg@aux {}{spanish}Correlaciones entre atributos numéricos y tiempo de diagnóstico}}{21}{figure.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

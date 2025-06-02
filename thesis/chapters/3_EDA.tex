@@ -8,7 +8,7 @@ El \textbf{cáncer de mama triple negativo} es uno de los cánceres de mama más
 
 El principal objetivo del problema - y, por tanto, el objetivo que guía el proceso de ciencia de datos - es \textbf{crear un modelo de regresión} capaz de predecir el tiempo de diagnóstico de metástasis en base a la información dada de un paciente. Además, se busca estudiar la \textbf{influencia de factores geográficos, socioeconómicos y climáticos} en dicho tiempo de diagnóstico, para comprobar si existe un sesgo real en el trato a los pacientes.
 
-El problema a resolver se planteó originalmente como el segundo de los desafios ofrecidos por la institución \textbf{Women in Data Science} como parte de su \textit{Datathon} de 2024 \cite{widsdatathon2024-challenge2}.
++El problema a resolver se planteó originalmente como el segundo de los desafios ofrecidos por la institución \textbf{Women in Data Science} como parte de su \textit{Datathon} de 2024 \cite{widsdatathon2024-challenge2}.
 
 \section{Análisis exploratorio de datos}
 
@@ -48,7 +48,8 @@ La variable objetivo - el \textbf{tiempo de diagnóstico de una metástasis} - e
 			\end{center}
 		\end{subfigure} 
 	\end{center}
-	\caption[Ejemplo de subfiguras]{Distribución del tiempo de diagnóstico}
+	\captionsetup{aboveskip=-5pt, belowskip=-15pt}
+	\caption{Distribución del tiempo de diagnóstico}
 	\label{fig:ch3varobjetivo}
 \end{figure}
 
@@ -61,7 +62,8 @@ Antes de realizar un estudio más exhaustivo de los atributos, es de interés es
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/chapter3/missingvalues}
-	\caption[Atributos con mayor número de valores perdidos]{Atributos con mayor número de valores perdidos}
+	\captionsetup{belowskip=-15pt}
+	\caption{Distribución de valores perdidos en el conjunto de datos}
 	\label{fig:ch3missingvalues}
 \end{figure}
 
@@ -77,12 +79,170 @@ En el resto de atributos el número de valores perdidos es más reducido - en el
 
 \subsection{Estudio de atributos categóricos}
 
-\subsubsection{Datos personales - raza y género del paciente}
+Tras un primer análisis - en el que se ha estudiado la distribución de la variable objetivo, los atributos y sus valores perdidos -, la segunda parte del análisis exploratorio es realizar un \textbf{estudio exhaustivo individualizado} de los atributos de interés y su relación con la variable predictora. Al ser reducido el número de atributos categóricos (con un total de \textbf{11}) es posible realizar un análisis individual de cada uno de estos atributos:
 
-\subsubsection{Datos médicos - seguro, códigos de diagnóstico y tipos de tratamiento}
+\subsubsection{Datos personales - raza, género y tipo de seguro del paciente}
 
-\subsubsection{Datos geográficos}
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Raza del paciente:}
+	
+	Como se ha comentado durante el estudio de los valores perdidos, hay \textbf{un número significativo de valores perdidos} de este atributo - que serán tratados como una categoría adicional, \textit{"Unknown"}.
+	
+	\begin{figure}[h]
+		\begin{center}
+			\begin{subfigure}{0.45\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/racedistribution.pdf}
+					\caption{General}\label{fig:ch3racedist}
+				\end{center}
+			\end{subfigure} 
+			\begin{subfigure}{0.45\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/raceperiod.pdf}
+					\caption{Respecto al tiempo de diagnóstico}\label{fig:ch3raceperiod}
+				\end{center}
+			\end{subfigure} 
+		\end{center}
+		\captionsetup{aboveskip=-5pt, belowskip=-15pt}
+		\caption{Distribución de la raza del paciente}
+		\label{fig:ch3race}
+	\end{figure}
+	
+	
+	
+	En la \textbf{Figura \ref{fig:ch3race}} se puede observar que:
+	\begin{itemize}
+		\item \textbf{Distribución general:} Como se podía esperar, la mayoría de pacientes presentan una raza desconocida - algo que se puede interpretar como que \textbf{la mayoría de los pacientes no se sienten cómodos especificando su raza}. Tras esto, la raza \textbf{blanca} es la más frecuente - siendo tres veces más frecuente que la raza negra -, siendo la raza asiática la menos frecuente.
+		\item \textbf{Relación con el tiempo de diagnóstico:} Si bien todas las razas tienen un rango de tiempos de diagnóstico amplio, \textbf{las razas blanca e hispánica tienen una mediana ligeramente inferior al resto} - sugiriendo que \textbf{la raza puede influir en el tiempo de diagnóstico}.
+	\end{itemize}
+	
+	Dada estas observaciones, puede resultar de interés considerar la raza del paciente a la hora de hacer una selección de atributos.
+	
+	\item \textbf{Tipo de seguro médico del paciente:}
+	
+	Igual que con la raza, hay una cantidad significativa de valores perdidos de este atributo - que serán categorizados como un nuevo valor, \textit{"UNKNOWN"}.
+	
+	\begin{figure}[h]
+		\begin{center}
+			\begin{subfigure}{0.45\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/payertypedistribution.pdf}
+					\caption{General}\label{fig:ch3payertypedist}
+				\end{center}
+			\end{subfigure} 
+			\begin{subfigure}{0.45\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/payertypeperiod.pdf}
+					\caption{Respecto al tiempo de diagnóstico}\label{fig:ch3payertypeperiod}
+				\end{center}
+			\end{subfigure} 
+		\end{center}
+		\captionsetup{aboveskip=-5pt, belowskip=-15pt}
+		\caption{Distribución del tipo de seguro médico del paciente}
+		\label{fig:ch3payertype}
+	\end{figure}
+	
+	En la \textbf{Figura \ref{fig:ch3payertype}} se puede estudiar que:
+	\begin{itemize}
+		\item \textbf{Distribución general:} El seguro más frecuente - siendo la mitad del conjunto de datos - es el \textbf{seguro comercial privado}. Los dos seguros públicos - \textbf{Medicaid} y \textbf{Medicare Advanced} - tienen proporciones similares entre sí, siendo en conjunto algo inferior al número de seguros privados. Finalmente, hay una cantidad ligeramente inferior de seguros desconocidos - que podría referirse a \textbf{pacientes sin seguro médico}.
+		\item \textbf{Relación con el tiempo de diagnóstico:} En contra de lo que se podría esperar, los seguros desconocidos presentan \textbf{un tiempo de diagnóstico mediano y un rango sustancialmente inferior} al del resto de seguros. Aunque los tres tipos de seguros restantes tienen distribuciones similares, parece que \textbf{los seguros privados tienen un tiempo de diagnóstico ligeramente superior}.
+	\end{itemize}
+	
+	Dadas estas diferencias, es posible que \textbf{el tipo de seguro del paciente influya en el tiempo de diagnóstico} - por lo que será considerado posteriormente a la hora de realizar una selección de atributos.
+	
+	\item \textbf{Género del paciente:}
+	
+	Pese a no haber ningún valor perdido, el atributo presenta un problema de cara a su uso posterior: \textbf{todas las instancias del conjunto de datos tienen el mismo valor (mujer)}. Por tanto, el uso de este atributo no ofrece ninguna capacidad discriminatoria y puede ser descartado sin problema.
+	
+\end{itemize}
+
+\newpage
+
+\subsubsection{Datos médicos - códigos de diagnóstico y tipos de tratamiento}
+
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Código de diagnóstico de cáncer de mama:}
+	
+	Existen dos atributos en el conjunto de datos clasificando la misma información: \textbf{código de diagnóstico} y \textbf{descripción del diagnóstico}. Al representar la misma información - y tras comprobar que hay una correlación directa entre ambos atributos -, es suficiente con estudiar \textbf{uno de los dos atributos}, eligiendo estudiar el \textbf{código de diagnóstico de cáncer de mama}.
+	
+	El principal problema a la hora de estudiar este atributo es que se tienen \textbf{47 valores únicos} para el atributo, siendo un número demasiado elevado para estudiar en detalle. Además, no hay garantía de que \textbf{estos valores sean exhaustivos} - es decir, es posible que \textbf{existan códigos de diagnóstico no incluidos en el conjunto de entrenamiento}. Por esto, se realizará el estudio sobre los \textbf{15 códigos más frecuentes}.
+	
+	\begin{figure}[h]
+		\begin{center}
+			\begin{subfigure}{\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/bcdistribution}
+					\caption{General}\label{fig:ch3bcdist}
+				\end{center}
+			\end{subfigure} 
+			\begin{subfigure}{\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/bcperiod}
+					\caption{Respecto al tiempo de diagnóstico}\label{fig:ch3bcperiod}
+				\end{center}
+			\end{subfigure} 
+		\end{center}
+		\captionsetup{aboveskip=-5pt, belowskip=-15pt, justification=centering}
+		\caption{Distribución de los 15 valores más frecuentes del código de diagnóstico de cáncer de mama}
+		\label{fig:ch3bc}
+	\end{figure}
+	
+	En la \textbf{Figura \ref{fig:ch3bcdist}} se estudia la distribución general, y como se puede observar, \textbf{existen dos tipos de codificaciones} - las codificaciones que empiezan por la letra \textbf{C} (ICD10, más moderno) y las que empiezan por un número (ICD9). Además, se puede ver que la mayoría de diagnósticos se encuentran agrupados en cuatro códigos - con la frecuencia del resto de atributos bajando rápidamente hasta llegar a los diagnósticos con una o dos instancias no representados. Estos diagnósticos, si se comprueba su código descriptivo, hacen referencia a \textbf{cánceres en sitios sin especificar} - es decir, los códigos más genéricos y por tanto aplicables a un mayor número de casos.
+
+	En la \textbf{Figura \ref{fig:ch3bcperiod}} se puede apreciar una diferencia clara en tiempos de diagnóstico dependiendo de la \textbf{codificación utilizada}, con los diagnósticos con codificación de tipo \textbf{ICD9} teniendo un tiempo de diagnóstico promedio notablemente superior. Si bien no hay una explicación clara para ésto, puede deberse a que hagan referencia a casos más antiguos - y, por tanto, casos con menor conocimiento y recursos.
+	
+	Por esto, resulta evidente que el código de diagnóstico de cáncer de mama ofrece información discriminatoria muy relevante de cara a ser utilizada en el modelo posterior.
+	
+	\item \textbf{Código de diagnóstico de cáncer metastásico:}
+	
+	A diferencia del código de diagnóstico para cáncer de mama, para el \textbf{diagnóstico de cáncer metastásico} solo se tiene un atributo. 
+	
+	Ahora bien, se sigue teniendo el mismo problema de dimensionalidad: el conjunto de datos contiene \textbf{43 valores únicos} para este atributo, sin garantía de que sea un conjunto \textbf{exhaustivo}. Por esto, se realizará el estudio sobre los \textbf{15 códigos más frecuentes}.
+	
+	\begin{figure}[h]
+		\begin{center}
+			\begin{subfigure}{\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/mcdistribution}
+					\caption{General}\label{fig:ch3mcdist}
+				\end{center}
+			\end{subfigure} 
+			\begin{subfigure}{\linewidth}
+				\begin{center}
+					\includegraphics[width=\linewidth]{figs/chapter3/categorical/mcperiod}
+					\caption{Respecto al tiempo de diagnóstico}\label{fig:ch3mcperiod}
+				\end{center}
+			\end{subfigure} 
+		\end{center}
+		\captionsetup{aboveskip=-5pt, belowskip=-15pt, justification=centering}
+		\caption{Distribución de los 15 valores más frecuentes del código de diagnóstico de cáncer de mama}
+		\label{fig:ch3mc}
+	\end{figure}
+	
+	Como se observa en la \textbf{Figura \ref{fig:ch3mcdist}} y a diferencia del diagnóstico de cáncer de mama, en este caso \textbf{la mayoría de diagnósticos se concentran alrededor de un único diagnóstico} - $C773$, metástasis en nodos linfáticos auxiliares y de las extremidades superiores -, con el resto de diagnósticos reduciendo su frecuencia rápidamente.
+	
+	Respecto a la relación con el tiempo de diagnóstico, en la \textbf{Figura \ref{fig:ch3mcperiod}} se puede ver que, si bien no hay una diferencia tan pronunciada como en el caso del código de diagnóstico de cáncer de mama, \textbf{el tipo de metástasis diagnosticado parece tener influencia sobre el tiempo necesario para su diagnóstico}. Ahora bien, si se estudia la localización de la metástasis de cada código estudiado \textbf{no se observa correlación entre la localización y el tiempo de diagnóstico}.
+	
+	Por esto, se puede considerar al \textbf{código de diagnóstico del cáncer metastásico} otra variable de gran interés para los modelos desarrollados posteriormente - pudiendo ofrecer una gran capacidad discriminatoria.
+	
+	\item \textbf{Tipo de tratamiento:}
+	
+	Como se mencionó durante el estudio de los valores perdidos, \textbf{solo se tienen 11 valores} para este atributo - de \textbf{13173} instancias totales. Por tanto, no tiene ningún sentido estudiar este atributo, al no contener suficiente información para ser significativo.
+\end{itemize}
+
+\subsubsection{Datos geográficos - estado de residencia y ubicación geográfica}
+
+\subsubsection{Tests de hipótesis}
 
 \subsection{Estudio de atributos numéricos}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figs/chapter3/numerical/correlations.png}
+	\captionsetup{belowskip=-15pt, justification=centering}
+	\caption{Correlaciones entre atributos numéricos y tiempo de diagnóstico}
+	\label{fig:correlations}
+\end{figure}
+
 
 \subsection{Conclusiones del análisis}
