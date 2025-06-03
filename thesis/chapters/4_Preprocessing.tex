@@ -1,9 +1,31 @@
 \chapter{Preparación del conjunto de datos}
 
+En este capítulo se describe el conjunto de transformaciones y técnicas aplicadas para preparar el conjunto de datos para su uso posterior durante el entrenamiento y experimentación.
+
+En primer lugar se propone un número de \textbf{subconjuntos de atributos} de cara a reducir la dimensionalidad del conjunto de datos. Tras esto, se plantean y describen las \textbf{transformaciones} aplicadas al conjunto de datos previo al entrenamiento para estandarizar los datos y mejorar el rendimiento de los modelos.
+
+
 \section{Selección de atributos}
 
+Durante el análisis exploratorio se realizó un estudio exhaustivo de los atributos contenidos en el conjunto de datos, observándose los siguientes problemas:
+
+\begin{itemize}
+	\item \textbf{Alta dimensionalidad:} El conjunto de datos tiene \textbf{150 atributos} en total, donde la mayoría de atributos categóricos tienen \textbf{40 o más valores únicos}. Esto, unido al número de instancias bajo para dicha complejidad, puede significar que el modelo acabaría \textbf{sobreajustándose} al no poder aprender generalizaciones de forma adecuada.
+	\item \textbf{Irrelevancia de los atributos:} De los 150 atributos estudiados, \textbf{la amplia mayoría no presentan correlación con la variable objetivo} - por lo que mantenerlos puede implicar una disminución del rendimiento final del modelo y un aumento del tiempo de entrenamiento.
+\end{itemize}
+
+Debido a esto, resulta necesario realizar una \textbf{selección de atributos} - proponiendo varios \textbf{subconjuntos de atributos} a utilizar durante la experimentación y selección de modelos, con el objetivo de optimizar el rendimiento del modelo reduciendo la dimensionalidad.
+
 \subsection{Selección manual de atributos}
+
+testing testing
 
 \subsection{Selección automática de atributos}
 
 \section{Preprocesamiento de los datos}
+
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Atributos categóricos:}
+	
+	\item \textbf{Atributos numéricos:}
+\end{itemize}

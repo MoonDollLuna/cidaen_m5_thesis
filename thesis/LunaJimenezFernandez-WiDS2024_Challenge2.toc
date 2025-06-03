@@ -26,8 +26,8 @@
 \contentsline {chapter}{\numberline {4}Preparación del conjunto de datos}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Selección de atributos}{23}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Selección manual de atributos}{23}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Selección automática de atributos}{23}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Preprocesamiento de los datos}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.1.2}Selección automática de atributos}{24}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Preprocesamiento de los datos}{24}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Modelado y evaluación}{25}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Selección de modelos}{25}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Experimentación}{25}{section.5.2}%
@@ -43,5 +43,4 @@
 \contentsline {chapter}{\numberline {7}Conclusiones}{29}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Trabajo futuro}{29}{section.7.1}%
 \contentsline {chapter}{Referencia bibliográfica}{32}{chapter*.15}%
-\contentsline {chapter}{\numberline {A}Anexo 1}{33}{appendix.A}%
 \contentsfinish 
