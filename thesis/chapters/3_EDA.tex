@@ -7,8 +7,7 @@ En este capítulo se estudia en detalle el problema a resolver a través de un p
 El \textbf{cáncer de mama triple negativo} es uno de los cánceres de mama más agresivos y difíciles de tratar. En el caso de que además se agravase con una \textbf{metástasis}, se necesita un tratamiento rápido y urgente, sin retrasos innecesarios, para aumentar al máximo las posibilidades de éxito. Ahora bien, el tiempo de espera para acceder a dicho tratamiento no es igual para todos los pacientes, y existe la posibilidad de que hayan sesgos influyendo en el tiempo de diagnóstico - como pueden ser algunos factores geográficos, socioeconómicos o incluso climáticos \cite{widsdatathon2024-challenge2}.
 
 El principal objetivo del problema - y, por tanto, el objetivo que guía el proceso de ciencia de datos - es \textbf{crear un modelo de regresión} capaz de predecir el tiempo de diagnóstico de metástasis en base a la información dada de un paciente. Además, se busca estudiar la \textbf{influencia de factores geográficos, socioeconómicos y climáticos} en dicho tiempo de diagnóstico, para comprobar si existe un sesgo real en el trato a los pacientes.
-
-+El problema a resolver se planteó originalmente como el segundo de los desafios ofrecidos por la institución \textbf{Women in Data Science} como parte de su \textit{Datathon} de 2024 \cite{widsdatathon2024-challenge2}.
+El problema a resolver se planteó originalmente como el segundo de los desafíos ofrecidos por la institución \textbf{Women in Data Science} como parte de su \textit{Datathon} de 2024 \cite{widsdatathon2024-challenge2}.
 
 \section{Análisis exploratorio de datos}
 
@@ -61,7 +60,7 @@ Antes de realizar un estudio más exhaustivo de los atributos, es de interés es
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.9\linewidth]{figs/chapter3/missingvalues}
+	\includegraphics[width=\linewidth]{figs/chapter3/missingvalues}
 	\captionsetup{belowskip=-15pt}
 	\caption{Distribución de valores perdidos en el conjunto de datos}
 	\label{fig:ch3missingvalues}
@@ -171,13 +170,13 @@ Tras un primer análisis - en el que se ha estudiado la distribución de la vari
 		\begin{center}
 			\begin{subfigure}{\linewidth}
 				\begin{center}
-					\includegraphics[width=\linewidth]{figs/chapter3/categorical/bcdistribution}
+					\includegraphics[width=0.9\linewidth]{figs/chapter3/categorical/bcdistribution}
 					\caption{General}\label{fig:ch3bcdist}
 				\end{center}
 			\end{subfigure} 
 			\begin{subfigure}{\linewidth}
 				\begin{center}
-					\includegraphics[width=\linewidth]{figs/chapter3/categorical/bcperiod}
+					\includegraphics[width=0.9\linewidth]{figs/chapter3/categorical/bcperiod}
 					\caption{Respecto al tiempo de diagnóstico}\label{fig:ch3bcperiod}
 				\end{center}
 			\end{subfigure} 
@@ -203,13 +202,13 @@ Tras un primer análisis - en el que se ha estudiado la distribución de la vari
 		\begin{center}
 			\begin{subfigure}{\linewidth}
 				\begin{center}
-					\includegraphics[width=\linewidth]{figs/chapter3/categorical/mcdistribution}
+					\includegraphics[width=0.9\linewidth]{figs/chapter3/categorical/mcdistribution}
 					\caption{General}\label{fig:ch3mcdist}
 				\end{center}
 			\end{subfigure} 
 			\begin{subfigure}{\linewidth}
 				\begin{center}
-					\includegraphics[width=\linewidth]{figs/chapter3/categorical/mcperiod}
+					\includegraphics[width=0.9\linewidth]{figs/chapter3/categorical/mcperiod}
 					\caption{Respecto al tiempo de diagnóstico}\label{fig:ch3mcperiod}
 				\end{center}
 			\end{subfigure} 
@@ -232,17 +231,72 @@ Tras un primer análisis - en el que se ha estudiado la distribución de la vari
 
 \subsubsection{Datos geográficos - estado de residencia y ubicación geográfica}
 
-\subsubsection{Tests de hipótesis}
+El estudio de la información geográfica del conjunto de datos es de especial importancia al ser uno de los objetivos planteados por el problema a resolver. Además, toda la información socio-económica y climática del conjunto de datos está \textbf{asociada al código zip de los pacientes} - por lo que estos atributos codifican de forma innata todos estos factores de sesgo.
+
+Ahora bien, la información se encuentra representada en el conjunto de datos a través de \textbf{4 atributos jerárquicos}, donde cada atributo inferior describe con más granularidad el atributo superior. Al codificar la misma información, es de interés seleccionar \textbf{un único atributo} sobre el que realizar el estudio.
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}rlll@{}}
+			\toprule
+			\multicolumn{1}{c}{}                                    & \multicolumn{1}{c}{}                                           & \multicolumn{2}{c}{\textbf{p-valores (Tests de hipótesis)}}                                       \\ \cmidrule(l){3-4} 
+			\multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Atributo}}} & \multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Valores totales}}} & \textbf{Paramétrico (ANOVA)}                    & \textbf{No paramétrico (Kruskal)}               \\ \midrule
+			\textbf{Región}                                         & 4                                                              & $2,80 \times 10^{-3}$                           & $1,93 \times 10^{-6}$                           \\
+			\rowcolor[HTML]{EFEFEF} 
+			\textbf{División}                                       & 8                                                              & $6,13 \times 10^{-3}$                           & $1,68 \times 10^{-5}$                           \\
+			\textbf{Estado}                                         & 44                                                             & $5.86 \times 10^{-10}$                          & $1.06 \times 10^{-16}$                          \\
+			\rowcolor[HTML]{EFEFEF} 
+			\textbf{Código zip}                                     & 751                                                            & \multicolumn{1}{c}{\cellcolor[HTML]{EFEFEF}---} & \multicolumn{1}{c}{\cellcolor[HTML]{EFEFEF}---} \\ \bottomrule
+		\end{tabular}%
+	}
+	\captionsetup{belowskip=-15pt}
+	\caption{p-valores de los atributos geográficos}
+	\label{tab:ch3geographical}
+\end{table}
+
+Para realizar la selección se han realizado \textbf{tests de hipótesis} - tanto paramétricos (\textbf{ANOVA}, para estudiar desviaciones en la media) como no paramétricos (\textbf{Kruskal-Wallis}, para estudiar desviaciones en la mediana) - sobre todos los atributos excepto el código zip, debido a su alta dimensionalidad. Los resultados se pueden observar en la \textbf{Tabla \ref{tab:ch3geographical}}, siendo el atributo a seleccionar el \textbf{estado}, al tener el p-valor más bajo - y, por tanto, tener la mayor certeza de que \textbf{su valor influye sobre el promedio del tiempo de diagnóstico}.
+
+\begin{figure}[h]
+	\begin{center}
+		\begin{subfigure}{0.9\linewidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{figs/chapter3/categorical/statedist}
+				\caption{Frecuencia}\label{fig:ch3statedist}
+			\end{center}
+		\end{subfigure} 
+		\begin{subfigure}{0.9\linewidth}
+			\begin{center}
+				\includegraphics[width=\linewidth]{figs/chapter3/categorical/statemean}
+				\caption{Tiempo de diagnóstico promedio}\label{fig:ch3statemean}
+			\end{center}
+		\end{subfigure} 
+	\end{center}
+	\captionsetup{aboveskip=-5pt, belowskip=-15pt, justification=centering}
+	\caption{Distribución geográfica de los pacientes}
+	\label{fig:ch3state}
+\end{figure}
+
+En el mapa de la \textbf{Figura \ref{fig:ch3statedist}} se representa la distribución de los pacientes en el mapa de los Estados Unidos, donde se observa que los pacientes están \textbf{agrupados en estados concretos} - en general, los estados de mayor población -, sin haber una correlación geográfica clara en su ubicación. También se observa que \textbf{existen algunos estados sin pacientes} - por lo que, igual que con los códigos de diagnóstico, \textbf{los valores del atributo no son exhaustivos}.
+
+Estudiando el valor promedio del tiempo de diagnóstico, la \textbf{Figura \ref{fig:ch3statemean}} muestra que el \textbf{tiempo de diagnóstico promedio es similar entre todos los estados} - rondando alrededor de los \textbf{80 días}, pero ubicado en el rango de los \textbf{60 a 120 días}. También es llamativo el hecho de que \textbf{la desviación estándar es muy elevada} - en la práctica totalidad de los estados se trabaja con desviaciones estándar de alrededor de \textbf{100 días}.
+
+El test de hipótesis indica que el estado del paciente \textbf{influye de forma significativa sobre el tiempo de diagnóstico}, por lo que es un atributo de interés de cara a la creación posterior de modelos. Ahora bien, el estudio gráfico de la distribución también muestra que existe un \textbf{error sustancial} en dicha diferencia, al haber un rango muy elevado de posibles valores dentro de cada estado.
 
 \subsection{Estudio de atributos numéricos}
+
+Tras el estudio de los atributos categóricos, el siguiente paso es realizar un \textbf{estudio exhaustivo} de los atributos numéricos más significativos. Sin embargo, el elevado número de atributos, con un total de \textbf{138 variables numéricas}, hace imposible el estudio individualizado. Por tanto, el objetivo es seleccionar los \textbf{principales atributos numéricos} - entendiendo como tales los \textbf{atributos con mayor influencia sobre el tiempo de diagnóstico}. 
+
+Una forma de realizar esta selección es mediante el \textbf{coeficiente de correlación de Pearson} - un valor numérico en el rango $[-1, 1]$ indicando la \textbf{relación lineal entre dos atributos}, donde los valores cercanos a los extremos indican una correlación fuerte y un valor cercano a $0$ indica independencia entre los atributos.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figs/chapter3/numerical/correlations.png}
 	\captionsetup{belowskip=-15pt, justification=centering}
-	\caption{Correlaciones entre atributos numéricos y tiempo de diagnóstico}
-	\label{fig:correlations}
+	\caption{Relación entre valor y tiempo de diagnósticos para los 12 atributos de mayor correlación}
+	\label{fig:ch3correlations}
 \end{figure}
 
+Ahora bien, como se refleja en la \textbf{Figura \ref{fig:ch3correlations}}, cuando se calcula la correlación entre los \textbf{138 atributos} y el tiempo de diagnóstico se observa claramente que \textbf{los valores de correlación de Pearson son muy bajos} - siendo el valor más alto de $0.055$. Estos valores se traducen en que \textbf{los atributos numéricos no tienen apenas influencia sobre el tiempo de diagnóstico} - y, por tanto, \textbf{pueden ser descartados} en las siguientes etapas del proceso de ciencia de datos.
 
-\subsection{Conclusiones del análisis}
+Al ser la práctica totalidad de atributos socioeconómicos y climáticos de tipo numérico, esto también se traduce en una respuesta al segundo objetivo del problema: identificar que, en contra de lo que se podría esperar, \textbf{los factores socioeconómicos y climáticos no parecen tener influencia sobre el tiempo de diagnóstico} - al menos, para el conjunto de datos proporcionado.

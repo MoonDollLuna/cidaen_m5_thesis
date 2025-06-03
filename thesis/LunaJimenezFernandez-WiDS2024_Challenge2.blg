@@ -1,17 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'LunaJimenezFernandez-WiDS2024_Challenge2.blg'
-[148] biber-MSWIN64:340> INFO - === 
-[199] Biber.pm:420> INFO - Reading 'LunaJimenezFernandez-WiDS2024_Challenge2.bcf'
-[370] Biber.pm:994> INFO - Found 30 citekeys in bib section 0
-[393] Biber.pm:4463> INFO - Processing section 0
-[406] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[492] bibtex.pm:1713> INFO - LaTeX decoding ...
-[568] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[823] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[823] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[823] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[852] bbl.pm:676> INFO - Writing 'LunaJimenezFernandez-WiDS2024_Challenge2.bbl' with encoding 'UTF-8'
-[877] bbl.pm:779> INFO - Output to LunaJimenezFernandez-WiDS2024_Challenge2.bbl
-[878] Biber.pm:131> WARN - legacy month field 'jul 1' in entry 'Wing2019Data' is not an integer - this will probably not sort properly.
-[878] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'Geurts2006' is not an integer - this will probably not sort properly.
-[878] Biber.pm:133> INFO - WARNINGS: 2
+[135] biber-MSWIN64:340> INFO - === 
+[183] Biber.pm:420> INFO - Reading 'LunaJimenezFernandez-WiDS2024_Challenge2.bcf'
+[342] Biber.pm:994> INFO - Found 29 citekeys in bib section 0
+[364] Biber.pm:4463> INFO - Processing section 0
+[377] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[467] bibtex.pm:1713> INFO - LaTeX decoding ...
+[546] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[795] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[795] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[795] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[822] bbl.pm:676> INFO - Writing 'LunaJimenezFernandez-WiDS2024_Challenge2.bbl' with encoding 'UTF-8'
+[844] bbl.pm:779> INFO - Output to LunaJimenezFernandez-WiDS2024_Challenge2.bbl
+[845] Biber.pm:131> WARN - legacy month field 'jul 1' in entry 'Wing2019Data' is not an integer - this will probably not sort properly.
+[845] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'Geurts2006' is not an integer - this will probably not sort properly.
+[845] Biber.pm:133> INFO - WARNINGS: 2

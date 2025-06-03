@@ -22,9 +22,7 @@
 \contentsline {subsubsection}{Datos personales - raza, género y tipo de seguro del paciente}{16}{subsection.3.2.2}%
 \contentsline {subsubsection}{Datos médicos - códigos de diagnóstico y tipos de tratamiento}{18}{figure.caption.9}%
 \contentsline {subsubsection}{Datos geográficos - estado de residencia y ubicación geográfica}{20}{figure.caption.11}%
-\contentsline {subsubsection}{Tests de hipótesis}{20}{figure.caption.11}%
-\contentsline {subsection}{\numberline {3.2.3}Estudio de atributos numéricos}{20}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Conclusiones del análisis}{20}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.3}Estudio de atributos numéricos}{22}{subsection.3.2.3}%
 \contentsline {chapter}{\numberline {4}Preparación del conjunto de datos}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Selección de atributos}{23}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Selección manual de atributos}{23}{subsection.4.1.1}%
@@ -44,6 +42,6 @@
 \contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en grupo}{27}{section.6.2}%
 \contentsline {chapter}{\numberline {7}Conclusiones}{29}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Trabajo futuro}{29}{section.7.1}%
-\contentsline {chapter}{Referencia bibliográfica}{32}{chapter*.13}%
+\contentsline {chapter}{Referencia bibliográfica}{32}{chapter*.15}%
 \contentsline {chapter}{\numberline {A}Anexo 1}{33}{appendix.A}%
 \contentsfinish 
