@@ -943,12 +943,6 @@
            given={Robert\bibnamedelima E.},
            giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Berlin, Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Verlag}%
-      }
       \strng{namehash}{44393f04b9db3d51c4c344eacdc81606}
       \strng{fullhash}{44393f04b9db3d51c4c344eacdc81606}
       \strng{fullhashraw}{44393f04b9db3d51c4c344eacdc81606}
@@ -1364,6 +1358,86 @@
       \field{year}{2011}
       \field{pages}{2825\bibrangedash 2830}
       \range{pages}{6}
+    \endentry
+    \entry{featureselection}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=284a778b6c8e17f1aae38e288dc06036}{%
+           family={Guyon},
+           familyi={G\bibinitperiod},
+           given={Isabelle},
+           giveni={I\bibinitperiod}}}%
+        {{hash=af1237fe610213b60eefaf767e506435}{%
+           family={Elisseeff},
+           familyi={E\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{fullhash}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{fullhashraw}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{bibnamehash}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{authorbibnamehash}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{authornamehash}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{authorfullhash}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \strng{authorfullhashraw}{975fa6513949a08fe98fc5ebc01f3ed8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Machine Learning Research Special Issue on Variable and Feature Selection}
+      \field{month}{01}
+      \field{title}{An Introduction of Variable and Feature Selection}
+      \field{volume}{3}
+      \field{year}{2003}
+      \field{pages}{1157\bibrangedash 1182}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1162/153244303322753616
+      \endverb
+    \endentry
+    \entry{GVK022791892}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=d341f9df4f1da061d5c4dac8ec1a6444}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={{Norman Richard}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=bbccd75a9de2f2f7c00f816dab8e475b}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={{Harry}},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York [u.a.]}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{fullhash}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{fullhashraw}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{bibnamehash}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{authorbibnamehash}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{authornamehash}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{authorfullhash}{802e3991d30a60db67e114dd8bc4480d}
+      \strng{authorfullhashraw}{802e3991d30a60db67e114dd8bc4480d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0471221708}
+      \field{pagetotal}{IX, 407}
+      \field{series}{Wiley series in probability and mathematical statistics}
+      \field{title}{Applied regression analysis}
+      \field{year}{1966}
+      \verb{urlraw}
+      \verb http://gso.gbv.de/DB=2.1/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=ppn+022791892&sourceid=fbw_bibsonomy
+      \endverb
+      \verb{url}
+      \verb http://gso.gbv.de/DB=2.1/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=ppn+022791892&sourceid=fbw_bibsonomy
+      \endverb
+      \keyw{Mathematische_Statistik Methode Statistik}
     \endentry
   \enddatalist
 \endrefsection
