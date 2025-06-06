@@ -4,7 +4,17 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{spanish}p-valores de los atributos geográficos}}{20}{table.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros planteados para modelos de regresión lineal}}{28}{table.caption.15}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros planteados para árboles de decisión}}{28}{table.caption.16}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros planteados para máquinas de vector de soporte}}{29}{table.caption.17}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros planteados para ensembles de bagging}}{29}{table.caption.18}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros planteados para ensembles de boosting}}{29}{table.caption.19}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros comunes a los modelos de Gradient Boosting}}{30}{table.caption.20}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros específicos para modelos de Gradient Boosting}}{30}{table.caption.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Estadísticos del mejor resultado para cada par de modelo y subconjunto de atributos}}{42}{table.A.1}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Estadísticos del modelo seleccionada para cada modelo}}{42}{table.A.2}%
 \addvspace {10\p@ }
 \contentsfinish 

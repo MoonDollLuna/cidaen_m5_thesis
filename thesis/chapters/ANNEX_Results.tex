@@ -1,0 +1,179 @@
+\chapter{Resultados}
+
+En este anexo se incluyen los resultados completos de la experimentación - tanto los \textbf{estadísticos} del entrenamiento y validación de los modelos como los \textbf{hiperparámetros seleccionados} para cada uno de los modelos.
+
+\section{Estadísticos}
+
+\subsection{Ajuste de hiperparámetros}
+
+{\tiny \begin{longtable}[c]{@{}llllllll@{}}
+	\toprule
+	&               &            &     & \multicolumn{3}{l}{}                                                     &                    \\
+	&               &            &     & \multicolumn{3}{l}{\multirow{-2}{*}{\textbf{Tiempo de búsqueda (segs)}}} &                    \\* \cmidrule(lr){5-7}
+	\multirow{-3}{*}{\textbf{Modelo}} &
+	\multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Subconjunto \\ de\\ atributos\end{tabular}}} &
+	\multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Tipo \\ de \\ búsqueda\end{tabular}}} &
+	\multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Iteraciones\\ de\\ búsqueda\end{tabular}}} &
+	\multicolumn{1}{c}{\textbf{Total}} &
+	\multicolumn{1}{c}{\textbf{Por iteración}} &
+	\multicolumn{1}{c}{\textbf{Final}} &
+	\multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Error \\ promedio\end{tabular}}} \\* \midrule
+	\endhead
+	%
+	\bottomrule
+	\endfoot
+	%
+	\endlastfoot
+	%
+	linear\_regression & manual        & grid       & 7   & 1.6383299827575684     & 0.2340471403939383     & 0.0238795280456542     & 83.8568112648107   \\
+	\rowcolor[HTML]{EFEFEF} 
+	linear\_regression & filter        & grid       & 7   & 0.3313274383544922     & 0.0473324911934988     & 0.0416181087493896     & 83.75820570897277  \\
+	linear\_regression & wrapper       & grid       & 7   & 0.3210222721099853     & 0.0458603245871407     & 0.0307879447937011     & 83.57752118121913  \\
+	\rowcolor[HTML]{EFEFEF} 
+	linear\_regression & no\_selection & grid       & 7   & 1.8199312686920168     & 0.2599901812417166     & 0.3231534957885742     & 93.32674499694888  \\* \midrule
+	ridge\_l2          & manual        & grid       & 91  & 1.5099420547485352     & 0.0165927698324014     & 0.0136852264404296     & 83.55469321331245  \\
+	\rowcolor[HTML]{EFEFEF} 
+	ridge\_l2          & filter        & grid       & 91  & 1.9106590747833248     & 0.0209962535690475     & 0.0280930995941162     & 83.45235277991227  \\
+	ridge\_l2          & wrapper       & grid       & 91  & 1.7659635543823242     & 0.0194061929053002     & 0.0286035537719726     & 83.37960870257116  \\
+	\rowcolor[HTML]{EFEFEF} 
+	ridge\_l2          & no\_selection & grid       & 91  & 10.773196697235107     & 0.1183867768926934     & 0.1813464164733886     & 83.86179717659111  \\* \midrule
+	lasso\_l1          & manual        & grid       & 91  & 3.995432615280152      & 0.0439058529151665     & 0.0164384841918945     & 83.40286406661048  \\
+	\rowcolor[HTML]{EFEFEF} 
+	lasso\_l1          & filter        & grid       & 91  & 4.819518566131592      & 0.0529617424849625     & 0.0214715003967285     & 83.30629026098315  \\
+	lasso\_l1          & wrapper       & grid       & 91  & 3.9306271076202393     & 0.0431937044793432     & 0.0169079303741455     & 83.31664928110077  \\
+	\rowcolor[HTML]{EFEFEF} 
+	lasso\_l1          & no\_selection & grid       & 91  & 53.92193555831909      & 0.5925487423991109     & 1.0820424556732178     & 83.54799847993567  \\* \midrule
+	elastic\_net       & manual        & grid       & 273 & 11.721351385116575     & 0.042935353059035      & 0.5812702178955078     & 83.51526405439998  \\
+	\rowcolor[HTML]{EFEFEF} 
+	elastic\_net       & filter        & grid       & 273 & 14.64482307434082      & 0.0536440405653509     & 0.6614060401916504     & 83.41333496392983  \\
+	elastic\_net       & wrapper       & grid       & 273 & 12.51454734802246      & 0.045840832776639      & 0.4930276870727539     & 83.31637514887375  \\
+	\rowcolor[HTML]{EFEFEF} 
+	elastic\_net       & no\_selection & grid       & 273 & 167.6494746208191      & 0.6141006396366999     & 2.934457540512085      & 83.83496942582158  \\* \midrule
+	decision\_tree     & manual        & randomized & 100 & 9.67495584487915       & 0.0967495584487915     & 0.0208790302276611     & 83.7780860558013   \\
+	\rowcolor[HTML]{EFEFEF} 
+	decision\_tree     & filter        & randomized & 100 & 20.14728045463562      & 0.2014728045463562     & 0.0531642436981201     & 84.12740067171896  \\
+	decision\_tree     & wrapper       & randomized & 100 & 19.533833742141724     & 0.1953383374214172     & 0.0393133163452148     & 84.73891963892252  \\
+	\rowcolor[HTML]{EFEFEF} 
+	decision\_tree     & no\_selection & randomized & 100 & 229.85245037078855     & 2.2985245037078856     & 0.3523120880126953     & 84.73284059274799  \\* \midrule
+	svm\_linear        & manual        & randomized & 100 & 1.4980344772338867     & 0.0149803447723388     & 0.0259366035461425     & 91.26781654784642  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_linear        & filter        & randomized & 100 & 1.861642599105835      & 0.0186164259910583     & 0.0272941589355468     & 91.05567296412444  \\
+	svm\_linear        & wrapper       & randomized & 100 & 3.111152172088623      & 0.0311115217208862     & 0.0407259464263916     & 91.11874517574594  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_linear        & no\_selection & randomized & 100 & 97.80935859680176      & 0.9780935859680177     & 0.2651453018188476     & 91.22543953579348  \\* \midrule
+	svm\_poly          & manual        & randomized & 100 & 48.84676384925842      & 0.4884676384925842     & 2.4611942768096924     & 89.36720565282685  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_poly          & filter        & randomized & 100 & 54.5289785861969       & 0.545289785861969      & 3.5780694484710693     & 91.46895941664454  \\
+	svm\_poly          & wrapper       & randomized & 100 & 56.0568106174469       & 0.560568106174469      & 2.032531976699829      & 103.23746378648907 \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_poly          & no\_selection & randomized & 100 & 644.3820505142212      & 6.443820505142212      & 5.810599088668823      & 101.4302023212575  \\* \midrule
+	svm\_rbf           & manual        & randomized & 100 & 63.00397539138794      & 0.6300397539138793     & 2.6649532318115234     & 88.48592337147325  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_rbf           & filter        & randomized & 100 & 67.57193088531494      & 0.6757193088531495     & 3.077049016952514      & 88.40458104489666  \\
+	svm\_rbf           & wrapper       & randomized & 100 & 64.81695699691772      & 0.6481695699691773     & 2.79060959815979       & 90.88068235544974  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_rbf           & no\_selection & randomized & 100 & 681.3171155452728      & 6.8131711554527286     & 8.784799814224243      & 93.42802891084526  \\* \midrule
+	svm\_sigmoid       & manual        & randomized & 100 & 68.20164012908936      & 0.6820164012908936     & 2.5738353729248047     & 98.52864570703784  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_sigmoid       & filter        & randomized & 100 & 60.86087465286255      & 0.6086087465286255     & 3.0932424068450928     & 101.56179050963154 \\
+	svm\_sigmoid       & wrapper       & randomized & 100 & 57.571099519729614     & 0.5757109951972962     & 2.0827889442443848     & 116.6249476341536  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_sigmoid       & no\_selection & randomized & 100 & 686.9058706760406      & 6.869058706760407      & 7.009771823883057      & 114.56071608568432 \\* \midrule
+	random\_forest     & manual        & bayes      & 50  & 67.10657596588135      & 1.3421315193176269     & 1.0617177486419678     & 83.01366339811862  \\
+	\rowcolor[HTML]{EFEFEF} 
+	random\_forest     & filter        & bayes      & 50  & 257.291220664978       & 5.145824413299561      & 5.565766096115112      & 82.64006694163541  \\
+	random\_forest     & wrapper       & bayes      & 50  & 143.32606840133667     & 2.866521368026733      & 6.297638416290283      & 82.91317663829959  \\
+	\rowcolor[HTML]{EFEFEF} 
+	random\_forest     & no\_selection & bayes      & 50  & 1896.0526087284088     & 37.921052174568175     & 49.28590178489685      & 83.37177900561274  \\* \midrule
+	extra\_trees       & manual        & bayes      & 50  & 70.03935527801514      & 1.4007871055603027     & 1.225649118423462      & 83.32129708620833  \\
+	\rowcolor[HTML]{EFEFEF} 
+	extra\_trees       & filter        & bayes      & 50  & 127.64828777313232     & 2.5529657554626466     & 1.3669829368591309     & 82.99732955990197  \\
+	extra\_trees       & wrapper       & bayes      & 50  & 107.57072877883913     & 2.151414575576782      & 4.215499401092529      & 83.30860795243186  \\
+	\rowcolor[HTML]{EFEFEF} 
+	extra\_trees       & no\_selection & bayes      & 50  & 472.1313157081604      & 9.442626314163208      & 3.633639335632324      & 83.34617076279878  \\* \midrule
+	adaboost           & manual        & bayes      & 50  & 25.39012169837952      & 0.5078024339675903     & 0.215623140335083      & 86.98043185143206  \\
+	\rowcolor[HTML]{EFEFEF} 
+	adaboost           & filter        & bayes      & 50  & 37.90988659858704      & 0.7581977319717407     & 1.9048182964324951     & 87.0056344510263   \\
+	adaboost           & wrapper       & bayes      & 50  & 75.38741755485535      & 1.507748351097107      & 1.864696741104126      & 87.06043695047784  \\
+	\rowcolor[HTML]{EFEFEF} 
+	adaboost           & no\_selection & bayes      & 50  & 688.5746812820435      & 13.771493625640868     & 17.499237537384033     & 87.03001535473632  \\* \midrule
+	xgboost            & manual        & bayes      & 50  & 35.20437026023865      & 0.704087405204773      & 0.0331051349639892     & 87.90340747391754  \\
+	\rowcolor[HTML]{EFEFEF} 
+	xgboost            & filter        & bayes      & 50  & 49.24621248245239      & 0.984924249649048      & 0.1175014972686767     & 87.81372800884735  \\
+	xgboost            & wrapper       & bayes      & 50  & 44.32945442199707      & 0.8865890884399414     & 0.0812370777130127     & 86.51321162424438  \\
+	\rowcolor[HTML]{EFEFEF} 
+	xgboost            & no\_selection & bayes      & 50  & 196.10614681243896     & 3.9221229362487793     & 0.5374188423156738     & 87.11544175892757  \\* \midrule
+	catboost           & manual        & bayes      & 50  & 246.1163387298584      & 4.922326774597168      & 1.920884132385254      & 82.71968370465952  \\
+	\rowcolor[HTML]{EFEFEF} 
+	catboost           & filter        & bayes      & 50  & 620.5296370983124      & 12.410592741966248     & 3.180443525314331      & 82.17582430193673  \\
+	catboost           & wrapper       & bayes      & 50  & 330.7876410484314      & 6.615752820968628      & 2.2572925090789795     & 82.48079419827772  \\
+	\rowcolor[HTML]{EFEFEF} 
+	catboost           & no\_selection & bayes      & 50  & 530.1788566112518      & 10.603577132225036     & 5.097702026367188      & 82.79572110039553  \\* \midrule
+	lgbm               & manual        & bayes      & 50  & 38.05036544799805      & 0.7610073089599609     & 0.0299694538116455     & 83.314620119142    \\
+	\rowcolor[HTML]{EFEFEF} 
+	lgbm               & filter        & bayes      & 50  & 29.31800413131714      & 0.5863600826263428     & 0.0324811935424804     & 82.75239373414163  \\
+	lgbm               & wrapper       & bayes      & 50  & 29.38965344429016      & 0.5877930688858032     & 0.0278058052062988     & 82.95309627512827  \\
+	\rowcolor[HTML]{EFEFEF} 
+	lgbm               & no\_selection & bayes      & 50  & 43.04041337966919      & 0.8608082675933838     & 0.1700525283813476     & 83.11972338375003  \\* \midrule
+	histgradientboost  & manual        & bayes      & 50  & 28.465141534805294     & 0.569302830696106      & 0.0509958267211914     & 83.38184375003458  \\
+	\rowcolor[HTML]{EFEFEF} 
+	histgradientboost  & filter        & bayes      & 50  & 28.340924501419067     & 0.5668184900283814     & 0.0732359886169433     & 82.60312820261804  \\
+	histgradientboost  & wrapper       & bayes      & 50  & 26.02744150161743      & 0.5205488300323486     & 0.0717401504516601     & 82.84526131726716  \\
+	\rowcolor[HTML]{EFEFEF} 
+	histgradientboost  & no\_selection & bayes      & 50  & 44.81061744689941      & 0.8962123489379883     & 0.2714483737945556     & 82.97741054803666  \\* \bottomrule
+	\captionsetup{justification=centering}
+	\caption{Estadísticos del mejor resultado para cada par de modelo y subconjunto de atributos}
+	\label{tab:annextrainingresults}\\
+\end{longtable}}
+
+\subsection{Selección de modelos}
+
+{\scriptsize \begin{longtable}[c]{@{}llllll@{}}
+	\toprule
+	\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{}                   & \multicolumn{2}{c}{}                        \\
+	\multicolumn{1}{c}{} &
+	\multicolumn{1}{c}{} &
+	\multicolumn{2}{c}{\multirow{-2}{*}{\textbf{Error}}} &
+	\multicolumn{2}{c}{\multirow{-2}{*}{\textbf{Tiempo de entrenamiento (segs)}}} \\* \cmidrule(l){3-6} 
+	\multicolumn{1}{c}{\multirow{-3}{*}{\textbf{Modelo}}} &
+	\multicolumn{1}{c}{\multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Subconjunto\\ de\\ atributos\end{tabular}}}} &
+	\multicolumn{1}{c}{\textbf{Entrenamiento}} &
+	\multicolumn{1}{c}{\textbf{Validación}} &
+	\multicolumn{1}{c}{\textbf{Entrenamiento}} &
+	\multicolumn{1}{c}{\textbf{Validación}} \\* \midrule
+	\endhead
+	%
+	\bottomrule
+	\endfoot
+	%
+	\endlastfoot
+	%
+	linear\_regression   & wrapper              & 83.57752118121913 & 82.64944468760879  & 0.030787944793701172 & 0.0                  \\
+	\rowcolor[HTML]{EFEFEF} 
+	ridge\_l2            & wrapper              & 83.37960870257116 & 82.54723807247451  & 0.028603553771972656 & 0.012679338455200195 \\
+	lasso\_l1            & filter               & 83.30629026098315 & 82.40722984005937  & 0.021471500396728516 & 0.0                  \\
+	\rowcolor[HTML]{EFEFEF} 
+	elastic\_net         & wrapper              & 83.31637514887375 & 82.43928985039425  & 0.4930276870727539   & 0.0                  \\
+	decision\_tree       & manual               & 83.7780860558013  & 82.93619776291433  & 0.020879030227661133 & 0.0                  \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_linear          & filter               & 91.05567296412445 & 88.77516348329344  & 0.027294158935546875 & 0.017313480377197266 \\
+	svm\_poly            & manual               & 89.36720565282685 & 88.23183926282347  & 2.4611942768096924   & 0.5066883563995361   \\
+	\rowcolor[HTML]{EFEFEF} 
+	svm\_rbf             & filter               & 88.40458104489666 & 87.48841351157962  & 3.0770490169525146   & 0.6509499549865723   \\
+	svm\_sigmoid         & manual               & 98.52864570703784 & 101.27207439472834 & 2.5738353729248047   & 0.5883753299713135   \\
+	\rowcolor[HTML]{EFEFEF} 
+	random\_forest       & filter               & 82.64006694163541 & 81.99680936766894  & 5.565766096115112    & 0.03097224235534668  \\
+	extra\_trees         & filter               & 82.99732955990197 & 82.19038700513607  & 1.3669829368591309   & 0.026447296142578125 \\
+	\rowcolor[HTML]{EFEFEF} 
+	adaboost             & manual               & 86.98043185143206 & 86.46795403506125  & 0.215623140335083    & 0.0                  \\
+	xgboost              & wrapper              & 86.51321162424438 & 87.09145865628854  & 0.0812370777130127   & 0.01599717140197754  \\
+	\rowcolor[HTML]{EFEFEF} 
+	catboost             & filter               & 82.17582430193673 & 81.60903130606145  & 3.180443525314331    & 0.023774147033691406 \\
+	lgbm                 & filter               & 82.75239373414163 & 81.77821474896575  & 0.03248119354248047  & 0.00975489616394043  \\
+	\rowcolor[HTML]{EFEFEF} 
+	histgradientboost    & filter               & 82.60312820261804 & 81.9457649049038   & 0.07323598861694336  & 0.01062774658203125  \\* \bottomrule
+	\caption{Estadísticos del modelo seleccionada para cada modelo}
+	\label{tab:annexvalidation}\\
+\end{longtable}}
+
+\section{Hiperparámetros}

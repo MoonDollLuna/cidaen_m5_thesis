@@ -13,6 +13,9 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces \xpg@aux {}{spanish}Relación entre valor y tiempo de diagnósticos para los 12 atributos de mayor correlación}}{22}{figure.caption.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{spanish}Error promedio durante el entrenamiento para cada modelo y subconjunto de atributos (acotado en un error máximo de 105)}}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{spanish}Tiempo promedio de entrenamiento para cada modelo y subconjunto de atributos (acotado en 10 segundos)}}{33}{figure.caption.23}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

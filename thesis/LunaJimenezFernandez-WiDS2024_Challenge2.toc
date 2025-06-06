@@ -31,17 +31,34 @@
 \contentsline {subsubsection}{Wrapper - Selección mediante entrenamiento de modelos}{25}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Pre-procesamiento de los datos}{25}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Modelado y evaluación}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Selección de modelos e hiperparámetros}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Experimentación}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Análisis de resultados}{27}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Rendimiento de los subconjuntos de hiperparámetros}{27}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Rendimiento de los modelos entrenados}{27}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Rendimiento del modelo final}{27}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Despliegue y aplicación web}{29}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Aplicación para usuario - predicción individual}{29}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en grupo}{29}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{31}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Trabajo futuro}{31}{section.7.1}%
-\contentsline {chapter}{Referencia bibliográfica}{34}{chapter*.15}%
-\contentsline {chapter}{\numberline {A}Contenidos del repositorio}{35}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Modelado y experimentación}{27}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Modelos e hiperparámetros propuestos}{27}{subsection.5.1.1}%
+\contentsline {subsubsection}{Modelos de regresión lineal}{28}{subsection.5.1.1}%
+\contentsline {subsubsection}{Árboles de decisión}{28}{table.caption.15}%
+\contentsline {subsubsection}{Máquinas de vector de soporte}{28}{table.caption.16}%
+\contentsline {subsubsection}{Ensembles de Bagging}{29}{table.caption.17}%
+\contentsline {subsubsection}{Ensembles de Boosting}{29}{table.caption.18}%
+\contentsline {subsubsection}{Ensembles de Gradient Boosting}{29}{table.caption.19}%
+\contentsline {subsection}{\numberline {5.1.2}Definición de experimentos}{31}{subsection.5.1.2}%
+\contentsline {subsubsection}{Ajuste de hiperparámetros}{31}{subsection.5.1.2}%
+\contentsline {subsubsection}{Selección de modelos}{32}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Evaluación de resultados}{32}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Rendimiento de los subconjuntos de atributos}{32}{subsection.5.2.1}%
+\contentsline {subsubsection}{Error}{32}{subsection.5.2.1}%
+\contentsline {subsubsection}{Tiempo de entrenamiento}{32}{figure.caption.22}%
+\contentsline {subsection}{\numberline {5.2.2}Rendimiento de los modelos entrenados}{32}{subsection.5.2.2}%
+\contentsline {subsubsection}{Error de los modelos seleccionados}{33}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Rendimiento del modelo final}{33}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {6}Despliegue y aplicación web}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Aplicación para usuario - predicción individual}{35}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en grupo}{35}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{37}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Trabajo futuro}{37}{section.7.1}%
+\contentsline {chapter}{Referencia bibliográfica}{40}{chapter*.24}%
+\contentsline {chapter}{\numberline {A}Resultados}{41}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Estadísticos}{41}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Ajuste de hiperparámetros}{41}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Selección de modelos}{42}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Hiperparámetros}{43}{section.A.2}%
+\contentsline {chapter}{\numberline {B}Contenidos del repositorio}{45}{appendix.B}%
 \contentsfinish 
