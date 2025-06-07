@@ -236,7 +236,7 @@ Debido a estas diferencias, es necesario realizar algunos ajustes adicionales de
 \label{tab:ch5gboostspecific}
 \end{table}
 
-\subsection{Definición de experimentos}
+\subsection{Experimentación}
 
 Tras la definición de modelos, el siguiente paso es definir la \textbf{experimentación} a realizar: el proceso guiado de búsqueda a través del cual se realiza el \textbf{ajuste de hiperparámetros} y \textbf{selección de atributos} para cada modelo y la \textbf{selección del modelo final} para resolver el problema de regresión.
 
@@ -257,29 +257,118 @@ Para realizar los experimentos se cuentan con los siguientes \textbf{conjuntos d
 
 La primera fase de experimentación es el \textbf{ajuste de hiperparámetros:} la selección, para cada modelo propuesto, tanto de los \textbf{hiperparámetros} como del \textbf{subconjunto de atributos} que minimizan el error final del modelo. 
 
-Dicho ajuste se realiza a través de una \textbf{selección de hiperparámetros con validación cruzada} - se entrena un modelo para cada par de hiperparámetros y subconjunto de atributos sobre el conjunto de entrenamiento utilizando \textbf{validación cruzada de 5-folds} para obtener un error promedio honesto. Ahora bien, como se ha visto en la sección anterior, \textbf{el número de posibles hiperparámetros para cada modelo puede resultar excesivo} - lo cual, mezclado con el tiempo de entrenamiento de los modelos más complejos, puede hacer imposible la evaluación de todos los hiperparámetros en un tiempo razonable. 
+Dicho ajuste se realiza a través de una \textbf{selección de hiperparámetros con validación cruzada} - se entrena un modelo para cada par de hiperparámetros y subconjunto de atributos sobre el conjunto de entrenamiento utilizando \textbf{validación cruzada de 5-folds} para obtener un error promedio honesto. Ahora bien, como se ha visto en la sección anterior, \textbf{el número de posibles hiperparámetros para cada modelo puede resultar excesivo} - lo cual, mezclado con el tiempo de entrenamiento de los modelos más complejos, puede hacer la evaluación de todas las combinaciones de hiperparámetros en un tiempo razonable imposible. 
 
-Para solucionar este problema se opta por realizar una \textbf{búsqueda de hiperparámetros:} TODO AQUI
-
-\begin{itemize}[parsep=2pt, itemsep=2pt, topsep=4pt]
-	\item \textbf{Búsqueda exhaustiva:}
+Para solucionar este problema se plantean varias metodologías de \textbf{búsqueda de hiperparámetros} - es decir, distintas estrategias para determinar \textbf{cuáles de todos los posibles conjuntos de hiperparámetros propuestos se evalúan}:
+\begin{itemize}%[parsep=2pt, itemsep=2pt, topsep=4pt]
+	\item \textbf{Búsqueda exhaustiva:} Se prueban \textbf{todas las posibles combinaciones de hiperparámetros}. Si bien ofrece la garantía de encontrar una solución óptima, también acarrea un coste exponencial que deja de ser factible para modelos complejos.
 	
-	Esta búsqueda se aplica únicamente a los \textbf{modelos de regresión lineal} - al ser los algoritmos más simples y rápidos de entrenar.
-	\item \textbf{Búsqueda aleatoria:}
+	\item \textbf{Búsqueda aleatoria uniforme:} Para evitar una búsqueda exhaustiva, la primera opción es realizar en su lugar una \textbf{búsqueda totalmente aleatoria}, evaluando un número fijo de combinaciones aleatorias para seleccionar el mejor. Si bien es sustancialmente más rápido y suele dar resultados aceptables para un número suficiente de búsquedas, se pierde la garantía de encontrar una solución óptima.
 	
-	Esta búsqueda se aplica al resto de modelos tradicionales - \textbf{árboles de decisión} y \textbf{máquinas de vectores de soporte}.
-	\item \textbf{Búsqueda aleatoria Gaussiana:}
+	Para los modelos propuestos, se ha elegido de forma empírica evaluar \textbf{100 conjuntos de hiperparámetros aleatorios}.
 	
-	Esta búsqueda se aplica a todos los modelos de \textit{ensemble} - \textbf{Bagging}, \textbf{Boosting} y \textbf{Gradient Boosting}.
+	\item \textbf{Búsqueda aleatoria gaussiana:} La búsqueda aleatoria uniforme puede tener problemas al trabajar con modelos muy complejos con tiempos largo de entrenamiento, al tener que probar un gran número de hiperparámetros para encontrar un modelo razonable. Una solución a este algoritmo es guiar las búsquedas aleatorias con un modelo \textbf{probabilístico} - donde los hiperparámetros con menor error son más probables. De esta forma se puede reducir el número necesario de conjuntos de hiperparámetros evaluados para obtener un buen resultado. 
+	
+	Para los modelos propuestos, se ha elegido de forma empírica evaluar \textbf{50 conjuntos de hiperparámetros aleatorios}.
 \end{itemize}
 
-TODO COMENTAR QUE PARA CADA MODELO EL NÚMERO DE MODELOS ENTRENADOS ES EQUIVALENTE AL NÚMERO DE BÚSQUEDAS x 5 x 4
+\begin{table}[h]
+	\vspace{-6mm}
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}rrrrrrrrrrrrrrrrr@{}}
+			\toprule
+			\multicolumn{1}{l}{} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Regresión \\ Lineal\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Ridge \\ L1\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Lasso \\ L2\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Elastic-\\ Net\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Árbol de \\ decisión\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}SVR\\ Lineal\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}SVR\\ Polinomica\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}SVR\\ Gaussiana\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}SVR\\ Sigmoide\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Random\\ Forest\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Extremely\\ Random Trees\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Ada\\ Boost\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{XGBoost}} &
+			\multicolumn{1}{c}{\textbf{CatBoost}} &
+			\multicolumn{1}{c}{\textbf{LGBM}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}HistGradient\\ Boost\end{tabular}}} \\ \midrule
+			\textbf{\begin{tabular}[c]{@{}r@{}}Tipo de\\ búsqueda\end{tabular}} &
+			Exhaustiva &
+			Exhaustiva &
+			Exhaustiva &
+			Exhaustiva &
+			Aleatoria &
+			Aleatoria &
+			Aleatoria &
+			Aleatoria &
+			Aleatoria &
+			Gaussiana &
+			Gaussiana &
+			Gaussiana &
+			Gaussiana &
+			Gaussiana &
+			Gaussiana &
+			Gaussiana \\
+			\rowcolor[HTML]{EFEFEF} 
+			\textbf{\begin{tabular}[c]{@{}r@{}}Conjuntos\\ estudiados\end{tabular}} &
+			7 &
+			91 &
+			91 &
+			273 &
+			100 &
+			100 &
+			100 &
+			100 &
+			100 &
+			50 &
+			50 &
+			50 &
+			50 &
+			50 &
+			50 &
+			50 \\
+			\rowcolor[HTML]{FFFFFF} 
+			\textbf{\begin{tabular}[c]{@{}r@{}}Modelos\\ totales\\ entrenados\end{tabular}} &
+			140 &
+			1820 &
+			1820 &
+			5460 &
+			2000 &
+			2000 &
+			2000 &
+			2000 &
+			2000 &
+			1000 &
+			1000 &
+			1000 &
+			1000 &
+			1000 &
+			1000 &
+			1000 \\ \bottomrule
+		\end{tabular}%
+	}
+	\captionsetup{belowskip=-20pt, justification=centering}
+	\caption{Número total de conjuntos de hiperparámetros y modelos entrenados para cada modelo.}
+	\label{tab:ch5iteraciones}
+\end{table}
+
+En la \textbf{Tabla \ref{tab:ch5iteraciones}} se encuentra detallado el \textbf{número total de modelos entrenados} para cada modelo en base al tipo de búsqueda realizado, siguiendo el siguiente orden:
+\begin{enumerate}
+	\item \textbf{Subconjunto de atributos:} Uno de los hiperparámetros a elegir para cada modelo es el \textbf{subconjunto de atributos utilizado} - optando entre los tres subconjuntos propuestos o el conjunto de atributos completo. Por tanto, es necesario realizar la búsqueda \textbf{4 veces} para cada modelo.
+	\item \textbf{Ajuste de hiperparámetros:} Dependiendo del tipo de búsqueda realizado, el número de conjuntos de hiperparámetros a evaluar cambia. Hay que destacar que un hiperparámetro a ajustar por todos los modelos es el \textbf{agrupamiento de valores durante la codificación} - siendo especialmente significativo en la búsqueda exhaustiva, donde crece el número de conjuntos a evaluar.
+	\item \textbf{Validación cruzada:} Para cada par de subconjuntos de atributos e hiperparámetros se realiza una \textbf{5-validación cruzada}, por lo que se entrenan cinco modelos y se obtiene el error promedio de éstos.
+\end{enumerate}
+
+Tras todos los modelos entrenados y evaluados, se elige para cada algoritmo \textbf{un único modelo final} - aquel que minimiza el error - para ser considerado durante la selección de modelos.
 
 \subsubsection{Selección de modelos}
 
 SEGUNDO PASO - ELEGIR MODELO FINAL AJUSTADO
 
-TODO HABLA DE AJUSTAR
+TODO HABLA DE AJUSTAR CON VALIDACION, EVALUACION HONESTA
 
 \section{Evaluación de resultados}
 
