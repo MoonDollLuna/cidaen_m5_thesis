@@ -14,8 +14,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{spanish}Error promedio durante el entrenamiento para cada modelo y subconjunto de atributos (acotado en un error máximo de 105)}}{33}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{spanish}Tiempo promedio de entrenamiento para cada modelo y subconjunto de atributos (acotado en 10 segundos)}}{34}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \xpg@aux {}{spanish}Tiempo promedio de entrenamiento para cada modelo y subconjunto de atributos (acotado en 10 segundos)}}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \xpg@aux {}{spanish}Distribución de los subconjuntos de atributos seleccionados}}{35}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \xpg@aux {}{spanish}Distribución del error de los modelos entrenados}}{36}{figure.caption.26}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \xpg@aux {}{spanish}Página principal de la aplicación web}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \xpg@aux {}{spanish}Aplicación web para predicción de tiempo de diagnóstico individual}}{40}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \xpg@aux {}{spanish}Aplicación web para predicción de tiempo de diagnóstico en bloque}}{40}{figure.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -39,26 +39,29 @@
 \contentsline {subsubsection}{Ensembles de Bagging}{29}{table.caption.17}%
 \contentsline {subsubsection}{Ensembles de Boosting}{29}{table.caption.18}%
 \contentsline {subsubsection}{Ensembles de Gradient Boosting}{29}{table.caption.19}%
-\contentsline {subsection}{\numberline {5.1.2}Definición de experimentos}{31}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.2}Experimentación}{30}{subsection.5.1.2}%
 \contentsline {subsubsection}{Ajuste de hiperparámetros}{31}{subsection.5.1.2}%
-\contentsline {subsubsection}{Selección de modelos}{33}{Item.31}%
-\contentsline {section}{\numberline {5.2}Evaluación de resultados}{33}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Rendimiento de los subconjuntos de atributos}{33}{subsection.5.2.1}%
-\contentsline {subsubsection}{Error}{33}{subsection.5.2.1}%
-\contentsline {subsubsection}{Tiempo de entrenamiento}{33}{figure.caption.23}%
-\contentsline {subsection}{\numberline {5.2.2}Rendimiento de los modelos entrenados}{33}{subsection.5.2.2}%
-\contentsline {subsubsection}{Error de los modelos seleccionados}{33}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Rendimiento del modelo final}{33}{subsection.5.2.3}%
-\contentsline {chapter}{\numberline {6}Despliegue y aplicación web}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Aplicación para usuario - predicción individual}{35}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en grupo}{35}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{37}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Trabajo futuro}{37}{section.7.1}%
-\contentsline {chapter}{Referencia bibliográfica}{40}{chapter*.25}%
-\contentsline {chapter}{\numberline {A}Resultados}{41}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Estadísticos}{41}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Ajuste de hiperparámetros}{41}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Selección de modelos}{42}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Hiperparámetros}{43}{section.A.2}%
-\contentsline {chapter}{\numberline {B}Contenidos del repositorio}{45}{appendix.B}%
+\contentsline {subsubsection}{Selección de modelos}{32}{Item.31}%
+\contentsline {section}{\numberline {5.2}Evaluación}{33}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Rendimiento durante el ajuste de hiperparámetros}{33}{subsection.5.2.1}%
+\contentsline {subsubsection}{Error de los modelos durante el ajuste}{33}{subsection.5.2.1}%
+\contentsline {subsubsection}{Tiempo de entrenamiento de los modelos durante el ajuste}{34}{figure.caption.23}%
+\contentsline {subsection}{\numberline {5.2.2}Rendimiento durante la selección de modelos}{35}{subsection.5.2.2}%
+\contentsline {subsubsection}{Subconjuntos de hiperparámetros utilizados}{35}{subsection.5.2.2}%
+\contentsline {subsubsection}{Error de los modelos seleccionados}{36}{figure.caption.25}%
+\contentsline {subsection}{\numberline {5.2.3}Rendimiento del modelo final}{37}{subsection.5.2.3}%
+\contentsline {subsubsection}{Modelo seleccionado}{37}{subsection.5.2.3}%
+\contentsline {subsubsection}{Resultados sobre el conjunto de test y posición en la competición}{37}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {6}Despliegue y aplicación web}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Aplicación para usuario - predicción individual}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en bloque}{39}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{41}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Trabajo futuro}{41}{section.7.1}%
+\contentsline {chapter}{Referencia bibliográfica}{44}{chapter*.31}%
+\contentsline {chapter}{\numberline {A}Resultados}{45}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Estadísticos}{45}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Ajuste de hiperparámetros}{45}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Selección de modelos}{46}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Hiperparámetros}{47}{section.A.2}%
+\contentsline {chapter}{\numberline {B}Contenidos del repositorio}{49}{appendix.B}%
 \contentsfinish 
