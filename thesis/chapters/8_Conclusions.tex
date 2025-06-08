@@ -1,3 +1,36 @@
 \chapter{Conclusiones}
 
+A lo largo del trabajo realizado y de la memoria, se ha descrito en detalle el \textbf{ciclo de vida de la ciencia de datos} llevado a cabo para resolver el problema planteado: la \textbf{predicción del tiempo de diagnóstico de cáncer metastásico}, en base a datos médicos, geográficos, socioeconómicos y climáticos.
+
+El primer paso ha sido un \textbf{análisis exploratorio de datos}, para conocer y entender mejor el comportamiento del conjunto de datos - lo que ha permitido realizar un \textbf{preprocesamiento} posterior en el que se han seleccionando atributos y transformando los datos para su uso durante el \textbf{modelado}, donde se han planteado una serie de posibles modelos para solucionar el problema. 
+
+El mejor de dichos modelos ha sido seleccionado a través de una \textbf{evaluación} de su rendimiento en comparación con el resto de modelos y con los ganadores de la competición. Finalmente, este modelo se ha dejado disponible a los usuarios finales a través del \textbf{despliegue} de una aplicación web.
+
+Tras el trabajo realizado, se puede afirmar que el \textbf{primer objetivo} - la creación de un modelo de regresión capaz de predecir el tiempo de diagnóstico - se ha \textbf{cumplido con éxito} dentro de las posibilidades:
+\begin{itemize}
+	\item El modelo entrenado \textbf{presenta un error elevado} - alrededor de \textbf{82 días} en promedio -, si bien dicho error se encuentra cercano al error de los modelos ganadores de la competición.
+	\item El funcionamiento del modelo es \textbf{ágil} - en el orden de los segundos para el entrenamiento y de los milisegundos para la predicción -, lo que lo hace \textbf{utilizable en tiempo real}.
+	\item La \textbf{aplicación web} permite el uso simple del modelo por parte de los usuarios finales.
+\end{itemize}
+
+Respecto al \textbf{segundo objetivo} - el estudio de la influencia de factores geográficos, socioeconómicos y climáticos -, se han extraído las siguientes conclusiones:
+\begin{itemize}
+	\item El análisis exploratorio de datos indica que \textbf{solo la información médica es relevante para la predicción del tiempo} - los atributos socioeconómicos y climáticos \textbf{no presentan correlación clara con el tiempo de diagnóstico}, y el único atributo geográfico con cierta relevancia es el \textbf{estado de residencia del paciente}.
+	\item Pese a esto, \textbf{el modelo final seleccionado incluye información socioeconómica} - en la forma de información estadística sobre los estudios universitarios y los ingresos de las familias. Ahora bien, en la práctica \textbf{dichas variables no tienen apenas influencia sobre el tiempo predicho}.
+\end{itemize}
+
+Actualmente, el trabajo completo se encuentra disponible en un repositorio público de \textit{Github} (\url{https://github.com/MoonDollLuna/cidaen_m5_thesis}) bajo licencia \textit{MIT}, incluyendo tanto la memoria como el \textbf{código Python} utilizado para realizar todos los pasos del proceso de ciencia de datos.
+
+Además, como ya se ha comentado en el Capítulo 6, la aplicación web a través de la que se ha desplegado el modelo se encuentra disponible en el enlace \url{https://cidaen-m5-thesis-lunajimenezfernandez.streamlit.app/}.
+
+
 \section{Trabajo futuro}
+
+El trabajo propuesto fue concebido como parte de una competición ya clausurada, por lo que no tiene sentido continuarlo directamente. Ahora bien, sí es posible plantear una serie de \textbf{ampliaciones al proceso realizado}, de cara a futuros trabajos de ciencia de datos:
+\begin{itemize}[parsep=2pt, itemsep=2pt, topsep=4pt]
+	\item \textbf{Ampliación del número de modelos:} Aun utilizando los modelos más comunes para problemas de ciencia de datos estructurados, es posible utilizar otra serie de modelos más complejos - como pueden ser las \textbf{redes neuronales} o los \textbf{stacks} de \textit{ensembles}.
+	\item \textbf{Creación de atributos:} Si bien se ha realizado un pre-procesamiento de los datos, podría haber resultado de interés añadir \textbf{atributos sintéticos} para ampliar la información útil contenida en el conjunto de datos.
+	\item \textbf{Modelo disponible a través de cliente - servidor:} Actualmente, el modelo se encuentra embebido en la aplicación web - algo factible debido al tamaño ligero del modelo entrenado, pero que se haría imposible para modelos más complejos o páginas web más concurridas.
+	
+	Para solucionar ésto, sería razonable crear una \textbf{API (Application Web Interface)} a través de la cual se llamaría al modelo, para hospedarlo en un servidor separado independiente al funcionamiento de la propia aplicación.
+\end{itemize}
