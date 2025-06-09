@@ -55,7 +55,17 @@ Fdo.: \textbf{\autor}
 \end{center}
 \vskip1cm
 
-TODO RESUMEN AQUI
+El acceso equitativo a una \textbf{atención sanitaria de calidad} es un problema de interés a nivel global - existiendo diferencias significativas tanto en \textbf{calidad} como en \textbf{posibilidad} de acceso entre poblaciones. Este problema afecta especialmente al \textbf{cáncer de mama triple negativo} y sus metástasis - unos de los cánceres más difíciles de tratar, y en los que más pueden influir dichos sesgos retrasando su diagnóstico y tratamiento.
+
+Por tanto, el objetivo de este trabajo consiste en \textbf{desarrollar un modelo de regresión} capaz de predecir el tiempo de diagnóstico de metástasis - incidiendo a la vez en la relevancia de los factores \textbf{geográficos, socioeconómicos y climáticos} - a través de un proceso de \textbf{ciencia de datos}.
+
+Se ha realizado una \textbf{revisión de las principales técnicas} utilizadas durante el trabajo: el ciclo de vida de la ciencia de datos y algunos de los principales modelos de aprendizaje automático de regresión, con especial foco en los \textit{ensembles} de \textit{Gradient Boosting}.
+
+Además, se ha realizado un \textbf{análisis exploratorio del conjunto de datos}, observando la gran influencia de los códigos de diagnóstico a la vez que la irrelevancia de los atributos numéricos - representativos de factores geográficos, socioeconómicos y climáticos. Esta información se ha podido utilizar para realizar un \textbf{pre-procesamiento} de los datos, proponiendo tres subconjuntos de atributos a estudiar y varias transformaciones para imputar valores perdidos.
+
+Para el desarrollo del modelo, se ha realizado una fase de \textbf{modelado} en la que se han propuesto 16 modelos de regresión - realizando sobre éstos un ajuste de hiperparámetros y una selección de modelo en base al error. Además, el modelo seleccionado ha sido \textbf{evaluado} - estudiando su rendimiento tanto durante las fases de ajuste de hiperparámetros como de selección de modelos, y contrastando su rendimiento con un equivalente, ganador de la competición en la que se ha basado este problema.
+
+Finalmente, se ha \textbf{desplegado} el modelo a través de una aplicación web para permitir su uso de forma pública.
 
 % -------------------------------
 % Abstract
@@ -67,8 +77,17 @@ TODO RESUMEN AQUI
 \end{center}
 \vskip1cm
 
-TODO ABSTRACT HERE
+Equitative access to \textbf{quality healthcare} is a problem of global interest - with significant differences in both \textbf{quality} and \textbf{availability} existing depending on the population. This is especially true for \textbf{triple negative breast cancer} and its metastasis - one of the most dangerous and difficult to treat cancers, and one in which negative biases can greatly influence by delaying its diagnosis and treatment.
 
+The goal of this work is \textbf{developing a regression model} capable of predicting the metastasis diagnosis period of a patient - with a special focus on studying the relevance of \textbf{geographic, socioeconomic and climatic} factors - via data science.
+
+A survey of the \textbf{state of the art} of the main techniques used during this workk has been performed: studying the data science life cycle and some of the main regression machine learning models, focusing on \textit{Gradient Boosting ensembles}.
+
+In addition, an \textbf{exploratory data analysis} has been done on the dataset, finding that diagnosis codes carry a significant influence on the diagnosis period, while most numerical attributes - representing geographic, socioeconomic and climatic attributes - are mostly unrelated to the prediction. This knowledge has been used to \textbf{pre-process} the data, proposing three feature subsets to study and several transformations, including missing value imputing.
+
+For the model development, a \textbf{modelling} phase has been done, in which 16 regression models have been proposed - performing hyperparameter optimization and model selection on them based on their error. In addition, the chosen model has been \textbf{evaluated} - studying its performance in both previous phases, and comparing it with a similar model that placed first on the competition that originally proposed this problem.
+
+Finally, a web application has been \textbf{deployed} - to allow users to access the developed model publically.
 % -------------------------------
 % Agradecimientos
 % -------------------------------
