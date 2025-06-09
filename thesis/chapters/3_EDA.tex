@@ -18,12 +18,12 @@ El primer paso en el proceso de ciencia de datos es realizar un estudio exhausti
 El conjunto de datos contiene un total de \textbf{13173 instancias}, cada una de ellas descrita por \textbf{150 atributos} - divididos en \textbf{11 atributos categóricos} y \textbf{139 atributos numéricos} - y una \textbf{variable objetivo numérica}. Describir individualmente todos los atributos en la memoria no sería factible, por lo que se describen los principales grupos de atributos:
 
 \begin{itemize}
-	\item \textbf{Atributos médicos (13 atributos - 11 categóricos y 2 numéricos)}: Datos identificativos e información sobre el diagnóstico, tratamiento y seguro del paciente.
-	\item \textbf{Atributos socioeconómicos (65 atributos - 2 categóricos y 63 numéricos)}: Por lo general, datos \textbf{estadísticos} reflejando información socioeconómica relacionada con la población del paciente. Estos estadísticos se pueden dividir, a su vez, en:
+	\item \textbf{Atributos médicos (13: 11 categóricos y 2 numéricos)}: Datos identificativos e información sobre el diagnóstico, tratamiento y seguro del paciente.
+	\item \textbf{Atributos socioeconómicos (65: 2 categóricos y 63 numéricos)}: Por lo general, datos \textbf{estadísticos} reflejando información socioeconómica relacionada con la población del paciente. Estos estadísticos se pueden dividir, a su vez, en:
 	\begin{itemize}
-		\item \textbf{Porcentajes (49 atributos numéricos):} Porcentajes en el rango $[0, 100]$ representando valores estadísticos - matrimonios, educación, demografía... - de la ubicación del paciente.
-		\item \textbf{Medianas (10 atributos numéricos):} Valores representando la mediana de algunos estadísticos - edad, ingresos, alquileres... - de la ubicación del paciente.
-		\item \textbf{Información geográfica (6 atributos - 2 categóricos y 4 numéricos):} Valores concretos - población, densidad... - de la ubicación del paciente, sin ser representados a través de un porcentaje o una mediana.
+		\item \textbf{Porcentajes (49 atributos numéricos):} Porcentajes en el rango $[0, 100]$ representando valores estadísticos: matrimonios, educación, demografía, etc. de la ubicación del paciente.
+		\item \textbf{Medianas (10 atributos numéricos):} Valores representando la mediana de algunos estadísticos: edad, ingresos, alquileres, etc. de la ubicación del paciente.
+		\item \textbf{Información geográfica (6: 2 categóricos y 4 numéricos):} Valores concretos - población, densidad... - de la ubicación del paciente, sin ser representados a través de un porcentaje o una mediana.
 	\end{itemize}
 	\item \textbf{Atributos climáticos (72 atributos numéricos)}: Temperatura promedio (en grados \textbf{Farenheit}) de la población del paciente - representada de forma mensual entre los años 2013 y 2018.
 \end{itemize}
@@ -70,7 +70,7 @@ Estudiando la distribución, \textbf{72} de los 150 atributos disponibles presen
 
 \begin{itemize}
 	\item \textbf{Tratamiento:} Debido al número tan elevado de valores perdidos en ambos atributos, \textbf{solo se tiene información sobre el tratamiento de 11 pacientes} - lo que significa que no sería relevante el atributo debido a la falta de información.
-	\item \textbf{Índice de masa corporal del paciente:} Se conoce el índice de masa corporal de \textbf{menos de la mitad de los pacientes.}  Además, al ser información numérica \textbf{no existe un valor por defecto} por el que se puedan reemplazar los valores perdidos - por lo que sería razonable no estudiar en más detalle el atributo.
+	\item \textbf{Índice de masa corporal (IMC) del paciente:} Se conoce el índice de masa corporal de \textbf{menos de la mitad de los pacientes.}  Además, al ser información numérica \textbf{no existe un valor por defecto} por el que se puedan reemplazar los valores perdidos - por lo que sería razonable no estudiar en más detalle el atributo.
 	\item \textbf{Raza y tipo de seguro médico del paciente:} En ambos casos hay un número considerable de instancias con valores desconocidos. Ahora bien y a diferencia del IMC, al ser atributos categóricos puede considerar que \textbf{es significativo para el estudio que no se conozcan estos valores} - tratándolos como una categoría adicional, \textit{"Desconocido"}.
 \end{itemize}
 
@@ -80,7 +80,7 @@ En el resto de atributos el número de valores perdidos es más reducido - en el
 
 Tras un primer análisis - en el que se ha estudiado la distribución de la variable objetivo, los atributos y sus valores perdidos -, la segunda parte del análisis exploratorio es realizar un \textbf{estudio exhaustivo individualizado} de los atributos de interés y su relación con la variable predictora. Al ser reducido el número de atributos categóricos (con un total de \textbf{11}) es posible realizar un análisis individual de cada uno de estos atributos:
 
-\subsubsection{Datos personales - raza, género y tipo de seguro del paciente}
+\subsubsection{Datos personales: raza, género y tipo de seguro del paciente}
 
 \begin{itemize}[leftmargin=*]
 	\item \textbf{Raza del paciente:}
@@ -157,7 +157,7 @@ Tras un primer análisis - en el que se ha estudiado la distribución de la vari
 
 \newpage
 
-\subsubsection{Datos médicos - códigos de diagnóstico y tipos de tratamiento}
+\subsubsection{Datos médicos: códigos de diagnóstico y tipos de tratamiento}
 
 \begin{itemize}[leftmargin=*]
 	\item \textbf{Código de diagnóstico de cáncer de mama:}
@@ -229,9 +229,9 @@ Tras un primer análisis - en el que se ha estudiado la distribución de la vari
 	Como se mencionó durante el estudio de los valores perdidos, \textbf{solo se tienen 11 valores} para este atributo - de \textbf{13173} instancias totales. Por tanto, no tiene ningún sentido estudiar este atributo, al no contener suficiente información para ser significativo.
 \end{itemize}
 
-\subsubsection{Datos geográficos - estado de residencia y ubicación geográfica}
+\subsubsection{Datos geográficos: estado de residencia y ubicación geográfica}
 
-El estudio de la información geográfica del conjunto de datos es de especial importancia al ser uno de los objetivos planteados por el problema a resolver. Además, toda la información socio-económica y climática del conjunto de datos está \textbf{asociada al código zip de los pacientes} - por lo que estos atributos codifican de forma innata todos estos factores de sesgo.
+El estudio de la información geográfica del conjunto de datos es de especial importancia al ser uno de los objetivos planteados por el problema a resolver. Además, toda la información socio-económica y climática del conjunto de datos está \textbf{asociada al código zip de los pacientes}, por lo que estos atributos codifican además de forma innata todos estos factores de sesgo.
 
 Ahora bien, la información se encuentra representada en el conjunto de datos a través de \textbf{4 atributos jerárquicos}, donde cada atributo inferior describe con más granularidad el atributo superior. Al codificar la misma información, es de interés seleccionar \textbf{un único atributo} sobre el que realizar el estudio.
 
@@ -297,6 +297,6 @@ Una forma de realizar esta selección es mediante el \textbf{coeficiente de corr
 	\label{fig:ch3correlations}
 \end{figure}
 
-Ahora bien, como se refleja en la \textbf{Figura \ref{fig:ch3correlations}}, cuando se calcula la correlación entre los \textbf{138 atributos} y el tiempo de diagnóstico se observa claramente que \textbf{los valores de correlación de Pearson son muy bajos} - siendo el valor más alto de $0.055$. Estos valores se traducen en que \textbf{los atributos numéricos no tienen apenas influencia sobre el tiempo de diagnóstico} - y, por tanto, \textbf{pueden ser descartados} en las siguientes etapas del proceso de ciencia de datos.
+Ahora bien, como se refleja en la \textbf{Figura \ref{fig:ch3correlations}}, cuando se calcula la correlación entre los \textbf{138 atributos} y el tiempo de diagnóstico se observa claramente que \textbf{los valores de correlación de Pearson son muy bajos} - siendo el valor más alto de $0.055$. Estos valores se traducen en que \textbf{los atributos numéricos no tienen apenas influencia sobre el tiempo de diagnóstico} - y, por tanto, \textbf{pueden ser descartados} en las siguientes etapas del proceso de ciencia de datos sin ninguna repercusión.
 
-Al ser la práctica totalidad de atributos socioeconómicos y climáticos de tipo numérico, esto también se traduce en una respuesta al segundo objetivo del problema: identificar que, en contra de lo que se podría esperar, \textbf{los factores socioeconómicos y climáticos no parecen tener influencia sobre el tiempo de diagnóstico} - al menos, para el conjunto de datos proporcionado.
+Al ser la práctica totalidad de atributos socioeconómicos y climáticos de tipo numérico, esto también se traduce en una respuesta al segundo objetivo del problema: identificar que, en contra de lo que se podría esperar, \textbf{los factores socioeconómicos y climáticos no parecen tener influencia sobre el tiempo de diagnóstico de metástasis} - al menos, para el conjunto de datos proporcionado.

@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {2.2.1}Aprendizaje automático}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Selección de modelos}{7}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Modelos de regresión}{8}{subsection.2.2.3}%
-\contentsline {subsubsection}{Modelos tradicionales - regresión lineal, árboles de decisiones y máquinas de vectores de soporte}{8}{subsection.2.2.3}%
-\contentsline {subsubsection}{Modelos de ensemble - bagging y boosting}{10}{subsection.2.2.3}%
+\contentsline {subsubsection}{Modelos tradicionales: regresión lineal, árboles de decisiones y máquinas de vectores de soporte}{8}{subsection.2.2.3}%
+\contentsline {subsubsection}{Modelos de ensemble: \textit {bagging} y \textit {boosting}}{10}{subsection.2.2.3}%
 \contentsline {chapter}{\numberline {3}Estudio exploratorio del problema}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definición y objetivos del problema}{13}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Análisis exploratorio de datos}{13}{section.3.2}%
@@ -19,16 +19,16 @@
 \contentsline {subsubsection}{Variable objetivo - tiempo de diagnóstico}{14}{subsection.3.2.1}%
 \contentsline {subsubsection}{Valores perdidos}{15}{figure.caption.6}%
 \contentsline {subsection}{\numberline {3.2.2}Estudio de atributos categóricos}{16}{subsection.3.2.2}%
-\contentsline {subsubsection}{Datos personales - raza, género y tipo de seguro del paciente}{16}{subsection.3.2.2}%
-\contentsline {subsubsection}{Datos médicos - códigos de diagnóstico y tipos de tratamiento}{18}{figure.caption.9}%
-\contentsline {subsubsection}{Datos geográficos - estado de residencia y ubicación geográfica}{20}{figure.caption.11}%
+\contentsline {subsubsection}{Datos personales: raza, género y tipo de seguro del paciente}{16}{subsection.3.2.2}%
+\contentsline {subsubsection}{Datos médicos: códigos de diagnóstico y tipos de tratamiento}{18}{figure.caption.9}%
+\contentsline {subsubsection}{Datos geográficos: estado de residencia y ubicación geográfica}{20}{figure.caption.11}%
 \contentsline {subsection}{\numberline {3.2.3}Estudio de atributos numéricos}{22}{subsection.3.2.3}%
 \contentsline {chapter}{\numberline {4}Preparación del conjunto de datos}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Selección de atributos}{23}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Selección manual de atributos}{23}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Selección automática de atributos}{24}{subsection.4.1.2}%
-\contentsline {subsubsection}{Filter - Selección mediante tests estadísticos}{24}{subsection.4.1.2}%
-\contentsline {subsubsection}{Wrapper - Selección mediante entrenamiento de modelos}{25}{subsection.4.1.2}%
+\contentsline {subsubsection}{\textit {Filter}: Selección mediante tests estadísticos}{24}{subsection.4.1.2}%
+\contentsline {subsubsection}{\textit {Wrapper}: Selección mediante entrenamiento de modelos}{25}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Pre-procesamiento de los datos}{25}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Modelado y evaluación}{27}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Modelado y experimentación}{27}{section.5.1}%

@@ -1,6 +1,6 @@
 \chapter{Preparación del conjunto de datos}
 
-En este capítulo se describe el conjunto de transformaciones y técnicas aplicadas para preparar el conjunto de datos para su uso posterior durante el entrenamiento y experimentación.
+En este capítulo se describe el conjunto de transformaciones y técnicas aplicadas sobre el conjunto de datos para transformarlo, para su uso posterior durante las etapas de entrenamiento y experimentación.
 
 En primer lugar se propone un número de \textbf{subconjuntos de atributos} de cara a reducir la dimensionalidad del conjunto de datos. Tras esto, se plantean y describen las \textbf{transformaciones} aplicadas al conjunto de datos previo al entrenamiento para estandarizar los datos y mejorar el rendimiento de los modelos.
 
@@ -18,7 +18,7 @@ Debido a esto, resulta necesario realizar una \textbf{selección de atributos} -
 
 \subsection{Selección manual de atributos}
 
-El primer subconjunto de atributos propuesto se realizar a partir de las observaciones obtenidas a través del análisis exploratorio de datos realizado en el capítulo anterior - estando éste formado por las \textbf{variables con mayor significancia para la predicción del tiempo de diagnóstico}, según las gráficas y tests realizados. Tras este estudio, se han seleccionado los siguientes \textbf{5 atributos}:
+El primer subconjunto de atributos propuesto se realizar a partir de las observaciones obtenidas a través del análisis exploratorio de datos realizado en el capítulo anterior - estando este formado por las \textbf{variables con mayor significancia para la predicción del tiempo de diagnóstico}, según las gráficas y tests realizados. Tras este estudio, se han seleccionado los siguientes \textbf{5 atributos}:
 
 \begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item Código de diagnóstico del cáncer de mama.
@@ -34,11 +34,11 @@ A través de esta selección se ha reducido el conjunto de atributos de \textbf{
 
 \subsection{Selección automática de atributos}
 
-El subconjunto de atributos propuesto en la sección anterior está basado en el análisis exploratorio realizado. Ahora bien, al basar la decisión únicamente en tests estadísticos y gráficas - sin evaluar el rendimiento -, existe la posibilidad de que se haya introducido un \textbf{sesgo personal} o que existan otros subconjuntos de atributos que ofrezcan mejor rendimiento.
+El subconjunto de atributos propuesto en la sección anterior está basado en el análisis exploratorio realizado. Ahora bien, al basar la decisión únicamente en tests estadísticos y gráficas - sin evaluar el rendimiento real en modelos, -, existe la posibilidad de que se haya introducido un \textbf{sesgo personal} o que existan otros subconjuntos de atributos que puedan ofrecer un mejor rendimiento.
 
 Con el fin de solucionar estos problemas y de acercar el proceso de selección de atributos al funcionamiento real de los modelos, se proponen \textbf{dos subconjuntos adicionales} obtenidos a través de \textbf{algoritmos de selección automática de variables} \cite{featureselection} - basados en técnicas estadísticas y en entrenamiento de modelos.
 
-\subsubsection{Filter - Selección mediante tests estadísticos}
+\subsubsection{\textit{Filter}: Selección mediante tests estadísticos}
 
 Los \textbf{métodos de filtrado} (también conocidos como \textit{filter}) son algoritmos que evalúan la \textbf{relevancia de cada atributo} a través de tests estadísticos, sin necesidad de entrenar ningún modelo - lo que los hace más ágiles que otros métodos, pero más genéricos e incapaces de encontrar todas las correlaciones entre grupos de atributos \cite{featureselection}.
 
@@ -59,11 +59,11 @@ Para este problema se ha utilizado un \textbf{test estadístico F} - una medida 
 
 El subconjunto de atributos obtenido reafirma la selección manual realizada, al tener ambos conjuntos los \textbf{mismos atributos categóricos} - siendo el \textbf{código de diagnóstico del cáncer de mama} el atributo con mayor relevancia con diferencia. La principal diferencia se encuentra en que se han seleccionado además \textbf{atributos numéricos}, algunos de ellos teniendo incluso mayor relevancia que otros atributos categóricos - como la \textbf{edad del paciente}.
 
-\subsubsection{Wrapper - Selección mediante entrenamiento de modelos}
+\subsubsection{\textit{Wrapper}: Selección mediante entrenamiento de modelos}
 
-Los \textbf{métodos de envoltura} (también conocidos como \textit{wrapper}) son algoritmos que realizan su selección de atributos a través del \textbf{entrenamiento de un modelo de aprendizaje automático} y la selección de las variables más relevantes en base a los parámetros y pesos aprendidos por el modelo. A diferencia de los métodos de \textit{filter} el proceso de selección suele ser más lento, pero los resultados suelen ser más fiables al trabajar con modelos reales \cite{featureselection}.
+Los \textbf{métodos de envoltura} (también conocidos como \textit{wrapper}) son algoritmos que realizan su selección de atributos a través del \textbf{entrenamiento de un modelo de aprendizaje automático} y la selección de las variables más relevantes en base a los parámetros y pesos aprendidos por el modelo. A diferencia de los métodos de \textit{filter}, el proceso de selección suele ser más lento, pero los resultados suelen ser más fiables al trabajar de forma directa con modelos reales \cite{featureselection}.
 
-Para este problema se ha utilizado un modelo de \textbf{Random Forest}, entrenado con los hiperparámetros por defecto de su implementación en \textit{Scikit-Learn} - \textbf{100 árboles} sin profundidad máxima. A partir de este modelo entrenado se extraen los \textbf{10 atributos} con mayor peso sobre el modelo entrenado: 
+Para este problema se ha utilizado un modelo de \textbf{\textit{Random Forests}}, entrenado con los hiperparámetros por defecto de su implementación en \textit{Scikit-Learn} - \textbf{100 árboles} sin profundidad máxima. A partir de este modelo entrenado se extraen los \textbf{10 atributos} con mayor peso sobre el modelo entrenado: 
 
 \begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Atributos categóricos (4):} 
@@ -92,16 +92,16 @@ Ahora bien, los atributos necesitan \textbf{transformaciones distintas} dependie
 	\begin{enumerate}
 		\item \textbf{Imputación de valores perdidos:} Como se estudió durante el análisis exploratorio de datos, para la mayoría de atributos categóricos \textbf{resulta de interés tratar los valores perdidos como categorías separadas}, al ser relevante para el estudio que faltasen valores.
 		
-		Por esto, se opta por reemplazar todos los valores perdidos por un \textbf{valor constante, \textit{"Unknown"}}.
+		Por esto, se opta por reemplazar todos los valores perdidos por un \textbf{valor constante, \textit{"UNKNOWN"}}.
 		
 		\item \textbf{Codificación:} De forma inherente, la mayoría de modelos propuestos son incapaces de trabajar con atributos categóricos - necesitando transformar estos atributos en algún tipo de codificación numérica.
 		
-		Para estos casos, lo estándar es utilizar una codificación de tipo \textbf{\textit{One-Hot}} \cite{GVK022791892}: dividiendo el atributo $x$ en \textbf{tantos atributos $at_i$ como valores tiene la variable}, donde para cada atributo se cumple que $at_i=1$ si $x = i$ y $at_i=0$ si $x \neq i$ - representando de esta manera los valores categóricos en un formato numérico.
+		Para estos casos, lo estándar es utilizar una codificación de tipo \textbf{\textit{One-Hot}} \cite{GVK022791892}: dividiendo el atributo original en \textbf{tantos atributos como valores tiene la variable original}, donde el atributo que se corresponde con el valor de la variable original tiene un valor de $1$ y el resto tiene valores de $0$ - representando de esta manera los valores categóricos en un formato numérico.
 		
 		Es importante destacar las siguientes particularidades para el problema actual:
 		\begin{itemize}
 			\item Debido a que los atributos categóricos del conjunto de datos tienen una \textbf{alta dimensionalidad} y \textbf{valores no exhaustivos}, es necesario realizar una \textbf{agrupación de los atributos menos frecuentes y desconocidos} bajo un único atributo $at_{other}$. El umbral para considerar un atributo como poco frecuente será determinado durante el proceso de experimentación y selección de modelos.
-			\item La implementación de los modelos de \textbf{Gradient Boosting} codifican de forma inherente los atributos categóricos, por lo que no es necesario aplicar este paso para ellos.
+			\item La implementación de los modelos de \textbf{\textit{Gradient Boosting}} codifican de forma inherente los atributos categóricos, por lo que no es necesario aplicar este paso para ellos.
 		\end{itemize}
 		 
 	\end{enumerate}

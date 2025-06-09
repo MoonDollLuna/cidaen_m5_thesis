@@ -8,7 +8,7 @@ En primer lugar se describe la \textbf{experimentación} a realizar - empezando 
 
 Tras el análisis exploratorio y el preprocesamiento del conjunto de datos realizado en los capítulos anteriores, la siguiente etapa del ciclo de vida de la ciencia de datos es el \textbf{modelado}: la propuesta de modelos de aprendizaje automático e hiperparámetros, el ajuste de éstos y el proceso de selección final para obtener un \textbf{modelo de regresión entrenado} capaz de resolver el problema propuesto con el menor error posible.
 
-Para llevar a cabo este ajuste y selección es necesario realizar a la vez un proceso paralelo de \textbf{experimentación}, donde se evalua el rendimiento de todos los modelos bajo distintos parámetros y circunstancias, con el fin de seleccionar el mejor modelo de todos los propuestos.
+Para llevar a cabo este ajuste y selección es necesario realizar a la vez un proceso paralelo de \textbf{experimentación}, donde se evalua el rendimiento de los modelos bajo distintos conjuntos de parámetros y circunstancias, con el fin de seleccionar el mejor modelo de entre todos los propuestos.
 
 \subsection{Modelos e hiperparámetros propuestos}
 
@@ -22,8 +22,8 @@ Los modelos de regresión lineal son la familia de algoritmos más sencilla util
 
 \begin{itemize}[parsep=1pt, itemsep=0pt, topsep=1pt]
 	\item Regresión lineal simple.
-	\item Regresión con regularización Ridge (L2).
-	\item Regresión con regularización Lasso (L1).
+	\item Regresión con regularización \textit{Ridge} (L2).
+	\item Regresión con regularización \textit{Lasso} (L1).
 	\item Regresión con \textit{Elastic-Net}.
 \end{itemize}
 
@@ -80,13 +80,13 @@ Solo se estudia un modelo de árbol, pudiendo observarse los hiperparámetros pl
 
 \subsubsection{Máquinas de vector de soporte}
 
-Se han planteado \textbf{cuatro} modelos de máquinas de vector de soporte, según la \textbf{función kernel} utilizada - siendo los hiperparámetros asociados a dichas máquinas los descritos en la \textbf{Tabla \ref{tab:ch5svrhyperparameters}}.
+Se han planteado \textbf{cuatro} modelos de máquinas de vector de soporte, según la \textbf{función \textit{kernel}} utilizada - siendo los hiperparámetros asociados a dichas máquinas los descritos en la \textbf{Tabla \ref{tab:ch5svrhyperparameters}}.
 
 \begin{itemize}[parsep=1pt, itemsep=0pt, topsep=1pt]
-	\item Kernel lineal.
-	\item Kernel polinómico.
-	\item Kernel gaussiano.
-	\item Kernel sigmoide.
+	\item \textit{Kernel} lineal.
+	\item \textit{Kernel} polinómico.
+	\item \textit{Kernel} gaussiano.
+	\item \textit{Kernel} sigmoide.
 \end{itemize}
 
 \begin{table}[h]
@@ -114,7 +114,7 @@ Se han planteado \textbf{cuatro} modelos de máquinas de vector de soporte, seg�
 Se han planteado \textbf{dos} \textit{ensembles} de tipo \textit{bagging}, utilizando \textbf{árboles de decisiones} como modelos sencillos a agrupar:
 
 \begin{itemize}[parsep=1pt, itemsep=0pt, topsep=1pt]
-	\item \textit{Random Forest}.
+	\item \textit{Random Forests}.
 	\item \textit{Extremely Randomized Trees}.
 \end{itemize}
 
@@ -145,7 +145,7 @@ Los hiperparámetros de los modelos se encuentran descritos en la \textbf{Tabla 
 
 \subsubsection{Ensembles de Boosting}
 
-Se ha planteado un único modelo de \textit{boosting} - \textbf{AdaBoost} -, utilizando \textbf{árboles de decisiones} como modelo sencillo a agrupar. Sus hiperparámetros se encuentran descritos en la \textbf{Tabla \ref{tab:ch5boostinghyperparameters}}.
+Se ha planteado un único modelo de \textit{boosting} --- \textbf{\textit{AdaBoost}} ---, utilizando \textbf{árboles de decisiones} como modelo sencillo a agrupar. Sus hiperparámetros se encuentran descritos en la \textbf{Tabla \ref{tab:ch5boostinghyperparameters}}.
 
 \begin{table}[h]
 	\vspace{-8mm}
@@ -257,7 +257,7 @@ Para realizar los experimentos se cuentan con los siguientes \textbf{conjuntos d
 
 La primera fase de experimentación es el \textbf{ajuste de hiperparámetros:} la selección, para cada modelo propuesto, tanto de los \textbf{hiperparámetros} como del \textbf{subconjunto de atributos} que minimizan el error final del modelo. 
 
-Dicho ajuste se realiza a través de una \textbf{selección de hiperparámetros con validación cruzada} - se entrena un modelo para cada par de hiperparámetros y subconjunto de atributos sobre el conjunto de entrenamiento utilizando \textbf{validación cruzada de 5-folds} para obtener un error promedio honesto. Ahora bien, como se ha visto en la sección anterior, \textbf{el número de posibles hiperparámetros para cada modelo puede resultar excesivo} - lo cual, mezclado con el tiempo de entrenamiento de los modelos más complejos, puede hacer la evaluación de todas las combinaciones de hiperparámetros en un tiempo razonable imposible. 
+Dicho ajuste se realiza a través de una \textbf{selección de hiperparámetros con validación cruzada} - se entrena un modelo para cada par de hiperparámetros y subconjunto de atributos sobre el conjunto de entrenamiento utilizando \textbf{validación cruzada de 5-\textit{folds}} para obtener un error promedio honesto. Ahora bien, como se ha visto en la sección anterior, \textbf{el número de posibles hiperparámetros para cada modelo puede resultar excesivo} - lo cual, mezclado con el tiempo de entrenamiento de los modelos más complejos, puede hacer la evaluación de todas las combinaciones de hiperparámetros en un tiempo razonable imposible. 
 
 Para solucionar este problema se plantean varias metodologías de \textbf{búsqueda de hiperparámetros} - es decir, distintas estrategias para determinar \textbf{cuáles de todos los posibles conjuntos de hiperparámetros propuestos se evalúan}:
 \begin{itemize}[parsep=2pt, itemsep=2pt, topsep=4pt]
@@ -267,7 +267,7 @@ Para solucionar este problema se plantean varias metodologías de \textbf{búsqu
 	
 	Para los modelos propuestos, se ha elegido de forma empírica evaluar \textbf{100 conjuntos de hiperparámetros aleatorios}.
 	
-	\item \textbf{Búsqueda aleatoria gaussiana:} La búsqueda aleatoria uniforme puede tener problemas al trabajar con modelos muy complejos con tiempos largo de entrenamiento, al tener que probar un gran número de hiperparámetros para encontrar un modelo razonable. Una solución a este algoritmo es guiar las búsquedas aleatorias con un modelo \textbf{probabilístico} - donde los hiperparámetros con menor error son más probables. De esta forma se puede reducir el número necesario de conjuntos de hiperparámetros evaluados para obtener un buen resultado. 
+	\item \textbf{Búsqueda aleatoria Gaussiana:} La búsqueda aleatoria uniforme puede tener problemas al trabajar con modelos muy complejos con tiempos largo de entrenamiento, al tener que probar un gran número de hiperparámetros para encontrar un modelo razonable. Una solución a este algoritmo es guiar las búsquedas aleatorias con un modelo \textbf{probabilístico}, donde los hiperparámetros con menor error son más probables. De esta forma se puede reducir el número necesario de conjuntos de hiperparámetros evaluados para obtener un buen resultado. 
 	
 	Para los modelos propuestos, se ha elegido de forma empírica evaluar \textbf{50 conjuntos de hiperparámetros aleatorios}.
 \end{itemize}
@@ -362,7 +362,7 @@ En la \textbf{Tabla \ref{tab:ch5iteraciones}} se encuentra detallado el \textbf{
 	\item \textbf{Validación cruzada:} Para cada par de subconjuntos de atributos e hiperparámetros se realiza una \textbf{5-validación cruzada} entrenando sobre el \textbf{conjunto de entrenamiento}, por lo que se entrenan cinco modelos y se obtiene el error promedio de éstos.
 \end{enumerate}
 
-Tras todos los modelos entrenados y evaluados, se elige para cada algoritmo \textbf{un único modelo final} - aquel que minimiza el error - para ser considerado durante la selección de modelos.
+Tras todos los modelos entrenados y evaluados, se elige para cada algoritmo \textbf{un único modelo final} - aquel que minimiza el error - para ser considerado durante el proceso de selección de modelos.
 
 \subsubsection{Selección de modelos}
 
@@ -405,9 +405,9 @@ La \textbf{Figura \ref{fig:ch5trainerror}} representa la distribución del \text
 	\end{itemize}
 	\item Se pueden observar \textbf{tres agrupamientos de subconjuntos de atributos}, con promedios de error similares:
 	\begin{itemize}[parsep=1pt, itemsep=0pt, topsep=1pt]
-		\item \textbf{Manual y Filter}: Los subconjuntos con menor error promedio, ambos presentan comportamientos y atributos muy similares - siendo la principal diferencia que \textit{filter} añade información numérica y ofrece ligeramente mejores resultados, especialmente en modelos \textbf{complejos} como \textit{ensembles}.
+		\item \textbf{Manual y \textit{Filter}}: Los subconjuntos con menor error promedio, ambos presentan comportamientos y atributos muy similares - siendo la principal diferencia que \textit{filter} añade información numérica y ofrece ligeramente mejores resultados, especialmente en modelos \textbf{complejos} como \textit{ensembles}.
 		
-		\item \textbf{Wrapper}: Un subconjunto con menos atributos categóricos y más atributos numéricos, parece ofrecer los mejores resultados en los modelos de regresión lineal - los más simples y susceptibles a la alta dimensionalidad que introducen los atributos categóricos.
+		\item \textbf{\textit{Wrapper}}: Un subconjunto con menos atributos categóricos y más atributos numéricos, parece ofrecer los mejores resultados en los modelos de regresión lineal - los más simples y susceptibles a la alta dimensionalidad que introducen los atributos categóricos.
 		
 		\item \textbf{Conjunto completo:} Como era de esperar, el error tiende a ser mayor utilizando el conjunto completo de 150 atributos - presentando picos sustanciales en algunos modelos .
 	\end{itemize}
@@ -440,7 +440,7 @@ La \textbf{Figura \ref{fig:ch5traintime}} representa el \textbf{tiempo de entren
 
 \subsection{Rendimiento durante la selección de modelos}
 
-Tras el estudio del rendimiento durante el ajuste, el siguiente paso consiste en analizar el rendimiento de los \textbf{modelos entrenados} - concretamente estudiar los \textbf{subconjuntos de atributos seleccionados} y los \textbf{errores finales de los modelos sobre el conjunto de validación}.
+Tras el estudio del rendimiento durante el ajuste, el siguiente paso consiste en analizar el rendimiento de los \textbf{modelos entrenados} - concretamente estudiar los \textbf{subconjuntos de atributos seleccionados} y los \textbf{errores finales de los modelos ajustados sobre el conjunto de validación}.
 
 Los resultados completos de la fase de selección de modelo están disponibles en la \textbf{Tabla \ref{tab:annexvalidation}} - realizándose el siguiente estudio a partir de gráficas.
 
@@ -487,12 +487,12 @@ La \textbf{Figura \ref{fig:ch5valerror}} representa el error sobre el \textbf{co
 	\item \textbf{El error generalizado de los modelos es muy elevado:} Incluso para el mejor modelo - \textit{Categorical Boost}, con un error de \textbf{81.61} - el error es muy elevado si se tiene en cuenta que el rango de la variable objetivo en el conjunto de entrenamiento es aproximadamente $[0, 365]$.
 	
 	Al ser este error generalizado, lo más factible es asumir que \textbf{el conjunto de datos no tiene suficiente información para predecir esta información}.
-	\item \textbf{Como era de esperar, los \textit{ensembles} ofrecen mejor rendimiento:} Los modelos con mejor rendimiento son los \textit{ensembles} - concretamente \textbf{Gradient Boosting} seguido de \textbf{Bagging}.
+	\item \textbf{Como era de esperar, los \textit{ensembles} ofrecen mejor rendimiento:} Los modelos con mejor rendimiento son los \textit{ensembles} - concretamente \textbf{\textit{Gradient Boosting}} seguido de \textbf{\textit{Bagging}}.
 	
 	Sorprendentemente, los modelos de regresión lineal, en principio incluidos como \textit{baselines}, ofrecen rendimientos \textbf{superiores} al resto de modelos propuestos.
 	\item \textbf{Algunos modelos ofrecen rendimientos anómalos:}
 	\begin{itemize}
-		\item \textbf{XGBoost y AdaBoost}: Pese a ser ensembles, el error es superior al de un único árbol de decisión. Esto puede deberse a problemas a la hora de ajustar hiperparámetros.
+		\item \textbf{\textit{XGBoost} y \textit{AdaBoost}}: Pese a ser ensembles, el error es superior al de un único árbol de decisión. Esto puede deberse a problemas a la hora de ajustar hiperparámetros.
 		\item \textbf{Máquinas de vector de soporte:} El error de estos modelos es sustancialmente superior al de todos los demás modelos. Sumado a su elevado tiempo de entrenamiento, hace que esta familia de modelos no sea útil para el problema propuesto.
 	\end{itemize}
 \end{itemize}
@@ -512,7 +512,7 @@ El último paso de la evaluación es el estudio del \textbf{rendimiento del mode
 
 \subsubsection{Modelo seleccionado}
 
-Tras el proceso de selección de modelo, el modelo de regresión seleccionado ha sido \textbf{Categorical Boost} - un \textit{ensemble de \textbf{Gradient Boosting}} utilizado como estado del arte actualmente en numerosos problemas estructurados. A través del ajuste de hiperparámetros se han seleccionado los siguientes parámetros:
+Tras el proceso de selección de modelo, el modelo de regresión seleccionado ha sido \textbf{\textit{Categorical Boost}} - un \textit{ensemble de \textbf{Gradient Boosting}} utilizado como estado del arte actualmente en numerosos problemas estructurados. A través del ajuste de hiperparámetros se han seleccionado los siguientes parámetros:
 
 \begin{itemize}[parsep=1pt, itemsep=2pt, topsep=1pt]
 	\item \textbf{Subconjunto de atributos:} \textit{Filter} - \textbf{10 atributos} incluyendo los \textbf{5 atributos categóricos} seleccionados durante el análisis exploratorio de datos y \textbf{5 atributos numéricos} adicionales con información socioeconómica.
