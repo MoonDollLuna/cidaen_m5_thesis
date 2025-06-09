@@ -1,0 +1,5 @@
+model,preprocessing__cat__oh__min_frequency,regression__alpha,regression__l1_ratio,error,feature_subset
+linear_regression,0,,,82.64944468760879,wrapper
+ridge_l2,0,1.0,,82.54723807247451,wrapper
+lasso_l1,0,0.1,,82.40722984005937,filter
+elastic_net,0,0.001,0.5,82.43928985039425,wrapper

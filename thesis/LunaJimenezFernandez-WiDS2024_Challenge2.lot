@@ -18,5 +18,14 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {A.1}{\ignorespaces Estadísticos del mejor resultado para cada par de modelo y subconjunto de atributos}}{46}{table.A.1}%
 \contentsline {table}{\numberline {A.2}{\ignorespaces Estadísticos del modelo seleccionada para cada modelo}}{46}{table.A.2}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de los modelos de regresión lineal}}{47}{table.caption.32}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de los árboles de decisión}}{47}{table.caption.33}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de las máquinas de vectores de soporte}}{47}{table.caption.34}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de los ensembles de bagging}}{47}{table.caption.35}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de los ensembles de boosting}}{48}{table.caption.36}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de Extreme Gradient Boosting}}{48}{table.caption.37}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de Categorical Boosting}}{48}{table.caption.38}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de Light Gradient Boosting Machine}}{48}{table.caption.39}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces \xpg@aux {}{spanish}Hiperparámetros de Histogram Gradient Boosting}}{48}{table.caption.40}%
 \addvspace {10\p@ }
 \contentsfinish 

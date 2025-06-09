@@ -1,0 +1,2 @@
+,regression__learning_rate,regression__max_depth,regression__min_data_in_leaf,regression__num_iterations,regression__num_leaves,error,feature_subset
+lgbm,0.19674635138648194,3,79.0,74.0,10.0,81.77821474896575,filter

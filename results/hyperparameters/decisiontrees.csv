@@ -1,0 +1,2 @@
+model,preprocessing__cat__oh__min_frequency,regression__criterion,regression__max_depth,regression__min_samples_leaf,regression__min_samples_split,error,feature_subset
+decision_tree,0.002965985859578346,friedman_mse,9,40,33,82.93619776291433,manual

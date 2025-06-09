@@ -63,5 +63,11 @@
 \contentsline {subsection}{\numberline {A.1.1}Ajuste de hiperparámetros}{45}{subsection.A.1.1}%
 \contentsline {subsection}{\numberline {A.1.2}Selección de modelos}{46}{subsection.A.1.2}%
 \contentsline {section}{\numberline {A.2}Hiperparámetros}{47}{section.A.2}%
+\contentsline {subsubsection}{Modelos de regresión lineal}{47}{section.A.2}%
+\contentsline {subsubsection}{Árboles de decisión}{47}{table.caption.32}%
+\contentsline {subsubsection}{Máquinas de vectores de soporte}{47}{table.caption.33}%
+\contentsline {subsubsection}{Ensembles de Bagging}{47}{table.caption.34}%
+\contentsline {subsubsection}{Ensembles de Boosting}{48}{table.caption.35}%
+\contentsline {subsubsection}{Ensembles de Gradient Boosting}{48}{table.caption.36}%
 \contentsline {chapter}{\numberline {B}Contenidos del repositorio}{49}{appendix.B}%
 \contentsfinish 

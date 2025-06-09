@@ -1,0 +1,2 @@
+model,preprocessing__cat__oh__min_frequency,regression__learning_rate,regression__n_estimators,error,feature_subset
+adaboost,0.0001,0.0001,50,86.46795403506125,manual

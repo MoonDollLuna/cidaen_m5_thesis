@@ -22,8 +22,8 @@ Los modelos de regresión lineal son la familia de algoritmos más sencilla util
 
 \begin{itemize}[parsep=1pt, itemsep=0pt, topsep=1pt]
 	\item Regresión lineal simple.
-	\item Regresión con regularización Lasso (L2).
-	\item Regresión con regularización Ridge (L1).
+	\item Regresión con regularización Ridge (L2).
+	\item Regresión con regularización Lasso (L1).
 	\item Regresión con \textit{Elastic-Net}.
 \end{itemize}
 
@@ -36,7 +36,7 @@ Los modelos de regresión lineal son la familia de algoritmos más sencilla util
 			\multicolumn{1}{l}{\textbf{Hiperparámetro}} & \textbf{Rango}                      & \textbf{Descripción}                                                                                                                                                  & \textbf{Aplicable a}                                          \\ \midrule
 			alfa                                        & $\{10^{-6}, 10^{-5}, \dots, 10^6\}$ & \begin{tabular}[c]{@{}l@{}}Factor de penalización aplicado a los parámetros.\\ Valores más altos implican una mayor penalización.\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}L1, L2,\\ Elastic-Net\end{tabular} \\
 			\rowcolor[HTML]{EFEFEF} 
-			ratio                                       & $\{0.25, 0.5, 0.75\}$               & \begin{tabular}[c]{@{}l@{}}Ratio en el que se aplica la penalización de Ridge - L1.\\ 0 significa un modelo Lasso (L2), 1 significa un modelo Ridge (L1)\end{tabular} & Elastic-Net                                                   \\ \bottomrule
+			ratio                                       & $\{0.25, 0.5, 0.75\}$               & \begin{tabular}[c]{@{}l@{}}Ratio en el que se aplica la penalización de Lasso - L1.\\ 0 significa un modelo Ridge (L2), 1 significa un modelo Lasso (L1)\end{tabular} & Elastic-Net                                                   \\ \bottomrule
 		\end{tabular}%
 	}
 	\captionsetup{belowskip=-40pt, justification=centering}
@@ -223,7 +223,7 @@ Debido a estas diferencias, es necesario realizar algunos ajustes adicionales de
 			Porcentaje de instancias                                                       & $[0.3, 1.0]$             & Porcentaje de instancias del conjunto de datos muestreadas.                                                                                        & XGBoost                                                              \\
 			\rowcolor[HTML]{EFEFEF} 
 			Porcentaje de atributos                                                        & $[0.3, 1.0]$             & Porcentaje de atributos del conjunto de datos muestreados.                                                                                         & \begin{tabular}[c]{@{}l@{}}XGBoost,\\ HistGradientBoost\end{tabular} \\ \hline
-			Regularización                                                                 & $[10^{-3}, 10]$          & \begin{tabular}[c]{@{}l@{}}Coeficiente aplicado a la regularización de tipo Lasso (L2)\\ para penalizar ensembles con pesos elevados.\end{tabular} & CatBoost                                                             \\
+			Regularización                                                                 & $[10^{-3}, 10]$          & \begin{tabular}[c]{@{}l@{}}Coeficiente aplicado a la regularización de tipo Ridge (L2)\\ para penalizar ensembles con pesos elevados.\end{tabular} & CatBoost                                                             \\
 			\rowcolor[HTML]{EFEFEF} 
 			\begin{tabular}[c]{@{}r@{}}Intensidad de\\ la aleatoriedad\end{tabular}        & $[1, 2]$                 & \begin{tabular}[c]{@{}l@{}}Multiplicador aplicado a la varianza de cada posible partición\\ para forzar aleatoriedad.\end{tabular}                 & CatBoost                                                             \\ \hline
 			\begin{tabular}[c]{@{}r@{}}Número máximo de\\ hojas\end{tabular}               & $\{10, 11, \dots, 100\}$ & \begin{tabular}[c]{@{}l@{}}Número máximo de hojas que puede tener cada árbol -\\ independientemente de su profundidad.\end{tabular}                & \begin{tabular}[c]{@{}l@{}}LGBM,\\ HistGradientBoost\end{tabular}    \\
@@ -280,8 +280,8 @@ Para solucionar este problema se plantean varias metodologías de \textbf{búsqu
 			\toprule
 			\multicolumn{1}{l}{} &
 			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Regresión \\ Lineal\end{tabular}}} &
-			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Ridge \\ L1\end{tabular}}} &
-			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Lasso \\ L2\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Ridge \\ L2\end{tabular}}} &
+			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Lasso \\ L1\end{tabular}}} &
 			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Elastic-\\ Net\end{tabular}}} &
 			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Árbol de \\ decisión\end{tabular}}} &
 			\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}SVR\\ Lineal\end{tabular}}} &

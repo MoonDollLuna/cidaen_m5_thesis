@@ -1,0 +1,2 @@
+,regression__learning_rate,regression__max_depth,regression__iterations,regression__l2_leaf_reg,regression__random_strength,error,feature_subset
+catboost,0.04893017698331533,8,200.0,5.637922884126309,2.0,81.60903130606145,filter
