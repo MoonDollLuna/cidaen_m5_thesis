@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.1.2}Cross-Industry Standard Process for Data Mining - CRISP-DM}{5}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Aprendizaje automático y ajuste de modelos}{6}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Aprendizaje automático}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Selección de modelos}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Selección de modelos y ajuste de hiperparámetros}{7}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Modelos de regresión}{8}{subsection.2.2.3}%
 \contentsline {subsubsection}{Modelos tradicionales: regresión lineal, árboles de decisiones y máquinas de vectores de soporte}{8}{subsection.2.2.3}%
 \contentsline {subsubsection}{Modelos de ensemble: \textit {bagging} y \textit {boosting}}{10}{subsection.2.2.3}%
@@ -53,8 +53,8 @@
 \contentsline {subsubsection}{Modelo seleccionado}{37}{subsection.5.2.3}%
 \contentsline {subsubsection}{Resultados sobre el conjunto de test y posición en la competición}{37}{subsection.5.2.3}%
 \contentsline {chapter}{\numberline {6}Despliegue y aplicación web}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Aplicación para usuario - predicción individual}{39}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Aplicación \textit {batch} - predicción en bloque}{40}{section.6.2}%
+\contentsline {section}{\numberline {6.1}Aplicación para usuario: predicción individual}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Aplicación \textit {batch}: predicción en bloque}{40}{section.6.2}%
 \contentsline {chapter}{\numberline {7}Conclusiones}{41}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Trabajo futuro}{42}{section.7.1}%
 \contentsline {chapter}{Referencia bibliográfica}{44}{chapter*.31}%

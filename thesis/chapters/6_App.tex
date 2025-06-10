@@ -1,6 +1,6 @@
 \chapter{Despliegue y aplicación web}
 
-Tras los pasos realizados del ciclo de vida de la ciencia de datos - análisis exploratorio, preprocesamiento, modelado y evaluación -, en este capítulo se describe el resultado del último paso: el \textbf{despliegue} del modelo final entrenado obtenido para su uso por los usuarios.
+Tras los pasos realizados del ciclo de vida de la ciencia de datos (análisis exploratorio, preprocesamiento, modelado y evaluación), en este capítulo se describe el resultado del último paso: el \textbf{despliegue} del modelo final entrenado obtenido para su uso por los usuarios.
 
 \begin{figure}[h]
 	\vspace{-6mm}
@@ -11,13 +11,13 @@ Tras los pasos realizados del ciclo de vida de la ciencia de datos - análisis e
 	\label{fig:ch6main}
 \end{figure}
 
-El despliegue se ha realizado a través de una \textbf{aplicación web}, cuyo aspecto se puede observar en la \textbf{Figura \ref{fig:ch6main}}. Esta aplicación es un \textbf{producto mínimo viable} desarrollado a través de \textit{Streamlit} - una librería de Python para prototipado de aplicaciones-, funcionando mediante un \textbf{modelo embebido} incrustado directamente en la página web. 
+El despliegue se ha realizado a través de una \textbf{aplicación web}, cuyo aspecto se puede observar en la \textbf{Figura \ref{fig:ch6main}}. Esta aplicación es un \textbf{producto mínimo viable} desarrollado a través de \textit{Streamlit} --- una librería de Python para prototipado de aplicaciones---, funcionando mediante un \textbf{modelo embebido} incrustado directamente en la página web. 
 
 Esta aplicación se encuentra disponible en el enlace \url{https://cidaen-m5-thesis-lunajimenezfernandez.streamlit.app/}, teniendo \textbf{dos} funcionalidades principales.
 
 
 \vspace*{-4mm}
-\section{Aplicación para usuario - predicción individual}
+\section{Aplicación para usuario: predicción individual}
 
 La funcionalidad principal de la aplicación es la \textbf{predicción individual del tiempo de diagnóstico}, como se puede observar en la \textbf{Figura \ref{fig:ch6single}}.
 
@@ -39,7 +39,7 @@ La aplicación permite introducir manualmente los valores de los \textbf{10 atri
 \end{itemize}
 
 \vspace*{-6mm}
-\section{Aplicación \textit{batch} - predicción en bloque}
+\section{Aplicación \textit{batch}: predicción en bloque}
 
 La segunda funcionalidad ofrecida por la aplicación es la \textbf{predicción de tiempos de diagnóstico en bloque}, como se puede observar en la \textbf{Figura \ref{fig:ch6batch}}.
 
@@ -52,4 +52,4 @@ La segunda funcionalidad ofrecida por la aplicación es la \textbf{predicción d
 	\label{fig:ch6batch}
 \end{figure}
 
-El funcionamiento está más enfocado a la automatización del diagnóstico de un gran número de pacientes - introduciendo un \textbf{fichero CSV} con los datos clínicos relevantes y generando de forma automática la predicción para todos los pacientes. Esta predicción puede ser descargada posteriormente a través del botón \textbf{"Download Predictions"}.
+El funcionamiento está más enfocado a la automatización del diagnóstico de un gran número de pacientes, introduciendo un \textbf{fichero CSV} con los datos clínicos relevantes y generando de forma automática la predicción para todos los pacientes. Esta predicción puede ser descargada posteriormente a través del botón \textbf{"Download Predictions"}.

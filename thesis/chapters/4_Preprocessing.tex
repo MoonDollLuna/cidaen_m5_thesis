@@ -11,16 +11,16 @@ Durante el análisis exploratorio se realizó un estudio exhaustivo de los atrib
 
 \begin{itemize}
 	\item \textbf{Alta dimensionalidad:} El conjunto de datos tiene \textbf{150 atributos} en total, donde la mayoría de atributos categóricos tienen \textbf{40 o más valores únicos}. Esto, unido al número de instancias bajo para dicha complejidad, puede significar que el modelo acabaría \textbf{sobreajustándose} al no poder aprender generalizaciones de forma adecuada.
-	\item \textbf{Irrelevancia de los atributos:} De los 150 atributos estudiados, \textbf{la amplia mayoría no presentan correlación con la variable objetivo} - por lo que mantenerlos puede implicar una disminución del rendimiento final del modelo y un aumento del tiempo de entrenamiento.
+	\item \textbf{Irrelevancia de los atributos:} De los 150 atributos estudiados, \textbf{la amplia mayoría no presentan correlación con la variable objetivo}, por lo que mantenerlos puede implicar una disminución del rendimiento final del modelo y un aumento del tiempo de entrenamiento.
 \end{itemize}
 
-Debido a esto, resulta necesario realizar una \textbf{selección de atributos} - proponiendo varios \textbf{subconjuntos de atributos} a evaluar durante la experimentación y selección de modelos, con el objetivo de optimizar el rendimiento del modelo reduciendo la dimensionalidad.
+Debido a esto, resulta necesario realizar una \textbf{selección de atributos}, proponiendo varios \textbf{subconjuntos de atributos} a evaluar durante la experimentación y selección de modelos, con el objetivo de optimizar el rendimiento del modelo reduciendo la dimensionalidad.
 
 \subsection{Selección manual de atributos}
 
-El primer subconjunto de atributos propuesto se realizar a partir de las observaciones obtenidas a través del análisis exploratorio de datos realizado en el capítulo anterior - estando este formado por las \textbf{variables con mayor significancia para la predicción del tiempo de diagnóstico}, según las gráficas y tests realizados. Tras este estudio, se han seleccionado los siguientes \textbf{5 atributos}:
+El primer subconjunto de atributos propuesto se realizar a partir de las observaciones obtenidas a través del análisis exploratorio de datos realizado en el capítulo anterior, estando este formado por las \textbf{variables con mayor significancia para la predicción del tiempo de diagnóstico} según las gráficas y tests realizados. Tras este estudio, se han seleccionado los siguientes \textbf{5 atributos}:
 
-\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
+\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=2pt]
 	\item Código de diagnóstico del cáncer de mama.
 	\item Código de diagnóstico del cáncer metastásico.
 	\item Estado de residencia del paciente.
@@ -28,21 +28,21 @@ El primer subconjunto de atributos propuesto se realizar a partir de las observa
 	\item Tipo de seguro médico del paciente.
 \end{itemize}
 
-Como se puede observar, \textbf{todos los atributos seleccionados son categóricos}. Esto se debe a la correlación prácticamente nula entre los atributos numéricos y el tiempo de diagnóstico. Además, se ha optado por representar la información geográfica a través del \textbf{estado de residencia} - al ser el atributo geográfico con menor valor en los tests de hipótesis.
+Como se puede observar, \textbf{todos los atributos seleccionados son categóricos}. Esto se debe a la correlación prácticamente nula entre los atributos numéricos y el tiempo de diagnóstico. Además, se ha optado por representar la información geográfica a través del \textbf{estado de residencia}, al ser el atributo geográfico con menor valor en los tests de hipótesis.
 
 A través de esta selección se ha reducido el conjunto de atributos de \textbf{150 a 5 atributos}, reduciendo sustancialmente la dimensionalidad. Ahora bien, los atributos elegidos siguen siendo complejos debido al gran número de valores posibles, por lo que será necesario un procesamiento posterior para \textbf{agrupar los valores menos frecuentes}.
 
 \subsection{Selección automática de atributos}
 
-El subconjunto de atributos propuesto en la sección anterior está basado en el análisis exploratorio realizado. Ahora bien, al basar la decisión únicamente en tests estadísticos y gráficas - sin evaluar el rendimiento real en modelos, -, existe la posibilidad de que se haya introducido un \textbf{sesgo personal} o que existan otros subconjuntos de atributos que puedan ofrecer un mejor rendimiento.
+El subconjunto de atributos propuesto en la sección anterior está basado en el análisis exploratorio realizado. Ahora bien, al basar la decisión únicamente en tests estadísticos y gráficas --- sin evaluar el rendimiento real en modelos ---, existe la posibilidad de que se haya introducido un \textbf{sesgo personal} o que existan otros subconjuntos de atributos que puedan ofrecer un mejor rendimiento.
 
-Con el fin de solucionar estos problemas y de acercar el proceso de selección de atributos al funcionamiento real de los modelos, se proponen \textbf{dos subconjuntos adicionales} obtenidos a través de \textbf{algoritmos de selección automática de variables} \cite{featureselection} - basados en técnicas estadísticas y en entrenamiento de modelos.
+Con el fin de solucionar estos problemas y de acercar el proceso de selección de atributos al funcionamiento real de los modelos, se proponen \textbf{dos subconjuntos adicionales} obtenidos a través de \textbf{algoritmos de selección automática de variables} \cite{featureselection}, basados en técnicas estadísticas y en entrenamiento de modelos.
 
 \subsubsection{\textit{Filter}: Selección mediante tests estadísticos}
 
-Los \textbf{métodos de filtrado} (también conocidos como \textit{filter}) son algoritmos que evalúan la \textbf{relevancia de cada atributo} a través de tests estadísticos, sin necesidad de entrenar ningún modelo - lo que los hace más ágiles que otros métodos, pero más genéricos e incapaces de encontrar todas las correlaciones entre grupos de atributos \cite{featureselection}.
+Los \textbf{métodos de filtrado} (también conocidos como \textit{filter}) son algoritmos que evalúan la \textbf{relevancia de cada atributo} a través de tests estadísticos sin necesidad de entrenar ningún modelo, lo que los hace más ágiles que otros métodos pero más genéricos e incapaces de encontrar todas las correlaciones entre grupos de atributos \cite{featureselection}.
 
-Para este problema se ha utilizado un \textbf{test estadístico F} - una medida de la \textbf{dependencia lineal} entre atributos -, calculando la correlación entre cada atributo numérico y el tiempo de diagnóstico. A partir de estas puntuaciones, se eligen los \textbf{10 atributos} con mayor dependencia lineal:
+Para este problema se ha utilizado un \textbf{test estadístico F} --- una medida de la \textbf{dependencia lineal} entre atributos ---, calculando la correlación entre cada atributo numérico y el tiempo de diagnóstico. A partir de estas puntuaciones, se eligen los \textbf{10 atributos} con mayor dependencia lineal:
 
 \begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Atributos categóricos (5):} 
@@ -57,13 +57,13 @@ Para este problema se ha utilizado un \textbf{test estadístico F} - una medida 
 	\end{itemize}
 \end{itemize}
 
-El subconjunto de atributos obtenido reafirma la selección manual realizada, al tener ambos conjuntos los \textbf{mismos atributos categóricos} - siendo el \textbf{código de diagnóstico del cáncer de mama} el atributo con mayor relevancia con diferencia. La principal diferencia se encuentra en que se han seleccionado además \textbf{atributos numéricos}, algunos de ellos teniendo incluso mayor relevancia que otros atributos categóricos - como la \textbf{edad del paciente}.
+El subconjunto de atributos obtenido reafirma la selección manual realizada, al tener ambos conjuntos los \textbf{mismos atributos categóricos}, siendo el \textbf{código de diagnóstico del cáncer de mama} el atributo con mayor relevancia con diferencia. La principal diferencia se encuentra en que se han seleccionado además \textbf{atributos numéricos}, algunos de ellos teniendo incluso mayor relevancia que otros atributos categóricos, como la \textbf{edad del paciente}.
 
 \subsubsection{\textit{Wrapper}: Selección mediante entrenamiento de modelos}
 
 Los \textbf{métodos de envoltura} (también conocidos como \textit{wrapper}) son algoritmos que realizan su selección de atributos a través del \textbf{entrenamiento de un modelo de aprendizaje automático} y la selección de las variables más relevantes en base a los parámetros y pesos aprendidos por el modelo. A diferencia de los métodos de \textit{filter}, el proceso de selección suele ser más lento, pero los resultados suelen ser más fiables al trabajar de forma directa con modelos reales \cite{featureselection}.
 
-Para este problema se ha utilizado un modelo de \textbf{\textit{Random Forests}}, entrenado con los hiperparámetros por defecto de su implementación en \textit{Scikit-Learn} - \textbf{100 árboles} sin profundidad máxima. A partir de este modelo entrenado se extraen los \textbf{10 atributos} con mayor peso sobre el modelo entrenado: 
+Para este problema se ha utilizado un modelo de \textbf{\textit{Random Forests}}, entrenado con los hiperparámetros por defecto de su implementación en \textit{Scikit-Learn}: \textbf{100 árboles} sin profundidad máxima. A partir de este modelo entrenado se extraen los \textbf{10 atributos} con mayor peso sobre el modelo entrenado: 
 
 \begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Atributos categóricos (4):} 
@@ -78,13 +78,13 @@ Para este problema se ha utilizado un modelo de \textbf{\textit{Random Forests}}
 	\end{itemize}
 \end{itemize}
 
-Frente a las selecciones manuales y de filtrado, el \textbf{subconjunto \textit{wrapper} no incluye información geográfica en su selección} - optando, en su lugar, por incluir un mayor número de atributos numéricos tanto médicos como socioeconómicos.
+Frente a las selecciones manuales y de filtrado, el \textbf{subconjunto \textit{wrapper} no incluye información geográfica en su selección}, optando en su lugar, por incluir un mayor número de atributos numéricos tanto médicos como socioeconómicos.
 
 \section{Pre-procesamiento de los datos}
 
-A la par que se propone una selección de atributos para reducir la dimensionalidad del conjunto de datos, resulta también necesario realizar un \textbf{pre-procesamiento} - una serie de transformaciones secuenciales sobre los datos - para reducir la complejidad y paliar posibles problemas como los valores perdidos o la codificación de los atributos categóricos. De esta forma, se busca mejorar el rendimiento de los modelos entrenados.
+A la par que se propone una selección de atributos para reducir la dimensionalidad del conjunto de datos, resulta también necesario realizar un \textbf{pre-procesamiento} --- una serie de transformaciones secuenciales sobre los datos --- para reducir la complejidad y paliar posibles problemas como los valores perdidos o la codificación de los atributos categóricos. De esta forma, se busca mejorar el rendimiento de los modelos entrenados.
 
-Ahora bien, los atributos necesitan \textbf{transformaciones distintas} dependiendo del tipo de datos que representen - siendo necesario distinguir entre atributos numéricos y categóricos. Para el trabajo descrito en la memoria, se han propuesto las siguientes transformaciones dependiendo del tipo de datos del atributo:
+Ahora bien, los atributos necesitan \textbf{transformaciones distintas} dependiendo del tipo de datos que representen, siendo necesario distinguir entre atributos numéricos y categóricos. Para el trabajo descrito en la memoria, se han propuesto las siguientes transformaciones dependiendo del tipo de datos del atributo:
 
 \begin{itemize}[leftmargin=*, parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Atributos categóricos:}
@@ -94,9 +94,9 @@ Ahora bien, los atributos necesitan \textbf{transformaciones distintas} dependie
 		
 		Por esto, se opta por reemplazar todos los valores perdidos por un \textbf{valor constante, \textit{"UNKNOWN"}}.
 		
-		\item \textbf{Codificación:} De forma inherente, la mayoría de modelos propuestos son incapaces de trabajar con atributos categóricos - necesitando transformar estos atributos en algún tipo de codificación numérica.
+		\item \textbf{Codificación:} De forma inherente, la mayoría de modelos propuestos son incapaces de trabajar con atributos categóricos, necesitando transformar estos atributos en algún tipo de codificación numérica.
 		
-		Para estos casos, lo estándar es utilizar una codificación de tipo \textbf{\textit{One-Hot}} \cite{GVK022791892}: dividiendo el atributo original en \textbf{tantos atributos como valores tiene la variable original}, donde el atributo que se corresponde con el valor de la variable original tiene un valor de $1$ y el resto tiene valores de $0$ - representando de esta manera los valores categóricos en un formato numérico.
+		Para estos casos, lo estándar es utilizar una codificación de tipo \textbf{\textit{One-Hot}} \cite{GVK022791892}: dividiendo el atributo original en \textbf{tantos atributos como valores tiene la variable original}, donde el atributo que se corresponde con el valor de la variable original tiene un valor de $1$ y el resto tiene valores de $0$; representando de esta manera los valores categóricos en un formato numérico.
 		
 		Es importante destacar las siguientes particularidades para el problema actual:
 		\begin{itemize}
@@ -109,8 +109,8 @@ Ahora bien, los atributos necesitan \textbf{transformaciones distintas} dependie
 	\item \textbf{Atributos numéricos:}
 	
 	\begin{enumerate}
-		\item \textbf{Imputación de valores perdidos:} Debido a la presencia de valores extremos en la mayoría de atributos numéricos, se reemplazan los valores perdidos por el \textbf{valor mediano del atributo al que pertenece} - ofreciendo de esta forma un valor promedio resistente a sesgos y \textit{outliers}.
-		\item \textbf{Escalado:} Por lo general, es necesario \textbf{escalar los datos} - transformar los valores de todos los atributos para que se encuentren en el mismo rango - de los atributos numéricos para el funcionamiento adecuado de los modelos.
+		\item \textbf{Imputación de valores perdidos:} Debido a la presencia de valores extremos en la mayoría de atributos numéricos, se reemplazan los valores perdidos por el \textbf{valor mediano del atributo al que pertenece}, ofreciendo de esta forma un valor promedio resistente a sesgos y \textit{outliers}.
+		\item \textbf{Escalado:} Por lo general, es necesario \textbf{escalar los datos} --- transformar los valores de todos los atributos para que se encuentren en el mismo rango --- de los atributos numéricos para el funcionamiento adecuado de los modelos.
 		
 		Para el problema descrito, se intenta evitar los problemas introducidos por los valores extremos utilizando un escalado alrededor de la \textbf{mediana y el rango intercuartil}, donde cada valor se transforma utilizando la fórmula $z(x) = \frac{x - mediana}{IQR}$. 
 	\end{enumerate}

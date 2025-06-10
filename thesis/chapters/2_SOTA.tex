@@ -11,21 +11,21 @@ La \textbf{ciencia de datos} es el estudio de la extracción de conocimiento út
 Desde su origen, la ciencia de datos ha evolucionado como un campo interdisciplinar que integra conocimientos y técnicas de otras disciplinas afines como el análisis de datos, la estadística o la minería de datos \cite{potential}. Ahora bien, la principal diferencia con estos campos se encuentra en el fin: el aprendizaje a partir de los datos \cite{Donoho02102017} y la capacidad de adquirir nuevo conocimiento capaz de ser utilizado para la toma de decisiones y la predicción \cite{10.1145/2500499}.
 
 \begin{figure}[h]
+	\vspace{-2mm}
 	\centering
-	\includegraphics[width=0.8\linewidth]{figs/chapter2/datalifecycle}
+	\includegraphics[width=0.6\linewidth]{figs/chapter2/datalifecycle}
 	\caption{Ciclo de vida de los datos \cite{potential}}
+	\captionsetup{belowskip=-100pt}
 	\label{fig:datalifecycle}
 \end{figure}
 
 Por definición, la ciencia de datos depende de los datos sobre los que se está trabajando. Por esto, el proceso de trabajo de la ciencia de datos depende generalmente del \textbf{ciclo de vida de los datos}: las distintas etapas por las que pasa un conjunto de datos desde su recolección e investigación hasta su uso final \cite{datasciencelifecycle}. Como se observa en la \textbf{Figura \ref{fig:datalifecycle}}, este ciclo está tradicionalmente dividido en \textbf{cinco} apartados \cite{potential}:
 
-
-
-\begin{enumerate}
+\begin{enumerate}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Adquisición:} En la actualidad, los datos se generan en cantidades masivas - del orden de \textbf{exabytes por hora} \cite{Wing2019Data}. Por tanto, el primer paso del ciclo consiste en la adquisición y almacenamiento eficiente de los datos necesarios para el proceso.
 	\item \textbf{Limpieza:} Tras la adquisición, el segundo paso del ciclo consiste en la transformación de los datos originales en datos utilizables posteriormente - a través de procesos de limpieza, imputación, formateo, etc.
 	\item \textbf{Uso y re-uso:}  El tercer paso del ciclo consiste en el uso de los datos procesados con el fin de adquirir conocimiento y tomar decisiones a partir de estos. este apartado se puede dividir, a su vez, en tres subapartados \cite{Wing2019Data}:
-		\begin{enumerate}
+		\begin{enumerate}[parsep=1pt, itemsep=1pt, topsep=4pt]
 			\item \textbf{Análisis exploratorio:} El estudio del comportamiento de los datos con el fin de plantear hipótesis para guiar el resto del ciclo de datos \cite{eda}.
 			\item \textbf{Modelado:} El uso de técnicas computacionales y estadísticas para extraer conocimiento y predicciones a partir del conjunto de datos.
 			\item \textbf{Visualización, interpretación y actuación:}  La representación gráfica de los resultados del uso de los datos, con el fin de facilitar la toma de decisiones posterior a las personas.
@@ -43,15 +43,17 @@ Aunque actualmente no existe un ciclo estandarizado, uno de los procesos más ut
 \textbf{Cross-Industry Standard Process for Data Mining} (abreviado como \textit{CRISP-DM}) es una metodología desarrollada con el fin de ofrecer un proceso de trabajo completo de principio a fin para la minería de datos; independientemente del campo, las herramientas o la aplicación final de los datos \cite{shearer2000crisp}. Si bien fue propuesto originalmente en el año 2000, en la actualidad sigue siendo uno de los procesos más utilizados tanto en minería de datos como en ciencia de datos \cite{datasciencepmCRISPDMStill}.
 
 \begin{figure}[h]
+	\vspace{-8mm}
 	\centering
-	\includegraphics[width=0.6\linewidth]{figs/chapter2/crispdm}
+	\includegraphics[width=0.5\linewidth]{figs/chapter2/crispdm}
+	\captionsetup{belowskip=-15pt}
 	\caption{Ciclo de vida de CRISP-DM \cite{shearer2000crisp}}
 	\label{fig:crispdm}
 \end{figure}
 
 Como se observa en la \textbf{Figura \ref{fig:crispdm}}, el ciclo de CRISP-DM está dividido en \textbf{seis fases} \cite{shearer2000crisp}, similares al ciclo de datos estudiado:
 
-\begin{enumerate}
+\begin{enumerate}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Conocimiento del campo (\textit{Business Understanding}):} El primer paso del ciclo consiste en entender el problema y los objetivos a resolver - estudiando la situación actual y estableciendo los pasos para alcanzar las metas propuestas.
 	\item \textbf{Conocimiento de los datos (\textit{Data Understanding}):} El segundo paso del ciclo consiste en adquirir y estudiar los datos - tanto de forma superficial como en un análisis exploratorio más profundo -, además de verificar que los datos disponibles son útiles para los objetivos propuestos.
 	\item \textbf{Preparación de los datos (\textit{Data Preparation}):} Tras la adquisición de conocimiento, el tercer paso consiste en preparar los datos obtenidos para su uso posterior - seleccionando las instancias relevantes, limpiando los datos para eliminar valores perdidos, enriqueciendo los datos con información externa, etc.
@@ -62,7 +64,7 @@ Como se observa en la \textbf{Figura \ref{fig:crispdm}}, el ciclo de CRISP-DM es
 \end{enumerate}
 
 Es importante destacar que, como indican las flechas de la \textbf{Figura \ref{fig:crispdm}}, la metodología propuesta no es linear, sino que el flujo entre los distintos pasos se puede ver alterado:
-\begin{itemize}
+\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item Las fases tienen dependencias entre sí - los descubrimientos en algunas fases pueden producir que sea necesario volver a fases anteriores para perfeccionar el proceso.
 	\item El proceso es \textbf{cíclico} - los conocimientos adquiridos durante las distintas fases se aplican para refinar futuros procesos, ya sean sobre el mismo conjunto de datos o datos nuevos.
 \end{itemize}
@@ -77,11 +79,11 @@ También se puede definir el término como el conjunto de métodos capaces de de
 
 Generalmente, los algoritmos de aprendizaje automático se dividen en dos grandes familias, en función del tipo de datos e información que se aporta a los algoritmos \cite{aima, mlprobabilistic}:
 
-\begin{itemize}
+\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Aprendizaje supervisado:} El objetivo del algoritmo es aprender una función capaz de, dados unos datos de entrada $X$, predecir una salida $Y$. Esta función se aprende a partir de un conjunto de datos $D={(x_i, y_i)}^{N}_{i=1}$ donde a cada instancia $x_i$ del conjunto de datos $D$ se le asocia un valor esperado $y_i$.
 	
 	Este tipo de aprendizaje se puede dividir a su vez en dos categorías dependiendo del tipo de salida $Y$ que se espera \cite{aima}:
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{Clasificación}: El algoritmo busca obtener para cada entrada $x_i$ un valor concreto \textbf{dentro de un conjunto finito de posibles valores}.
 		\item \textbf{Regresión}: El algoritmo busca obtener, para cada entrada $x_i$, un \textbf{valor numérico continuo}.
 	\end{itemize}
@@ -92,10 +94,11 @@ Un \textbf{modelo} es el resultado del proceso de aprendizaje automático: una f
 
 De cara a cumplir el objetivo propuesto por el trabajo descrito en esta memoria - la creación de un modelo capaz de \textbf{predecir el tiempo de diagnóstico} -, se van a trabajar con modelos supervisados de \textbf{regresión}. Por esto, resulta de interés describir los principales modelos a utilizar y el ajuste que se va a realizar sobre ellos.
 
-\subsection{Selección de modelos}
+\subsection{Selección de modelos y ajuste de hiperparámetros}
 
 Durante el entrenamiento de los modelos, se pueden encontrar algunos problemas:
-\begin{itemize}
+
+\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item Se han entrenado varios modelos, y es necesario elegir de forma objetiva uno de ellos en base a su rendimiento.
 	\item Se necesitan elegir los hiperparámetros de un modelo que mejor rendimiento ofrecen sobre el conjunto de datos, de forma objetiva.
 	\item Los modelos entrenados han aprendido variaciones insignificantes y patrones falsos - ruido interpretado como información real - a partir de los datos de entrada, llevando a un problema de \textbf{sobreajuste} \cite{mlprobabilistic} que puede afectar de forma negativa al rendimiento del modelo.
@@ -107,9 +110,22 @@ Ahora bien, a la hora de la verdad no es común tener acceso a dicho hipotético
 
 Para solucionar este problema y realizar una selección de modelos \textbf{honesta}, se pueden utilizar las siguientes opciones \cite{mlprobabilistic}:
 
-\begin{itemize}
+\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 	\item \textbf{Conjunto de validación:} Se particiona el conjunto de datos inicial en entrenamiento y validación - utilizando el primero para entrenar los modelos, y el segundo para evaluar su rendimiento honesto y seleccionar el modelo.
 	\item \textbf{$k$-Validación cruzada:} En caso de que el conjunto de datos no sea suficientemente grande para particionarse, se puede optar por particionar el conjunto de datos en \textbf{$k$ trozos} de igual tamaño. Para cada uno de estas particiones, se entrenan los modelos con el resto de particiones y se evalúan los rendimientos sobre la partición seleccionada. Tras realizar este proceso $k$ veces, se puede utilizar el error promedio de los $k$ entrenamientos como una aproximación al rendimiento honesto del modelo para realizar la selección.
+\end{itemize}
+
+Otro problema que puede ocurrir es el problema de la \textbf{selección de hiperparámetros}: la búsqueda de los parámetros que regulan el entrenamiento del propio modelo para alcanzar el modelo con el menor error posible \cite{hyperparameteroptimization}.
+
+Si bien una opción posible sería simplemente probar de forma \textbf{exhaustiva} todos los posibles valores para dichos hiperparámetros, el coste crece de forma exponencial conforme aumenta la complejidad y el número de éstos. Por tanto, es necesario establecer algún tipo de \textbf{estrategia de búsqueda de hiperparámetros} \cite{hyperparameteroptimization} para guiar la selección de hiperparámetros en un tiempo razonable.
+
+Generalmente, se utilizan las siguientes \textbf{3} estrategias:
+\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
+	\item \textbf{Búsqueda exhaustiva:} Se prueban \textbf{todas las posibles combinaciones de hiperparámetros}. Si bien ofrece la garantía de encontrar una solución óptima, también acarrea un coste exponencial que deja de ser factible para modelos complejos.
+	
+	\item \textbf{Búsqueda aleatoria uniforme:} Para evitar una búsqueda exhaustiva, la primera opción es realizar en su lugar una \textbf{búsqueda totalmente aleatoria}, evaluando un número fijo de combinaciones aleatorias para seleccionar el mejor. Si bien es sustancialmente más rápido y suele dar resultados aceptables para un número suficiente de búsquedas, se pierde la garantía de encontrar una solución óptima.
+	
+	\item \textbf{Búsqueda aleatoria Bayesiana \cite{bayesianoptimization}:} La búsqueda aleatoria uniforme puede tener problemas al trabajar con modelos muy complejos con tiempos largo de entrenamiento, al tener que probar un gran número de hiperparámetros para encontrar un modelo razonable. Una solución a este algoritmo es guiar las búsquedas aleatorias con un modelo \textbf{probabilístico}, donde los hiperparámetros con menor error son más probables. De esta forma se puede reducir el número necesario de conjuntos de hiperparámetros evaluados para obtener un buen resultado. 
 \end{itemize}
 
 \subsection{Modelos de regresión}
@@ -124,7 +140,7 @@ Si bien no hay una definición consensuada sobre su definición, se puede entend
 
 Existe una gran cantidad de familias de modelos con una larga trayectoria en la bibliografía existente \cite{Burkov2019TheHM}. Ahora bien, el estudio realizado en la memoria se centra en las siguientes tres familias de modelos utilizadas en el trabajo:
 
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=*, parsep=2pt, itemsep=2pt, topsep=4pt]
 	\item \textbf{Regresión lineal:} 
 	
 	Los modelos más simples, trabajando con la suposición de que \textbf{existe una correlación lineal} entre los atributos de entrada y la salida del modelo \cite{mlprobabilistic}. Por lo general, la salida $y$ para una entrada $x$ se predice utilizando la siguiente fórmula: 
@@ -135,7 +151,7 @@ Existe una gran cantidad de familias de modelos con una larga trayectoria en la 
 	
 	Para evitar este problema, se proponen técnicas de \textbf{regularización} - penalizaciones aplicadas a la fórmula del error con el objetivo de conseguir modelos menos complejos y más generalizables \cite{elasticnet}. Los tres modelos de regularización más utilizados son los siguientes:
 	
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{Ridge (L2) \cite{ridge}:} Como factor de penalización, se utiliza $\sum_{j=1}^D(w_j)^2$ - la suma de los pesos cuadrados del modelo, buscando reducir de forma generalizada la influencia de los atributos para evitar sobreajustes y correlaciones.
 		\item \textbf{Lasso (L1) \cite{lasso}:} Como factor de penalización, se utiliza $\sum_{j=1}^D|w_j|$ - la suma del valor absoluto de los pesos del modelo, buscando eliminar los atributos irrelevantes reduciendo su peso a $0$.
 		\item \textbf{Elastic-Net \cite{elasticnet}:} Como factor de penalización, se utiliza $\lambda\left(\sum_{j=1}^D(w_j)^2\right) + (1-\lambda)\left(\sum_{j=1}^D|w_j|\right)$ - utilizando a la vez las regularizaciones L1 y L2 de forma ponderada, buscando aunar los beneficios de ambas aproximaciones.
@@ -148,16 +164,16 @@ Existe una gran cantidad de familias de modelos con una larga trayectoria en la 
 	En regresión, esto se traduce en la búsqueda de la función representando al mejor hiperplano capaz de ajustarse a todas las instancias del conjunto de datos a la vez que es capaz de mantener una distancia inferior a un margen $\epsilon$ con todos los puntos \cite{svr}.
 	
 	La principal utilidad de estos modelos radica en las dos siguientes características \cite{aima}:
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{Funciones \textit{kernel}:} Un problema de los modelos lineales es que los conjuntos de datos no siempre son linealmente separables. Para solventar este problema, las máquinas de vectores de soporte son capaces de utilizar \textbf{funciones \textit{kernel}} para transformar los datos a una mayor dimensionalidad - donde si es posible ajustar un hiperplano con mayor margen.
 		\item \textbf{Vectores de soporte:} Para definir el modelo no es necesario almacenar información sobre el conjunto de datos completo, sino que es suficiente con almacenar información sobre los \textbf{puntos que definen la frontera entre el hiperplano y el margen} - conocidos como los vectores de soporte.
 	\end{itemize}
-	\newpage
+
 	\item \textbf{Árboles de decisión:} 
 	
 	Los árboles de decisión son modelos de reglas representando su función a través de grafos dirigidos acíclicos \cite{Burkov2019TheHM} donde la predicción se obtiene realizando una serie de comprobaciones secuenciales empezando desde la raíz, ramificando hasta llegar a una hoja final \cite{aima}. Estos árboles se dividen en los siguientes componentes:
 	
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{Nodos:} Nodos internos del árbol donde se realiza una comprobación sobre el valor de un atributo. Dependiendo del resultado de la comprobación, el nodo se \textbf{ramifica} a otros nodos u hojas.
 		\item \textbf{Hojas:} El valor final predicho para una entrada, alcanzado tras una serie de comprobaciones en nodos.
 	\end{itemize}
@@ -175,7 +191,7 @@ Los algoritmos de \textit{ensemble} buscan aprender un gran número de modelos s
 Dependiendo de la metodología utilizada para entrenar los modelos simples - ya sea de forma secuencial o paralela -, se pueden dividir los algoritmos en dos familias \cite{aima}:
 
 
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=*, parsep=2pt, itemsep=2pt, topsep=4pt]
 
 	\item \textbf{\textit{Bootstrap Aggregating} (\textit{Bagging}):} 
 	
@@ -185,7 +201,7 @@ Dependiendo de la metodología utilizada para entrenar los modelos simples - ya 
 
 	Algunos de los modelos de \textit{bagging} más importantes son los siguientes:
 	
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{\textit{Random Forests} \cite{randomforests}:} Un modelo de \textit{ensemble bagging} de \textbf{árboles de decisión profundos} en el que se añade un segundo proceso de muestreo aleatorio para aumentar la independencia entre los predictores simples entrenados:
 		\begin{itemize}
 			\item \textbf{Muestreo de instancias:} Cada árbol se entrena con un subconjunto aleatorio de instancias del conjunto de datos.
@@ -204,7 +220,7 @@ Dependiendo de la metodología utilizada para entrenar los modelos simples - ya 
 	
 	Durante el trabajo, se ha considerado el siguiente modelo de \textit{boosting}:
 	
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{\textit{Adaptive Boosting \cite{adaboost}:}} Un modelo básico de \textit{boosting} que sigue estrictamente el proceso descrito. Concretamente, se comienza con un conjunto de datos de pesos uniformes sobre el que se entrena el primer modelo, ajustando los pesos de las instancias - aumentando el peso de las instancias con mayor error, y reduciendo el peso de las instancias con menor error. Tras esto, se repite el proceso de entrenamiento de modelos y ajuste de pesos hasta entrenar todos los predictores \cite{aima}.
 		
 		La predicción final es una \textbf{media ponderada por el error} de la predicción de todos los modelos - donde los modelos con menor error tienen un mayor peso en la ponderación.
@@ -213,11 +229,11 @@ Dependiendo de la metodología utilizada para entrenar los modelos simples - ya 
 	Una subfamilia dentro de estos algoritmos son los modelos de \textbf{\textit{Gradient Boosting}}. Estos modelos también utilizan la metodología de \textit{boosting} - entrenar modelos secuencialmente ajustándose a los errores del modelo anterior -, con la diferencia de que el entrenamiento no se hace sobre el conjunto de datos directamente, sino sobre los \textbf{errores residuales} (la diferencia entre la predicción y el valor real) de cada instancia \cite{gradientboosting}. 
 	
 	Este comportamiento es similar al \textbf{gradiente descendiente} utilizado para entrenar otros modelos como la regresión lineal o las redes neuronales \cite{Burkov2019TheHM}. En concreto, se llevan a cabo los siguientes pasos:
-	\begin{enumerate}
+	\begin{enumerate}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item Se comienza realizando una predicción inicial, generalmente el valor promedio de todas las instancias.
 		\item Utilizando el valor estimado, se calculan los \textbf{errores pseudo-residuales} de cada instancia - el \textbf{error} entre la predicción y el valor real. Estas pseudo-residuales dependen de la función de error que se elija.
 		\item Repitiéndose para cada modelo que se tiene que entrenar:
-		\begin{enumerate}
+		\begin{enumerate}[parsep=1pt, itemsep=1pt, topsep=4pt]
 			\item A partir de los valores pseudo-residuales, se entrena un modelo simple que \textbf{predice el valor residual de cada instancia}.
 			\item Utilizando los nuevos residuales estimados, se recalculan los valores pseudo-residuales para que el siguiente modelo ajuste mejor a las instancias clasificadas erroneamente.
 		\end{enumerate}
@@ -227,7 +243,7 @@ Dependiendo de la metodología utilizada para entrenar los modelos simples - ya 
 	
 	Actualmente, los modelos de \textit{Gradient Boosting} son considerados el estado del arte para la mayoría de problemas de predicción estructurada \cite{Burkov2019TheHM}, siendo algunos de los modelos más populares los siguientes:
 	
-	\begin{itemize}
+	\begin{itemize}[parsep=1pt, itemsep=1pt, topsep=4pt]
 		\item \textbf{\textit{Extreme Gradient Boosting} \cite{Chen_2016}:} Un algoritmo de \textit{Gradient Boosting} utilizando el método de Newton-Raphson - en vez de calcular los errores pseudo-residuales, se calcula una función de la segunda y la primera derivada de la función de error. Además, el modelo está diseñado para permitir el entrenamiento en paralelo de los árboles.
 		\item \textbf{\textit{Categorical Boosting} \cite{dorogush2018catboostgradientboostingcategorical}:} Un algoritmo de \textit{Gradient Boosting} diseñado para trabajar de forma nativa con atributos categóricos sin necesidad de convertirlos previamente a valores numéricos. 
 		
