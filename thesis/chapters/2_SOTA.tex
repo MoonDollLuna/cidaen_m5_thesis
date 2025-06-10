@@ -191,7 +191,7 @@ Dependiendo de la metodología utilizada para entrenar los modelos simples - ya 
 			\item \textbf{Muestreo de instancias:} Cada árbol se entrena con un subconjunto aleatorio de instancias del conjunto de datos.
 			\item \textbf{Muestreo de atributos:} Cada nodo del árbol es entrenado sobre un subconjunto aleatorio de atributos del conjunto de datos.
 		\end{itemize}
-		\item \textbf{\textit{Extremely Randomized Trees \cite{Geurts2006}:}} Una evolución del modelo de \textit{Random Forest} en el que se añade un proceso de muestreo adicional, con los siguientes cambios:
+		\item \textbf{\textit{Extremely Randomized Trees \cite{Geurts2006}:}} Una evolución del modelo de \textit{Random Forests} en el que se añade un proceso de muestreo adicional, con los siguientes cambios:
 		\begin{itemize}
 			\item Cada árbol pasa a entrenarse sobre el \textbf{conjunto de datos completo}, sin muestreo - aunque se sigue realizando un muestreo de los atributos a considerar por cada nodo del árbol.
 			\item Durante la construcción del árbol, se generan de forma aleatoria varias \textbf{particiones del conjunto de datos} para cada atributo - en vez de calcular la partición óptima. A la hora de construir cada nodo, se elige la partición que mejor puntuación obtiene de todas las generadas.

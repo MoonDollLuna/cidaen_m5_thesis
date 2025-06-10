@@ -1,6 +1,6 @@
 \chapter{Estudio exploratorio del problema}
 
-En este capítulo se estudia en detalle el problema a resolver a través del proceso de ciencia de datos. Se comienza realizando una definición del problema y sus objetivos, seguido por un \textbf{análisis exploratorio de los datos} que lo definen. En este análisis se estudian los atributos que describen los datos junto a sus distribuciones y comportamientos - haciendo hincapié en los atributos de carácter geográfico, social y económico.
+En este capítulo se estudia en detalle el problema a resolver a través del proceso de ciencia de datos. Se comienza realizando una definición del problema y sus objetivos, seguido por un \textbf{análisis exploratorio de los datos} que lo definen. En este análisis se estudian los atributos que describen los datos junto a sus distribuciones y comportamientos, haciendo hincapié en los atributos de carácter geográfico, social y económico.
 
 \section{Definición y objetivos del problema}
 
@@ -56,7 +56,7 @@ Se puede ver que los tiempos de diagnóstico siguen una \textbf{distribución de
 
 \subsubsection{Valores perdidos}
 
-Antes de realizar un estudio más exhaustivo de los atributos, es de interés estudiar el comportamiento de los \textbf{valores perdidos} en el conjunto de datos - para comprobar si hay un gran número de éstos, si existen atributos irrelevantes por tener un alto grado de información perdida y si sería necesario realizar algún tipo de tratamiento sobre éstos valores.
+Antes de realizar un estudio más exhaustivo de los atributos, es de interés estudiar el comportamiento de los \textbf{valores perdidos} en el conjunto de datos, para comprobar si hay un gran número de éstos, si existen atributos irrelevantes por tener un alto grado de información perdida y si sería necesario realizar algún tipo de tratamiento sobre éstos valores.
 
 \begin{figure}[h]
 	\centering
@@ -66,7 +66,7 @@ Antes de realizar un estudio más exhaustivo de los atributos, es de interés es
 	\label{fig:ch3missingvalues}
 \end{figure}
 
-Estudiando la distribución, \textbf{72} de los 150 atributos disponibles presentan valores perdidos - con un promedio de \textbf{624 instancias perdidas} por atributo. En primera instancia puede parecer un número muy elevado de valores perdidos, si se observa cómo se distribuyen los valores perdidos - como se representa en la \textbf{Figura \ref{fig:ch3missingvalues}} - se puede observar un \textbf{sesgo} claro, donde la amplia mayoría de valores perdidos se agrupan alrededor de cinco atributos:
+Estudiando la distribución, \textbf{72} de los 150 atributos disponibles presentan valores perdidos - con un promedio de \textbf{624 instancias perdidas} por atributo. En primera instancia puede parecer un número muy elevado de valores perdidos, si se observa cómo se distribuyen los valores perdidos --- como se representa en la \textbf{Figura \ref{fig:ch3missingvalues}} --- se puede observar un \textbf{sesgo} claro, donde la amplia mayoría de valores perdidos se agrupan alrededor de cinco atributos:
 
 \begin{itemize}
 	\item \textbf{Tratamiento:} Debido al número tan elevado de valores perdidos en ambos atributos, \textbf{solo se tiene información sobre el tratamiento de 11 pacientes} - lo que significa que no sería relevante el atributo debido a la falta de información.
